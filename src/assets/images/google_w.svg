@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="203px" height="64px" viewBox="0 0 203 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Group 12</title>
+    <desc>Created with Sketch.</desc>
+    <g id="官网主页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ONT-ID-2.0-Lite" transform="translate(-970.000000, -2973.000000)">
+            <g id="Group-12" transform="translate(970.000000, 2973.000000)">
+                <rect id="Rectangle-Copy-3" fill="#FFFFFF" x="0" y="0" width="203" height="64" rx="6"></rect>
+                <g id="Group" transform="translate(64.000000, 12.000000)" fill="#3AAB25">
+                    <text id="Download-from" font-family="ProximaNova-Regular, Proxima Nova" font-size="14" font-weight="normal">
+                        <tspan x="0" y="13">Download from</tspan>
+                    </text>
+                    <text id="Google-Play" font-family="ProximaNova-Semibold, Proxima Nova" font-size="22" font-weight="500">
+                        <tspan x="0" y="33">Google Play</tspan>
+                    </text>
+                </g>
+                <path d="M21.5458161,45.0824793 L34.6463936,32.0126294 L21.5458161,18.9176574 C21.2230911,19.4383514 21,20.2817704 21,21.4966205 L21,42.5030035 C21,43.7179904 21.2230911,44.5612385 21.5458161,45.0824793 Z" id="Path" fill="#3AAB25"></path>
+                <path d="M40.179374,37.5423969 L35.8866051,33.2276162 L23.1335671,46 L23.2578787,46 C24.34934,46 25.292222,45.6026606 26.8055979,44.784227 L40.179374,37.5423969 Z" id="Path" fill="#3AAB25"></path>
+                <path d="M41.7914267,27.3249137 L37.1269533,32.0126294 L41.7914267,36.6750863 L44.6199361,35.1371352 C45.6618709,34.5664704 47.250032,33.5249457 47.250032,32.0126294 C47.250032,30.4746783 45.6618709,29.4331194 44.6199361,28.8624888 L41.7914267,27.3249137 Z" id="Path" fill="#3AAB25"></path>
+                <path d="M23.1335671,18 L35.8866051,30.7720078 L40.179374,26.4569537 L26.8055979,19.2149868 C25.292222,18.3967925 24.3494767,18 23.2578787,18 L23.1335671,18 Z" id="Path" fill="#3AAB25"></path>
+            </g>
+        </g>
+    </g>
+</svg>

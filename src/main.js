@@ -3,7 +3,15 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import './assets/reset.css'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+import VueParallaxJs from 'vue-parallax-js'
+Vue.use(VueParallaxJs)
+
 Vue.config.productionTip = false
+
+Vue.use(ElementUI)
 
 new Vue({
   router,

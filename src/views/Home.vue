@@ -1,18 +1,52 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <FirstScreen/>
+    <SecondScreen/>
+    <ThirdScreen/>
+    <FourthScreen/>
+    <FifthScreen/>
+    <SixthScreen/>
+    <!-- to do -->
+    <!-- <el-button plain @click="toRegister()">Register</el-button> -->
+    <HomeFooter/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import FirstScreen from '@/components/home/FirstScreen.vue'
+import SecondScreen from '@/components/home/SecondScreen.vue'
+import ThirdScreen from '@/components/home/ThirdScreen.vue'
+import FourthScreen from '@/components/home/FourthScreen.vue'
+import FifthScreen from '@/components/home/FifthScreen.vue'
+import SixthScreen from '@/components/home/SixthScreen.vue'
+import HomeFooter from '@/components/home/HomeFooter.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
-  }
+    FirstScreen,
+    HomeFooter,
+    SecondScreen,
+    ThirdScreen,
+    FourthScreen,
+    FifthScreen,
+    SixthScreen
+  },
+  methods: {
+    toRegister() {
+      console.log(11111)
+      // this.$router.push({ name: 'qrcode' })
+      this.$router.push({ name: 'register' })
+    }
+  },
 }
 </script>
+
+<style lang="scss" scoped>
+.home {
+  width: 100%;
+  height: 100%;
+}
+</style>
+

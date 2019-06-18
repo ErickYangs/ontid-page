@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+    <title>Fill 47</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="49.9920821%" y1="50.0079181%" x2="0.00108474576%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0.0158361486%"></stop>
+            <stop stop-color="#F2F2F2" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="官网h5" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ONT-ID-2.0-Landingpage" transform="translate(-1246.000000, -1564.000000)" fill="url(#linearGradient-1)">
+            <g id="分组" transform="translate(1011.000000, 1530.000000)">
+                <polyline id="Fill-47" points="294.197183 93.524968 235.179257 93.524968 235.179257 34.506402"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
