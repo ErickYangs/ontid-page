@@ -8,6 +8,7 @@ import Register from "./components/portal/Register.vue";
 import AppDetail from "./components/portal/AppDetail.vue";
 import AppList from "./components/portal/AppList.vue";
 import FourthScreen from "./components/home/FourthScreen.vue";
+import SecondScreen from "./components/home/SecondScreen.vue";
 
 Vue.use(Router);
 
@@ -58,7 +59,11 @@ export default new Router({
     {
       path: "/test",
       name: "test",
-      component: FourthScreen
+      component: SecondScreen
+    },
+    {
+      path: '*',
+      redirect: '/'
     }
   ]
 });

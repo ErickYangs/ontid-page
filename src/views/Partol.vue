@@ -27,7 +27,7 @@ export default {
       text-align: center;
       // height: 60px;
       font-size: 36px;
-      font-family: FuturaLT-Heavy;
+      font-family: Graphik-Medium;
       font-weight: 800;
       color: rgba(0, 0, 0, 1);
       line-height: 61px;

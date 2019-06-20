@@ -1,15 +1,51 @@
 <template>
-  <div class="second_screen home_contanier">
+  <div id="second_screen_top" class="second_screen home_contanier">
     <div class="title">What can ONT ID do for you</div>
     <div class="desc_box">
       <div class="left">
         <div class="ele_box">
-          <div class="ele_list">
-            <div class="ele_list_title">Unified Sign-In</div>
-            <div
-              class="ele_list_desc"
-            >Support the Sign-up and Sign-in of ONT ID in dAPPs , simple and fast</div>
-          </div>
+          <swiper class="swiper-no-swiping" :options="swiperOption">
+            <swiper-slide>
+              <div class="ele_list">
+                <div class="ele_list_title">Unified Sign-In1</div>
+                <div
+                  class="ele_list_desc"
+                >Support the Sign-up and Sign-in of ONT ID in dAPPs , simple and fast</div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="ele_list">
+                <div class="ele_list_title">Unified Sign-In2</div>
+                <div
+                  class="ele_list_desc"
+                >Support the Sign-up and Sign-in of ONT ID in dAPPs , simple and fast</div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="ele_list">
+                <div class="ele_list_title">Unified Sign-In3</div>
+                <div
+                  class="ele_list_desc"
+                >Support the Sign-up and Sign-in of ONT ID in dAPPs , simple and fast</div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="ele_list">
+                <div class="ele_list_title">Unified Sign-In4</div>
+                <div
+                  class="ele_list_desc"
+                >Support the Sign-up and Sign-in of ONT ID in dAPPs , simple and fast</div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="ele_list">
+                <div class="ele_list_title">Unified Sign-In5</div>
+                <div
+                  class="ele_list_desc"
+                >Support the Sign-up and Sign-in of ONT ID in dAPPs , simple and fast</div>
+              </div>
+            </swiper-slide>
+          </swiper>
         </div>
         <div class="line_box">
           <div class="inner_line"></div>
@@ -18,20 +54,81 @@
       </div>
       <div class="right">
         <div class="right_ele_box">
-          <div class="right_ele">
-            <div class="people">
-              <div class="index">
-                <i class="line"></i>
-                <span class="t">01</span>
-                <span class="b">04</span>
+          <swiper class="swiper-no-swiping" :options="swiperOption2">
+            <swiper-slide>
+              <div class="right_ele">
+                <div class="people"></div>
+                <div class="ball"></div>
               </div>
-            </div>
-            <div class="ball"></div>
-          </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="right_ele">
+                <div class="people"></div>
+                <div class="ball"></div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="right_ele">
+                <div class="people"></div>
+                <div class="ball"></div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="right_ele">
+                <div class="people"></div>
+                <div class="ball"></div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="right_ele">
+                <div class="people"></div>
+                <div class="ball"></div>
+              </div>
+            </swiper-slide>
+          </swiper>
         </div>
         <div class="right_arrow_box">
-          <i class="left_arrow"></i>
-          <i class="right_arrow"></i>
+          <div class="arrow left_arrow"></div>
+          <div class="arrow right_arrow"></div>
+        </div>
+        <div class="index">
+          <swiper :options="swiperOption3">
+            <swiper-slide>
+              <div class="index_layout">
+                <i class="line"></i>
+                <div class="num t">01</div>
+                <div class="num b">04</div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="index_layout">
+                <i class="line"></i>
+                <div class="num t">02</div>
+                <div class="num b">04</div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="index_layout">
+                <i class="line"></i>
+                <div class="num t">03</div>
+                <div class="num b">04</div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="index_layout">
+                <i class="line"></i>
+                <div class="num t">04</div>
+                <div class="num b">04</div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="index_layout">
+                <i class="line"></i>
+                <div class="num t">05</div>
+                <div class="num b">04</div>
+              </div>
+            </swiper-slide>
+          </swiper>
         </div>
       </div>
     </div>
@@ -39,17 +136,59 @@
 </template>
 
 <script>
-export default {
+import 'swiper/dist/css/swiper.css'
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
+export default {
+  data() {
+    return {
+      swiperOption: {
+        spaceBetween: 30,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true,
+        },
+        navigation: {
+          nextEl: '.left_arrow',
+          prevEl: '.right_arrow'
+        }
+      },
+      swiperOption2: {
+        navigation: {
+          nextEl: '.left_arrow',
+          prevEl: '.right_arrow'
+        }
+      },
+      swiperOption3: {
+        spaceBetween: 30,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true,
+        },
+        navigation: {
+          nextEl: '.left_arrow',
+          prevEl: '.right_arrow',
+          disabledClass: 'my-button-disabled'
+        }
+      }
+    }
+  },
+  components: {
+    swiper,
+    swiperSlide
+  }
 }
 </script>
 
 <style lang="scss" scoped>
+.my-button-disabled {
+  opacity: 0.3;
+}
 .second_screen {
   padding: 150px 0 210px;
   .title {
     font-size: 40px;
-    font-family: FuturaLT-Heavy;
+    font-family: Graphik-Medium;
     font-weight: 800;
     color: rgba(0, 0, 0, 1);
     line-height: 66px;
@@ -66,7 +205,7 @@ export default {
         .ele_list {
           .ele_list_title {
             font-size: 40px;
-            font-family: FuturaLT-Heavy;
+            font-family: Graphik-Medium;
             font-weight: 800;
             color: rgba(0, 0, 0, 1);
             line-height: 53px;
@@ -76,7 +215,7 @@ export default {
             margin-top: 30px;
             width: 524px;
             font-size: 20px;
-            font-family: FuturaLT;
+            // font-family: FuturaLT;
             color: rgba(0, 0, 0, 0.6);
             line-height: 35px;
             word-break: break-all;
@@ -109,6 +248,7 @@ export default {
     }
     .right {
       width: 50%;
+      position: relative;
       .right_ele_box {
         padding-top: 40px;
         .right_ele {
@@ -119,47 +259,6 @@ export default {
             background: url(../../assets/images/people_main.svg) no-repeat;
             position: relative;
             background-size: contain;
-            .index {
-              width: 140px;
-              height: 140px;
-              background: #000;
-              position: absolute;
-              right: -2%;
-              bottom: -65%;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              .line {
-                display: block;
-                width: 120px;
-                height: 2px;
-                background: rgba(255, 255, 255, 0.2);
-                transform: rotate(-45deg);
-              }
-              span {
-                color: #fff;
-                position: absolute;
-                font-size: 34px;
-                font-family: FuturaLT-Heavy;
-                font-weight: 800;
-              }
-              span.t {
-                left: 24px;
-                top: 16px;
-
-                color: rgba(255, 255, 255, 1);
-                line-height: 53px;
-              }
-              span.b {
-                right: 24px;
-                bottom: 16px;
-                // font-size: 40px;
-                // font-family: FuturaLT-Heavy;
-                // font-weight: 800;
-                color: rgba(255, 255, 255, 0.2);
-                line-height: 53px;
-              }
-            }
           }
           .ball {
             width: 50px;
@@ -168,7 +267,8 @@ export default {
             background-size: cover;
             position: absolute;
             left: 33%;
-            top: 9%;
+            top: 15%;
+            animation: breath 3s ease-in-out infinite;
           }
         }
       }
@@ -180,19 +280,63 @@ export default {
         display: flex;
         justify-content: flex-start;
         flex-wrap: wrap;
-        i {
-          display: block;
+        .arrow {
+          // display: block;
           width: 60px;
           height: 60px;
           cursor: pointer;
+          outline: none;
         }
-        i.left_arrow {
+        .arrow.left_arrow {
           background: url(../../assets/images/prev_arrow.svg) no-repeat center
             center;
         }
-        i.right_arrow {
+        .arrow.right_arrow {
           background: url(../../assets/images/next_arrow.svg) no-repeat center
             center;
+        }
+      }
+      .index {
+        width: 140px;
+        height: 140px;
+        background: #000;
+        position: absolute;
+        right: 32%;
+        bottom: -4%;
+        .index_layout {
+          width: 140px;
+          height: 140px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .line {
+          display: block;
+          width: 120px;
+          height: 2px;
+          background: rgba(255, 255, 255, 0.2);
+          transform: rotate(-45deg);
+        }
+        .num {
+          color: #fff;
+          position: absolute;
+          font-size: 34px;
+          font-family: Graphik-Medium;
+          font-weight: 800;
+        }
+        .num.t {
+          left: 24px;
+          top: 16px;
+
+          color: rgba(255, 255, 255, 1);
+          line-height: 53px;
+        }
+        .num.b {
+          right: 24px;
+          bottom: 16px;
+          color: rgba(255, 255, 255, 0.2);
+          line-height: 53px;
         }
       }
     }
@@ -203,6 +347,9 @@ export default {
     left: 37%;
     top: 17%;
   }
+  .second_screen .desc_box .right .index {
+    right: 22%;
+  }
 }
 @media only screen and (max-width: 1280px) {
   .second_screen .desc_box .left .ele_box .ele_list .ele_list_desc {
@@ -212,8 +359,9 @@ export default {
   .second_screen .desc_box .right .right_ele_box .right_ele .people {
     width: 100%;
   }
-  .second_screen .desc_box .right .right_ele_box .right_ele .people .index {
-    right: 0;
+  .second_screen .desc_box .right .index {
+    right: 2%;
+    bottom: -2%;
   }
   .second_screen .desc_box .right .right_ele_box .right_ele .ball {
     left: 48%;
@@ -225,5 +373,29 @@ export default {
   .second_screen .desc_box {
     padding: 0 30px;
   }
+}
+
+@keyframes breath {
+  from {
+    opacity: 0.1;
+  } /* 动画开始时的不透明度 */
+  50% {
+    opacity: 1;
+  } /* 动画50% 时的不透明度 */
+  to {
+    opacity: 0.1;
+  } /* 动画结束时的不透明度 */
+}
+
+@-webkit-keyframes breath {
+  from {
+    opacity: 0.1;
+  } /* 动画开始时的不透明度 */
+  50% {
+    opacity: 1;
+  } /* 动画50% 时的不透明度 */
+  to {
+    opacity: 0.1;
+  } /* 动画结束时的不透明度 */
 }
 </style>

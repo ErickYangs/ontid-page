@@ -16,7 +16,7 @@
       <div class="open_account">
         <span class="hover1" @click="toIntegrat()">Open an account</span>
       </div>
-      <div class="down_arrow"></div>
+      <div class="down_arrow" @click="turnShow('#lite_second')"></div>
     </div>
     <!-- <div class="banner_right_tips">
       <div class="item">
@@ -53,6 +53,7 @@ import HomeHeader from '@/components/home/HomeHeader.vue'
 import LinkBanner from '@/components/home/LinkBanner.vue'
 import BannerRightTips from '@/components/home/BannerRightTips.vue'
 import Parallax from 'vue-parallaxy'
+import $ from "jquery"
 export default {
   name: 'LiteFirstScreen',
   components: {
@@ -63,6 +64,15 @@ export default {
   methods: {
     toIntegrat() {
       this.$router.push({ name: 'register' })
+    },
+    turnShow(ele) {
+      $("html, body").animate({
+        scrollTop: $(ele).offset().top + "px"
+      }, {
+          duration: 500,
+          easing: "swing"
+        });
+      return false;
     }
   }
 }
@@ -119,7 +129,7 @@ export default {
       max-width: 1080px;
       margin-top: 2%;
       font-size: 20px;
-      font-family: FuturaLT;
+      // font-family: FuturaLT;
       color: rgba(255, 255, 255, 1);
       line-height: 35px;
       text-align: center;
@@ -133,7 +143,7 @@ export default {
         padding: 12px 20px;
         border-radius: 4px;
         font-size: 16px;
-        font-family: FuturaLT-Heavy;
+        font-family: Graphik-Medium;
         font-weight: 800;
         line-height: 30px;
         cursor: pointer;

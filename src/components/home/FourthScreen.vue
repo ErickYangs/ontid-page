@@ -34,10 +34,6 @@ export default {
         slidesPerView: 7,
         centeredSlides: true,
         loop: true,
-        // pagination: {
-        //   el: '.swiper-pagination',
-        //   clickable: true
-        // },
         navigation: {
           nextEl: '.btn_click_next',
           prevEl: '.btn_click_prev'
@@ -59,7 +55,7 @@ export default {
       if (this.lock) {
         return
       } else {
-        console.log('targetTop', targetTop)
+        // console.log('targetTop', targetTop)
         if (targetTop < scrollTop) {
           this.lock = true
           // console.log('bottom')
@@ -100,7 +96,7 @@ export default {
   margin: 0 auto;
   .title {
     font-size: 40px;
-    font-family: FuturaLT-Heavy;
+    font-family: Graphik-Medium;
     font-weight: 800;
     color: rgba(0, 0, 0, 1);
     line-height: 66px;
@@ -232,7 +228,7 @@ export default {
   }
   .iden_title {
     font-size: 30px;
-    font-family: FuturaLT-Heavy;
+    font-family: Graphik-Medium;
     font-weight: 800;
     color: rgba(0, 0, 0, 1);
     line-height: 53px;
@@ -245,7 +241,7 @@ export default {
     max-width: 1078px;
     text-align: center;
     font-size: 16px;
-    font-family: FuturaLT;
+    // font-family: FuturaLT;
     color: rgba(0, 0, 0, 0.6);
     line-height: 24px;
   }

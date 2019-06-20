@@ -37,7 +37,7 @@ export default {
   .lite_third_box {
     .title {
       font-size: 40px;
-      font-family: FuturaLT-Heavy;
+      font-family: Graphik-Medium;
       font-weight: 800;
       color: rgba(255, 255, 255, 1);
       line-height: 66px;
@@ -48,7 +48,7 @@ export default {
       max-width: 1280px;
       margin: 0 auto;
       font-size: 18px;
-      font-family: FuturaLT;
+      // font-family: FuturaLT;
       color: rgba(255, 255, 255, 0.6);
       line-height: 35px;
       padding-bottom: 40px;
@@ -68,7 +68,7 @@ export default {
       .tips {
         padding-top: 70px;
         font-size: 30px;
-        font-family: FuturaLT-Heavy;
+        font-family: Graphik-Medium;
         font-weight: 800;
         color: rgba(255, 255, 255, 1);
         line-height: 40px;
@@ -87,7 +87,7 @@ export default {
           height: 54px;
           cursor: pointer;
           background-size: contain !important;
-          font-family: FuturaLT;
+          // font-family: FuturaLT;
         }
         span.apple {
           background: url(../../assets/images/apple_w.svg) no-repeat;

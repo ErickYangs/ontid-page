@@ -106,7 +106,7 @@ export default {
 
         .footer_main_title {
           font-size: 14px;
-          font-family: FuturaLT-Heavy;
+          font-family: Graphik-Medium;
           font-weight: 800;
           color: rgba(0, 0, 0, 1);
           line-height: 21px;
@@ -115,7 +115,7 @@ export default {
         .link_item {
           a {
             font-size: 13px;
-            font-family: FuturaLT;
+            // font-family: FuturaLT;
             color: rgba(0, 0, 0, 0.5);
             line-height: 18px;
             &:hover {
@@ -168,7 +168,7 @@ export default {
       width: 100%;
       text-align: center;
       font-size: 12px;
-      font-family: FuturaLT;
+      // font-family: FuturaLT;
       color: rgba(0, 0, 0, 0.3);
       line-height: 18px;
     }

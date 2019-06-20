@@ -34,7 +34,7 @@ export default {
     text-align: center;
     // height: 25px;
     font-size: 18px;
-    font-family: FuturaLT;
+    // font-family: FuturaLT;
     color: rgba(0, 0, 0, .5);
     line-height: 26px;
   }
@@ -48,7 +48,7 @@ export default {
       padding-right: 60px;
       p {
         font-size: 18px;
-        font-family: FuturaLT;
+        // font-family: FuturaLT;
         color: rgba(0, 0, 0, 1);
         line-height: 24px;
         margin-bottom: 20px;

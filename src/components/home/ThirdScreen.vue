@@ -57,7 +57,7 @@ export default {
     padding: 150px 0;
     .choose_title {
       font-size: 40px;
-      font-family: FuturaLT-Heavy;
+      font-family: Graphik-Medium;
       font-weight: 800;
       color: rgba(255, 255, 255, 1);
       line-height: 66px;
@@ -84,7 +84,7 @@ export default {
         .desc_title {
           margin-top: 24px;
           font-size: 20px;
-          font-family: FuturaLT-Heavy;
+          font-family: Graphik-Medium;
           font-weight: 800;
           color: rgba(255, 255, 255, 1);
           line-height: 35px;
@@ -94,7 +94,7 @@ export default {
           padding: 0 40px;
           margin-top: 20px;
           font-size: 14px;
-          font-family: FuturaLT;
+          // font-family: FuturaLT;
           color: rgba(255, 255, 255, 0.5);
           line-height: 24px;
           text-align: center;

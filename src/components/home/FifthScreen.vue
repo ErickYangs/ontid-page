@@ -40,7 +40,7 @@ export default {
     }
     .fifth_title {
       font-size: 40px;
-      font-family: FuturaLT-Heavy;
+      font-family: Graphik-Medium;
       font-weight: 800;
       color: rgba(255, 255, 255, 1);
       line-height: 66px;
@@ -49,7 +49,7 @@ export default {
     }
     .fifth_desc {
       font-size: 18px;
-      font-family: FuturaLT;
+      // font-family: FuturaLT;
       color: rgba(255, 255, 255, 1);
       line-height: 24px;
       margin-top: 40px;
@@ -64,7 +64,7 @@ export default {
       border-radius: 4px;
       border: 2px solid rgba(255, 255, 255, 1);
       font-size: 16px;
-      font-family: FuturaLT-Heavy;
+      font-family: Graphik-Medium;
       font-weight: 800;
       color: rgba(255, 255, 255, 1);
       line-height: 50px;

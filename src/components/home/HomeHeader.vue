@@ -1,6 +1,6 @@
 <template>
   <div class="top_header">
-    <div class="left_logo" @click="toIndex()"></div>
+    <div class="left_logo" :class="[isLite ? 'lite_logo': 'home_logo']" @click="toIndex()"></div>
     <div class="right">
       <SelectBox/>
     </div>
@@ -15,9 +15,14 @@ export default {
   },
   methods: {
     toIndex() {
-      this.$router.push({path: '/'})
+      this.$router.push({ path: '/' })
     }
   },
+  data() {
+    return {
+      isLite: this.$router.currentRoute.path == '/lite' ? true : false
+    }
+  }
 }
 </script>
 
@@ -28,11 +33,17 @@ export default {
   .left_logo {
     width: 90px;
     height: 20px;
-    background: url(../../assets/images/logo.svg) no-repeat;
-    background-size: contain;
     float: left;
     margin-left: 100px;
     cursor: pointer;
+  }
+  .left_logo.home_logo {
+    background: url(../../assets/images/logo.svg) no-repeat;
+    background-size: contain;
+  }
+   .left_logo.lite_logo {
+    background: url(../../assets/images/logo_w.svg) no-repeat;
+    background-size: contain;
   }
   .right {
     float: right;

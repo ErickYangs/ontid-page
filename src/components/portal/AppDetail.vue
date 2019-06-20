@@ -137,7 +137,7 @@ export default {
     text-align: center;
     font-weight: 800;
     font-size: 20px;
-    font-family: FuturaLT-Heavy;
+    font-family: Graphik-Medium;
     color: rgba(0, 0, 0, 1);
     line-height: 27px;
   }
@@ -171,7 +171,7 @@ export default {
       .api_left_desc {
         width: 50%;
         font-size: 16px;
-        font-family: FuturaLT;
+        // font-family: FuturaLT;
         color: rgba(226, 0, 0, 1);
         line-height: 20px;
       }
@@ -186,7 +186,7 @@ export default {
           height: 58px;
           line-height: 58px;
           font-size: 16px;
-          font-family: FuturaLT-Heavy;
+          font-family: Graphik-Medium;
           font-weight: 800;
           color: rgba(255, 255, 255, 1);
           background: #000;
@@ -203,7 +203,7 @@ export default {
 
     .appdetail_form_class_title {
       font-size: 14px;
-      font-family: FuturaLT;
+      // font-family: FuturaLT;
       color: rgba(0, 0, 0, 1);
       line-height: 20px;
       margin-bottom: 16px;
@@ -217,7 +217,7 @@ export default {
       border-radius: 0;
       padding-left: 0;
       font-size: 18px;
-      font-family: FuturaLT;
+      // font-family: FuturaLT;
       color: rgba(0, 0, 0, 1);
       line-height: 25px;
       transition: border-color 1s;
@@ -226,7 +226,7 @@ export default {
       }
       &::-webkit-input-placeholder {
         font-size: 18px;
-        font-family: FuturaLT;
+        // font-family: FuturaLT;
         line-height: 25px;
         color: rgba(0, 0, 0, .12)
       }
@@ -253,7 +253,7 @@ export default {
       background: rgba(0, 105, 224, 1);
       border-radius: 5px;
       font-size: 20px;
-      font-family: FuturaLT-Heavy;
+      font-family: Graphik-Medium;
       font-weight: 800;
       color: #fff;
       cursor: pointer;
@@ -279,7 +279,7 @@ export default {
                 width: 100%;
                 line-height: 20px;
                 font-size: 15px;
-                font-family: FuturaLT;
+                // font-family: FuturaLT;
               }
               span {
                 display: block;
@@ -290,7 +290,7 @@ export default {
                 border: none;
                 border-radius: 2px;
                 color: #fff;
-                font-family: FuturaLT;
+                // font-family: FuturaLT;
                 margin-top: 22px;
               }
             }
@@ -306,7 +306,7 @@ export default {
           line-height: 20px;
           margin-bottom: 10px;
           font-size: 16px;
-          font-family: FuturaLT;
+          // font-family: FuturaLT;
           color: rgba(0, 0, 0, 0.8);
         }
       }
@@ -315,7 +315,7 @@ export default {
     .app_edit {
       text-align: center;
       font-size: 20px;
-      font-family: FuturaLT-Heavy;
+      font-family: Graphik-Medium;
       font-weight: 800;
       color: rgba(0, 0, 0, 1);
       span {

@@ -29,7 +29,7 @@ export default {
   .usually_footer_copyright {
     margin-left: 100px;
     font-size: 14px;
-    font-family: FuturaLT;
+    // font-family: FuturaLT;
     color: rgba(0, 0, 0, 0.8);
     line-height: 18px;
   }
@@ -40,7 +40,7 @@ export default {
     margin-right: 50px;
     span {
       font-size: 14px;
-      font-family: FuturaLT;
+      // font-family: FuturaLT;
       color: rgba(0, 0, 0, 0.7);
       line-height: 18px;
       cursor: pointer;

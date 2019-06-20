@@ -1,5 +1,5 @@
 <template>
-  <div class="litesecondscreen home_contanier">
+  <div id="lite_second" class="litesecondscreen home_contanier">
     <!-- <iframe src="http://www.ericyang.xyz/change.html"
             height="500"
             width="100%"
@@ -57,7 +57,7 @@ export default {
   padding: 150px 0;
   .title {
     font-size: 40px;
-    font-family: FuturaLT-Heavy;
+    font-family: Graphik-Medium;
     font-weight: 800;
     color: rgba(0, 0, 0, 1);
     line-height: 66px;
@@ -78,7 +78,7 @@ export default {
 
       .introd_title {
         font-size: 24px;
-        font-family: FuturaLT-Heavy;
+        font-family: Graphik-Medium;
         font-weight: 800;
         color: rgba(0, 0, 0, 1);
         line-height: 35px;
@@ -87,7 +87,7 @@ export default {
 
       .introd_desc {
         font-size: 16px;
-        font-family: FuturaLT;
+        // font-family: FuturaLT;
         color: rgba(0, 0, 0, 0.6);
         line-height: 24px;
         margin-top: 20px;

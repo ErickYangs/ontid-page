@@ -14,18 +14,31 @@
       </div>
     </div>
     <div class="bottom_bg"></div>
-    <div class="arrow_down"></div>
+    <div class="arrow_down" @click="turnShow('#second_screen_top')"></div>
   </div>
 </template>
 
 <script>
+import $ from "jquery"
+
 export default {
-mounted() {
-  // console.log(this.$refs.banner_text_download.scrollTop)
-  // this.$refs.iden_title.classList.add('animated', 'fadeInUp')
-  // this.$refs.iden_desc.classList.add('animated', 'fadeInUp')
-  // this.$refs.appload_box.classList.add('animated', 'fadeInUp')
-},
+  mounted() {
+    // console.log(this.$refs.banner_text_download.scrollTop)
+    // this.$refs.iden_title.classList.add('animated', 'fadeInUp')
+    // this.$refs.iden_desc.classList.add('animated', 'fadeInUp')
+    // this.$refs.appload_box.classList.add('animated', 'fadeInUp')
+  },
+  methods: {
+    turnShow(ele) {
+      $("html, body").animate({
+        scrollTop: $(ele).offset().top + "px"
+      }, {
+          duration: 500,
+          easing: "swing"
+        });
+      return false;
+    }
+  },
 }
 </script>
 
@@ -50,7 +63,8 @@ mounted() {
     padding-top: 20%;
     .banner_text_title {
       font-size: 80px;
-      font-family: FuturaLT-Heavy;
+      // font-family: Graphik-Medium;
+      font-family: Graphik-Medium;
       font-weight: 800;
       color: rgba(0, 0, 0, 1);
       line-height: 106px;
@@ -59,7 +73,7 @@ mounted() {
       margin-top: 3%;
       width: 694px;
       font-size: 20px;
-      font-family: FuturaLT;
+      // font-family: FuturaLT;
       color: rgba(0, 0, 0, 0.6);
       line-height: 35px;
     }
@@ -75,7 +89,7 @@ mounted() {
         );
         border-radius: 4px;
         font-size: 16px;
-        font-family: FuturaLT-Heavy;
+        font-family: Graphik-Medium;
         font-weight: 800;
         color: rgba(255, 255, 255, 1);
         line-height: 30px;
@@ -88,7 +102,7 @@ mounted() {
     .banner_text_more {
       margin-top: 5%;
       font-size: 14px;
-      font-family: FuturaLT;
+      // font-family: FuturaLT;
       color: #999;
       line-height: 18px;
       span {

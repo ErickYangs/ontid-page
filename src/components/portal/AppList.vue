@@ -37,7 +37,7 @@ export default {
     padding-top: 20px;
     text-align: center;
     font-size: 18px;
-    font-family: FuturaLT;
+    // font-family: FuturaLT;
     color: rgba(0, 0, 0, 0.5);
     line-height: 26px;
     margin-bottom: 75px;
@@ -69,7 +69,7 @@ export default {
         width: 100%;
         margin-top: 30px;
         font-size: 20px;
-        font-family: FuturaLT-Heavy;
+        font-family: Graphik-Medium;
         font-weight: 800;
         color: rgba(0, 0, 0, 1);
         line-height: 27px;

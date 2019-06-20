@@ -113,7 +113,7 @@ export default {
 .select-content {
   text-align: left;
   font-size: 12px;
-  font-family: FuturaLT-Heavy;
+  /* font-family: FuturaLT-Heavy; */
   font-weight: 800;
   color: rgba(0, 0, 0, 1);
   line-height: 21px;
@@ -166,7 +166,7 @@ export default {
   text-align: left;
   cursor: default;
   font-size: 14px;
-  font-family: FuturaLT-Heavy;
+   /* font-family: FuturaLT-Heavy; */
   font-weight: 800;
   color: rgba(0, 0, 0, 1);
   line-height: 26px;

@@ -1,5 +1,5 @@
 <template>
-  <div class="banner_right_tips">
+  <div class="banner_right_tips" :class="[isLite ? 'lite_white': 'home_black']">
     <div class="item">
       <div class="item_title">
         Protocols
@@ -36,6 +36,11 @@ export default {
       this.$router.push({ name: 'register' })
     }
   },
+  data() {
+    return {
+      isLite: this.$router.currentRoute.path == '/lite' ? true : false
+    }
+  }
 }
 </script>
 
@@ -59,9 +64,9 @@ export default {
 
 .banner_right_tips .item .item_title {
   font-size: 14px;
-  font-family: FuturaLT-Heavy;
+  font-family: Graphik-Medium;
   font-weight: 800;
-  color: rgba(0, 0, 0, 1);
+  // color: rgba(0, 0, 0, 1);
   line-height: 21px;
   margin-bottom: 12px;
   position: relative;
@@ -71,7 +76,7 @@ export default {
   display: block;
   width: 18px;
   height: 2px;
-  background: #000;
+  // background: #000;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
@@ -79,13 +84,38 @@ export default {
 
 .banner_right_tips .item .item_link {
   font-size: 13px;
-  font-family: FuturaLT;
-  color: rgba(0, 0, 0, 0.3);
+  // font-family: FuturaLT;
+  // color: rgba(0, 0, 0, 0.3);
   line-height: 18px;
   margin-bottom: 10px;
   cursor: pointer;
+  // &:hover {
+  //   color: rgba(0, 0, 0, 1);
+  // }
+}
+.banner_right_tips.home_black .item .item_title {
+  color: rgba(0, 0, 0, 1);
+}
+.banner_right_tips.home_black .item .item_title i {
+  background: #000;
+}
+.banner_right_tips.home_black .item .item_link {
+  color: rgba(0, 0, 0, 0.3);
   &:hover {
     color: rgba(0, 0, 0, 1);
+  }
+}
+
+.banner_right_tips.lite_white .item .item_title {
+  color: rgba(255, 255, 255, 1);
+}
+.banner_right_tips.lite_white .item .item_title i {
+  background: #fff;
+}
+.banner_right_tips.lite_white .item .item_link {
+  color: rgba(255, 255, 255, 0.5);
+  &:hover {
+    color: rgba(255, 255, 255, 1);
   }
 }
 </style>
