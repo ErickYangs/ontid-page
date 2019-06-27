@@ -92,7 +92,7 @@ export default {
 <style lang="scss" scoped>
 .fourth_screen {
   padding: 150px 0;
-  max-width: 1920px;
+  // max-width: 1920px;
   margin: 0 auto;
   .title {
     font-size: 40px;
@@ -206,6 +206,7 @@ export default {
       transform: translateY(-50%);
       z-index: 9;
       cursor: pointer;
+      animation-delay: 1s;
     }
     .btn_click_prev {
       background: url(../../assets/images/d_prev.svg) no-repeat;

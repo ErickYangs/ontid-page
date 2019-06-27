@@ -1,11 +1,5 @@
 <template>
   <div id="lite_second" class="litesecondscreen home_contanier">
-    <!-- <iframe src="http://www.ericyang.xyz/change.html"
-            height="500"
-            width="100%"
-            frameborder="0"
-            scrolling="0"
-    ></iframe>-->
     <div class="title">Why ONT ID Lite</div>
     <div class="introduct_box">
       <div class="introd_layout">
@@ -18,7 +12,7 @@
         <div class="right fp_one">
           <div class="outer"></div>
 
-          <div class="inner" v-parallax.absY="0.04"></div>
+          <div class="inner" v-parallax.absY="0.05"></div>
 
         </div>
       </div>

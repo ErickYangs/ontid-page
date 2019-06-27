@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="lang_en">
+  <div id="app" :class="'lang_'+isLocal">
     <router-view/>
   </div>
 </template>
@@ -9,3 +9,13 @@
   height: 100%;
 }
 </style>
+<script>
+export default {
+  computed: {
+    isLocal() {
+      // console.log(this.$store.state.lang)
+      return this.$store.state.lang
+    }
+  }
+}
+</script>

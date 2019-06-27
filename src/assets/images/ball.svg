@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
-    <title>Fill 47</title>
+<svg width="66px" height="68px" viewBox="0 0 66 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Fill 57</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <linearGradient x1="49.9920821%" y1="50.0079181%" x2="0.00108474576%" y2="100%" id="linearGradient-1">
-            <stop stop-color="#FFFFFF" offset="0.0158361486%"></stop>
-            <stop stop-color="#F2F2F2" offset="100%"></stop>
+        <linearGradient x1="66.6564155%" y1="37.9328653%" x2="24.199644%" y2="84.1000782%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#2AC6FF" offset="100%"></stop>
         </linearGradient>
     </defs>
-    <g id="官网h5" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="ONT-ID-2.0-Landingpage" transform="translate(-1246.000000, -1564.000000)" fill="url(#linearGradient-1)">
-            <g id="分组" transform="translate(1011.000000, 1530.000000)">
-                <polyline id="Fill-47" points="294.197183 93.524968 235.179257 93.524968 235.179257 34.506402"></polyline>
+    <g id="页面1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.3">
+        <g id="插画" transform="translate(-1297.000000, -544.000000)" fill="url(#linearGradient-1)">
+            <g id="编组" transform="translate(1122.500000, 516.786250)">
+                <g transform="translate(174.739024, 26.995610)" id="Fill-57">
+                    <polyline points="65.6579268 48.3932927 27.2571951 67.5413415 0.418536585 41.1212195 17.4215854 0.15695122"></polyline>
+                </g>
             </g>
         </g>
     </g>

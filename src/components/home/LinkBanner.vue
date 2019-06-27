@@ -1,25 +1,30 @@
 <template>
   <div class="banner">
-    <div class="banner_text">
-      <div class="banner_text_title">LINK EACH SIDE OF YOU</div>
-      <div
-        class="banner_text_desc"
-      >Manage your digital identity and data safely.Allow you open account ,excute authentication and authorization seemlessly in decentralized applications.</div>
-      <div class="banner_text_download" ref="banner_text_download">
-        <span class="hover1">Download ONTO</span>
+    <div class="banner_layout">
+      <div class="banner_text">
+        <div class="banner_text_title">LINK EACH SIDE OF YOU</div>
+        <div
+          class="banner_text_desc"
+        >Manage your digital identity and data safely.Allow you open account ,excute authentication and authorization seemlessly in decentralized applications.</div>
+        <div class="banner_text_download" ref="banner_text_download">
+          <span class="hover1">Download ONTO</span>
+        </div>
+        <div class="banner_text_more">
+          ONT ID is open ,Know more about
+          <span>Ontology DID protocols</span>
+        </div>
       </div>
-      <div class="banner_text_more">
-        ONT ID is open ,Know more about
-        <span>Ontology DID protocols</span>
-      </div>
+      <!-- <parallax> -->
+      <div class="bottom_bg" v-parallax="0.2"></div>
+      <!-- </parallax> -->
     </div>
-    <div class="bottom_bg"></div>
     <div class="arrow_down" @click="turnShow('#second_screen_top')"></div>
   </div>
 </template>
 
 <script>
 import $ from "jquery"
+import Parallax from 'vue-parallaxy'
 
 export default {
   mounted() {
@@ -39,6 +44,9 @@ export default {
       return false;
     }
   },
+  components: {
+    Parallax
+  }
 }
 </script>
 
@@ -49,6 +57,12 @@ export default {
   max-width: 1120px;
   //   background: red;
   position: relative;
+  .banner_layout {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  overflow: hidden;
+  }
   .bottom_bg {
     position: absolute;
     right: 0;
@@ -154,6 +168,8 @@ export default {
 @media only screen and (max-width: 960px) {
   .banner .banner_text .banner_text_title {
     text-align: center;
+    width: 600px;
+    margin: 0 auto;
   }
   .banner .banner_text .banner_text_download {
     text-align: center;
@@ -164,6 +180,9 @@ export default {
   }
   .banner .banner_text .banner_text_more {
     text-align: center;
+  }
+  .banner .bottom_bg {
+    right: 3%;
   }
 }
 </style>

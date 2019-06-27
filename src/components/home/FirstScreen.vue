@@ -15,13 +15,14 @@
 import HomeHeader from '@/components/home/HomeHeader.vue'
 import LinkBanner from '@/components/home/LinkBanner.vue'
 import BannerRightTips from '@/components/home/BannerRightTips.vue'
-
+// import Parallax from 'vue-parallaxy'
 export default {
   name: 'firstscreen',
   components: {
     HomeHeader,
     LinkBanner,
-    BannerRightTips
+    BannerRightTips,
+    // Parallax
   }
 }
 </script>

@@ -1,14 +1,14 @@
 <template>
   <div class="selectWrap">
     <div class="select-wrapper">
-      <div class="select" @click="triggerOption">
+      <div class="select" @mouseover="triggerOption">
         <div class="select-content">{{selectContent.text}}</div>
         <div class="triangle-wrapper">
           <div id="triangle-down"></div>
         </div>
         <div class="triangle-ball"></div>
       </div>
-      <div class="option-wrapper" style="display: none;">
+      <div class="option-wrapper" @mouseleave="leaveHide" style="display: none;">
         <div
           class="option-item"
           v-for="(item,index) in subject"
@@ -22,6 +22,7 @@
   </div>
 </template>
 <script>
+import LangStorage from '../../helpers/lang'
 export default {
   props: {
     selectWidth: {
@@ -40,7 +41,12 @@ export default {
     selectContent: {
       type: Object,
       default: function () {
-        return { value: 'en', text: "English" }
+        let localLang = localStorage.getItem('user_lang')
+        if (localLang === 'zh') {
+          return { value: 'zh', text: "中文" }
+        } else {
+          return { value: 'en', text: "English" }
+        }
       }
     },
   },
@@ -87,7 +93,12 @@ export default {
       this.selectContent.text = item.text;
       this.optionWrapper.style.display = "none";
       this.$emit("changeSelect", this.selectContent.text, this.selectContent.value);
-      // console.log(item)
+      this.$i18n.locale = item.value
+      LangStorage.setLang(this.$i18n.locale)
+      window.location.reload()
+    },
+    leaveHide() {
+      this.optionWrapper.style.display = "none";
     }
   },
 }
@@ -157,6 +168,8 @@ export default {
   width: 100%;
   top: 32px;
   border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 0 10px #ccc;
 }
 .option-item {
   min-width: 70px;
@@ -166,7 +179,7 @@ export default {
   text-align: left;
   cursor: default;
   font-size: 14px;
-   /* font-family: FuturaLT-Heavy; */
+  /* font-family: FuturaLT-Heavy; */
   font-weight: 800;
   color: rgba(0, 0, 0, 1);
   line-height: 26px;

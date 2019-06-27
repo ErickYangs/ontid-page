@@ -48,5 +48,20 @@ export default {
   width: 100%;
   height: 100%;
 }
+@media only screen and (max-width: 1440px) {
+  .home {
+    width: 1440px;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .home {
+    width: 1280px;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .home {
+    width: 960px;
+  }
+}
 </style>
 

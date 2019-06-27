@@ -3,7 +3,10 @@
     <div class="center_box">
       <div class="ftbg" v-parallax="0.2"></div>
       <div class="sixth_box home_contanier">
-        <div class="left_lite"></div>
+        <div class="left_lite">
+          <div class="logo"></div>
+          <div class="desc">Use anytime ,anywhere</div>
+        </div>
         <div class="right_learn_more">
           <span>Learn more</span>
           <i @click="toLite()"></i>
@@ -49,10 +52,18 @@ export default {
     position: relative;
     z-index: 9;
     .left_lite {
-      width: 150px;
-      height: 40px;
-      background: url(../../assets/images/lite_logo.svg) no-repeat;
-      background-size: contain;
+      .logo {
+        width: 150px;
+        height: 40px;
+        background: url(../../assets/images/lite_logo.svg) no-repeat;
+        background-size: contain;
+      }
+      .desc {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 24px;
+        margin-top: 18px;
+      }
     }
     .right_learn_more {
       width: 300px;
@@ -91,6 +102,7 @@ export default {
     position: absolute;
     left: 0;
     top: 0;
+    background-size: cover;
   }
 }
 @media only screen and (max-width: 1440px) {
