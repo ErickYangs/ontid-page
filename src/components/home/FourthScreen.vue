@@ -237,8 +237,8 @@ export default {
       }
     }
     .card {
-      width: 305px;
-      height: 661px;
+      width: 316px;
+      height: 666px;
       // background: rgba(242, 242, 242, 1);
       border-radius: 32px;
       flex-grow: 0;
