@@ -2,11 +2,11 @@
   <div class="fifth_screen">
     <div class="fifth_box">
       <div class="outer_box">
-        <div class="fifth_title">Developers</div>
+        <div class="fifth_title">{{$t('developer.title')}}</div>
         <div
           class="fifth_desc"
-        >ONT ID is totally open . ONT ID Open API makes it easy to integrate your application . You can use ONT ID to login your application ,KYC your users or use attendance service.</div>
-        <div class="start hover1">Get Started</div>
+        >">{{$t('developer.deve_desc')}}</div>
+        <div class="start hover1" @click="openNewPage('https://ontid.readme.io/docs/getting-started')">{{$t('developer.start')}}</div>
       </div>
 
       <div class="gear-box">
@@ -20,7 +20,11 @@
 
 <script>
 export default {
-
+  methods: {
+    openNewPage(url) {
+      window.open(url)
+    }
+  },
 }
 </script>
 

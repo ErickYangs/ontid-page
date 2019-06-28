@@ -1,43 +1,43 @@
 <template>
   <div class="third_screen">
     <div class="screen_box home_contanier">
-      <div class="choose_title">Why choose ONT ID</div>
+      <div class="choose_title">{{$t('thrid_screen.title')}}</div>
       <div class="ele_box">
         <div class="ele_list">
           <div class="top_img">
             <img src="../../assets/images/1.svg" alt>
           </div>
-          <div class="desc_title">Identity you can trust</div>
+          <div class="desc_title">{{$t('thrid_screen.item1_title')}}</div>
           <div
             class="desc_text"
-          >Support the Sign-up and Sign-in of ONT ID in dAPPs , simple and fast.Support the Sign-up and Sign-in of ONT ID in dAPPs</div>
+          >{{$t('thrid_screen.item1_desc')}}</div>
         </div>
         <div class="ele_list">
           <div class="top_img">
             <img src="../../assets/images/2.svg" alt>
           </div>
-          <div class="desc_title">Data security</div>
+          <div class="desc_title">{{$t('thrid_screen.item2_title')}}</div>
           <div
             class="desc_text"
-          >Support the Sign-up and Sign-in of ONT ID in dAPPs , simple and fast.Support the Sign-up and Sign-in of ONT ID in dAPPs</div>
+          >{{$t('thrid_screen.item2_desc')}}</div>
         </div>
         <div class="ele_list">
           <div class="top_img">
             <img src="../../assets/images/3.svg" alt>
           </div>
-          <div class="desc_title">Easy to use</div>
+          <div class="desc_title">{{$t('thrid_screen.item3_title')}}</div>
           <div
             class="desc_text"
-          >Support the Sign-up and Sign-in of ONT ID in dAPPs , simple and fast.Support the Sign-up and Sign-in of ONT ID in dAPPs</div>
+          >{{$t('thrid_screen.item3_desc')}}</div>
         </div>
         <div class="ele_list">
           <div class="top_img">
             <img src="../../assets/images/4.svg" alt>
           </div>
-          <div class="desc_title">Standards & Coverage</div>
+          <div class="desc_title">{{$t('thrid_screen.item4_title')}}</div>
           <div
             class="desc_text"
-          >Support the Sign-up and Sign-in of ONT ID in dAPPs , simple and fast.Support the Sign-up and Sign-in of ONT ID in dAPPs</div>
+          >{{$t('thrid_screen.item4_desc')}}</div>
         </div>
       </div>
     </div>

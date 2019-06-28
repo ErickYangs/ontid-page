@@ -7,34 +7,55 @@
         </div>
         <div class="ele_list">
           <div class="footer_main_title">Developer Center</div>
-          <div class="link_item">
+          <!-- <div class="link_item">
             <a href target="_blank" class="hover1">Tutorials</a>
-          </div>
+          </div>-->
           <div class="link_item">
-            <a href target="_blank" class="hover1">Documentation</a>
+            <a
+              href="https://ontio.github.io/documentation/wp_download_en.html"
+              target="_blank"
+              class="hover1"
+            >Documentation</a>
           </div>
-          <div class="link_item">
+          <!-- <div class="link_item">
             <a href target="_blank" class="hover1">Bounty</a>
-          </div>
-          <div class="link_item">
+          </div>-->
+          <!-- <div class="link_item">
             <a href target="_blank" class="hover1">SmartX</a>
-          </div>
+          </div>-->
           <div class="link_item">
-            <a href target="_blank" class="hover1">Github</a>
+            <a href="https://github.com/ontio-ontid" target="_blank" class="hover1">Github</a>
           </div>
         </div>
         <div class="ele_list">
           <div class="footer_main_title">Cooperation</div>
           <div class="link_item">
-            <a href target="_blank" class="hover1">Cooperate with Ontology</a>
+            <a
+              href="https://ont.io/contactUs"
+              target="_blank"
+              class="hover1"
+            >Cooperate with Ontology</a>
           </div>
-          <div class="link_item">
+          <!-- <div class="link_item">
             <a href target="_blank" class="hover1">Nodes</a>
+          </div>-->
+          <div class="link_item">
+            <a
+              href="https://info.ont.io/trust-anchor/en"
+              target="_blank"
+              class="hover1"
+            >Trust Anchor</a>
           </div>
         </div>
         <div class="ele_list">
-          <div class="footer_main_title">About</div>
+          <div class="footer_main_title">Wallets</div>
           <div class="link_item">
+            <a href="https://onto.app/" target="_blank" class="hover1">ONTO</a>
+          </div>
+          <div class="link_item">
+            <a href="https://github.com/ontio/owallet" target="_blank" class="hover1">OWallet</a>
+          </div>
+          <!-- <div class="link_item">
             <a href target="_blank" class="hover1">Press</a>
           </div>
           <div class="link_item">
@@ -51,26 +72,29 @@
           </div>
           <div class="link_item">
             <a href target="_blank" class="hover1">Explore</a>
-          </div>
+          </div>-->
         </div>
         <div class="ele_list">
           <div class="footer_main_title">DApps</div>
           <div class="link_item">
-            <a href target="_blank" class="hover1">DApps List</a>
+            <a href="https://dapp.ont.io/" target="_blank" class="hover1">DApps List</a>
           </div>
           <div class="link_item">
-            <a href target="_blank" class="hover1">Submit a DApp</a>
+            <a href="https://ont.io/dapp" target="_blank" class="hover1">Submit a DApp</a>
           </div>
         </div>
       </div>
       <div class="share_link">
         <!-- <a href target="_blank"></a> -->
-        <a href target="_blank" class="hover1"></a>
-        <a href target="_blank" class="hover1"></a>
-        <a href target="_blank" class="hover1"></a>
-        <a href target="_blank" class="hover1"></a>
-        <a href target="_blank" class="hover1"></a>
-        <a href target="_blank" class="hover1"></a>
+        <a href="https://discordapp.com/invite/4TQujHj" target="_blank" class="hover1"></a>
+        <a href="https://twitter.com/OntologyNetwork" target="_blank" class="hover1"></a>
+        <a href="https://www.facebook.com/Ontology-Network-468098413590227/" target="_blank" class="hover1"></a>
+        <a href="https://medium.com/ontologynetwork" target="_blank" class="hover1"></a>
+        <a href="https://old.reddit.com/r/OntologyNetwork/" target="_blank" class="hover1"></a>
+        <a href="https://github.com/ontio" target="_blank" class="hover1"></a>
+        <a href="https://t.me/OntologyNetwork" target="_blank" class="hover1"></a>
+        <a href="https://www.youtube.com/channel/UCXzLZJgDglAWRU0b2GOa7pA" target="_blank" class="hover1"></a>
+        <a href="https://www.linkedin.com/company/ontology-network-official/" target="_blank" class="hover1"></a>
       </div>
       <div class="copyright">&#169; 2019 ontid.com. All rights reserved</div>
     </div>
@@ -79,7 +103,11 @@
 
 <script>
 export default {
-
+  methods: {
+    openNewPage(url) {
+      window.open(url)
+    }
+  },
 }
 </script>
 
@@ -128,7 +156,7 @@ export default {
     }
     .share_link {
       width: 100%;
-      max-width: 305px;
+      max-width: 500px;
       margin: 0 auto;
       padding: 50px 0 40px;
       display: flex;
@@ -142,26 +170,41 @@ export default {
           opacity: 0.5;
         }
       }
-      // a:nth-of-type(1) {
-      //   background: url(../../assets/images/f-1.svg) no-repeat;
-      // }
       a:nth-of-type(1) {
-        background: url(../../assets/images/f-2.svg) no-repeat;
+        background: url(../../assets/images/f-1.svg) no-repeat center;
+        background-size: contain;
       }
       a:nth-of-type(2) {
-        background: url(../../assets/images/f-3.svg) no-repeat;
+        background: url(../../assets/images/f-2.svg) no-repeat center;
+        background-size: contain;
       }
       a:nth-of-type(3) {
-        background: url(../../assets/images/f-4.svg) no-repeat;
+        background: url(../../assets/images/f-3.svg) no-repeat center;
+        background-size: contain;
       }
       a:nth-of-type(4) {
-        background: url(../../assets/images/f-5.svg) no-repeat;
+        background: url(../../assets/images/f-4.svg) no-repeat center;
+        background-size: contain;
       }
       a:nth-of-type(5) {
-        background: url(../../assets/images/f-6.svg) no-repeat;
+        background: url(../../assets/images/f-5.svg) no-repeat center;
+        background-size: contain;
       }
       a:nth-of-type(6) {
-        background: url(../../assets/images/f-7.svg) no-repeat;
+        background: url(../../assets/images/f-6.svg) no-repeat center;
+        background-size: contain;
+      }
+      a:nth-of-type(7) {
+        background: url(../../assets/images/f-7.svg) no-repeat center;
+        background-size: contain;
+      }
+      a:nth-of-type(8) {
+        background: url(../../assets/images/f-8.svg) no-repeat center;
+        background-size: contain;
+      }
+      a:nth-of-type(9) {
+        background: url(../../assets/images/f-9.svg) no-repeat center;
+        background-size: contain;
       }
     }
     .copyright {
@@ -181,7 +224,7 @@ export default {
     // padding-right: 20px;
   }
   .footer_box {
-     padding-left: 20px;
+    padding-left: 20px;
     padding-right: 20px;
   }
 }

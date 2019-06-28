@@ -1,66 +1,54 @@
 export default {
-  paxo_: {
-    banner_desc:
-      "Paxos Standard (PAX) 是由Paxos Trust发行的第一个与美元完全锚定的稳定币。 Paxos的使命是加速资产的移动，革新现代金融。在Paxos的未来愿景中，数字资产、现金、商品或证券可以在任何时间、任何地点之间进行流动。",
-    features_title: "优势",
-    features_trans: "交易深度",
-    features_trans_d: "PAX 是交易量最大的合规美元稳定币，日交易量紧追Tether",
-    features_month: "月度审计",
-    features_month_d:
-      "全美顶尖的审计公司Withum每月月底都对Paxos Standard 的银行账户进行审计并确保PAX流通量与银行储备资金一致。PAX的所有审计报告可以在此查看 paxos.com/ standard/attestations。",
-    reward_title: "机构合作激励计划",
-    reward_subtitle: "存币奖励",
-    reward_l_1: "面向对象：",
-    reward_l_2: "PAX(OEP-4)生态合作共建机构",
-    reward_l_3: "如何获得激励：",
-    reward_l_4: "与本体合作并持有PAX（OEP-4）",
-    reward_l_5: "激励：",
-    reward_l_6: "PAX(OEP-4)",
-    reward_l_7: "年利率：",
-    reward_l_8: "5.5%",
-    reward_l_9: "激励计算：",
-    reward_l_10: "基于每日快照的账户内PAX(OEP-4)数量*年利率/365",
-    reward_l_12: "激励发放时间：",
-    reward_l_13: "每天0点（UTC+8）采集用户锁定的PAX(OEP-4)账户快照，用于计算账户奖励",
-    reward_l_11: "合作商户：",
-    reward_r_0: "特别活动",
-    reward_r_1: "日期",
-    reward_r_2: "APR",
-    reward_r_3: "早鸟期（达成合作第一周）",
-    reward_r_4: "24.00%",
-    reward_r_5: "常规",
-    reward_r_6: "5.5%",
-    reward_r_7: "活动详情",
-    reward_r_8: "点此查看",
-    touch1: "如果您对PAX感兴趣，欢迎联系我们",
-    touch2: "邮箱：",
-    touch3: "pax@ont.io",
-    get: "如何获得 PAXOS ?",
-    click: "点击获得PAXOS",
-    ecology: "生态共建机构"
+  home: {
+    banner_title: 'LINK EACH SIDE OF YOU',
+    banner_desc: 'Manage your digital identity and data safely',
+    banner_more: 'ONT ID is open ,Know more about'
   },
-  common: {
-    lang: "中文"
+  second_screen: {
+    title: 'What can ONT ID do for you',
+    item1_title: 'Unified sign-In',
+    item1_desc: 'Support the Sign-up and Sign-in of ONT ID in dAPPs , simple and fast',
+    item2_title: 'Own your own data',
+    item2_desc: 'Provides you with a self-sovereign solution in which you can create and manage your self-controlled identity',
+    item3_title: 'Blockchain attestation',
+    item3_desc: 'Supports blockchain attestation service',
+    item4_title: 'Connect multiple identities',
+    item4_desc: 'Supports real-name authentication in 200+ countries. Connect multi-source data, including academic degrees, reputation, credit scoring of users.'
   },
-  footer: {
-    "1-1": "开发者",
-    "1-2": "开发者中心",
-    "1-3": "Bounty Program",
-    "1-4": "文档中心",
-    "2-1": "dApps",
-    "2-2": "dApps List",
-    "2-3": "Submit a dApp",
-    "3-1": "钱包",
-    "3-2": "ONTO",
-    "3-3": "OWallet",
-    "4-1": "信任生态",
-    "4-2": "信任锚",
-    "4-3": "节点",
-    "4-4": "Paxo",
-    "5-1": "关于",
-    "5-2": "关于我们",
-    "5-3": "联系我们",
-    "5-4": "白皮书",
-    "5-5": "区块浏览器"
+  thrid_screen: {
+    title: 'Why choose ONT ID',
+    item1_title: 'Identity you can trust',
+    item1_desc: 'By the nature of blockchain your identity cannot be tampered with by third parties, while multi-factor identities and data authentication let you compile well-rounded and credible identities.',
+    item2_title: 'Data security',
+    item2_desc: 'Privacy protection is ensured by cryptographic algorithms and your key for encryption can be self-managed or escrow to a third party. All data access must obtain your authorization.',
+    item3_title: 'Easy to use',
+    item3_desc: 'Avoid the fuss. Keep your identity data together in one place and quickly authorize its use.',
+    item4_title: 'Global coverage',
+    item4_desc: 'ONT ID is fully compatible with W3C DID standards. You are free to use your identity and data with any organization using the ONT ID protocol across the world.',
+  },
+  down_page: {
+    title: 'What is ONTO',
+    identity: 'Take back control of your identity',
+    iden_desc: 'ONTO is a comprehensive decentralized client product and an entrance to the Ontology blockchain system. ONTO allows you to build your own digital identity, store digital assets, and more, all with privacy protection ensured by cryptographic algorithms.'
+  },
+  developer: {
+    title: 'Developers',
+    deve_desc: 'ONT ID open APIs make it easy to integrate into your application.You can use ONT ID to login and access your application, KYC your users or use attestation services and more.',
+    start: "Get started"
+  },
+  lite_home: {
+    desc: 'ONT ID Lite allows users to open and use their blockchain accounts anywhere. They can use it on any dApps, mobile wallets, or even web applications.'
+  },
+  lite_pro: {
+    title: 'Why ONT ID Lite',
+    item1_title: 'Eliminate barries for users',
+    item1_desc: 'No need to manage private keys. The only thing users will need to remember is an email address, a mobile phone number, or a social media account like Facebook, Google or WeChat.',
+    item2_title: 'Suitable for light dAPPs',
+    item2_desc: 'Widely used in scenarios like games, social media and token airdrop applications.'
+  },
+  item_switch: {
+    title: 'Switch to self-sovereign mode',
+    p1: 'For now ,you are using ONT ID Lite which helps you navigate the world of blockchain without any barriers. ONT ID Lite is not meant to keep users using the service. Instead, it is meant as the middle-ground between trying your hand at blockchain and learning how to keep your private key safe.',
+    p2: 'We also provide you with wallets in which you can create and manage your self-controlled identity and data using private keys. You need to make sure you are able to keep your private key safe.Now you can download ONTO, then act as the following steps .'
   }
 };

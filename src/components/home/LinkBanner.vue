@@ -2,16 +2,16 @@
   <div class="banner">
     <div class="banner_layout">
       <div class="banner_text">
-        <div class="banner_text_title">LINK EACH SIDE OF YOU</div>
+        <div class="banner_text_title">{{$t('home.banner_title')}}</div>
         <div
           class="banner_text_desc"
-        >Manage your digital identity and data safely.Allow you open account ,excute authentication and authorization seemlessly in decentralized applications.</div>
+        >{{$t('home.banner_desc')}}</div>
         <div class="banner_text_download" ref="banner_text_download">
-          <span class="hover1">Download ONTO</span>
+          <span class="hover1" @click="turnShow('#fourth_top')">Download ONTO</span>
         </div>
         <div class="banner_text_more">
-          ONT ID is open ,Know more about
-          <span>Ontology DID protocols</span>
+          {{$t('home.banner_more')}}
+          <span @click="toPro">Ontology DID protocols</span>
         </div>
       </div>
       <!-- <parallax> -->
@@ -42,6 +42,9 @@ export default {
           easing: "swing"
         });
       return false;
+    },
+    toPro() {
+      window.open('https://ontid.readme.io/docs/ontology-did-protocol')
     }
   },
   components: {
@@ -177,6 +180,7 @@ export default {
   .banner .banner_text .banner_text_desc {
     margin: 0 auto;
     margin-top: 3%;
+    text-align: center;
   }
   .banner .banner_text .banner_text_more {
     text-align: center;

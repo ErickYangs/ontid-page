@@ -5,17 +5,17 @@
         Protocols
         <i></i>
       </div>
-      <div class="item_link hover1">Ontology DID</div>
-      <div class="item_link hover1">Verifiable Claims</div>
+      <div class="item_link hover1" @click="openNewPage('https://ontid.readme.io/docs/ontology-did-protocol')">Ontology DID</div>
+      <div class="item_link hover1" @click="openNewPage('https://ontid.readme.io/docs/verifiable-claim-protocol')">Verifiable Claims</div>
     </div>
     <div class="item">
       <div class="item_title">
-        Protocols
+        Products
         <i></i>
       </div>
-      <div class="item_link hover1">ONT Sourcing</div>
-      <div class="item_link hover1">ONT Pass</div>
-      <div class="item_link hover1">ONTO</div>
+      <!-- <div class="item_link hover1">ONT Sourcing</div> -->
+      <div class="item_link hover1" @click="openNewPage('https://developer.ont.io/ontpass/introduction')">ONT Pass</div>
+      <div class="item_link hover1" @click="openNewPage('https://onto.app/')">ONTO</div>
       <div class="item_link hover1" @click="$router.push({ path:'/lite'})">ONT ID Lite</div>
     </div>
     <div class="item">
@@ -23,8 +23,8 @@
         Developers
         <i></i>
       </div>
-      <div class="item_link hover1">Documentation Center</div>
-      <div class="item_link hover1" @click="toIntegrat()">Integration Portal</div>
+      <div class="item_link hover1" @click="openNewPage('https://ontid.readme.io/')">Documentation Center</div>
+      <!-- <div class="item_link hover1" @click="toIntegrat()">Integration Portal</div> -->
     </div>
   </div>
 </template>
@@ -34,6 +34,9 @@ export default {
   methods: {
     toIntegrat() {
       this.$router.push({ name: 'register' })
+    },
+    openNewPage(url) {
+      window.open(url)
     }
   },
   data() {

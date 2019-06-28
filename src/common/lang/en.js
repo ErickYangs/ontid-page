@@ -1,64 +1,54 @@
 export default {
-  paxo_: {
-    'banner_desc': 'Paxos Standard (PAX) is the first regulated USD stable coin issued by Paxos Trust. Paxos is on a mission to modernize finance by mobilizing assets at the speed of the internet. Paxos is building a future where all assets—from money to commodities to securities—will be digitized and can move instantaneously, 24/7. ',
-    'features_title': 'Features',
-    'features_trans': 'Transaction Depth',
-    'features_trans_d': 'PAX is the most compliant US dollar stable currency, with daily trading volume tracking Tether.',
-    'features_month': 'Monthly Audits',
-    'features_month_d': 'A nationally top-ranking auditing firm Withum performs month-end attestations on Paxos Standard bank accounts.',
-    'reward_title': 'Institutional Incentive Plan',
-    'reward_subtitle': 'Rewards for Depositing PAX',
-    'reward_l_1': 'Target:',
-    'reward_l_2': 'PAX (OEP-4) Ecosystem Partners',
-    'reward_l_3': 'How to get incentives: ',
-    'reward_l_4': 'Partner with Ontology and hold PAX (OEP-4)',
-    'reward_l_5': 'Incentives: ',
-    'reward_l_6': 'PAX (OEP-4)',
-    'reward_l_7': 'Annual interest rate:',
-    'reward_l_8': "5.5%",
-    'reward_l_9': 'Incentive calculation:',
-    'reward_l_10': 'According to daily snapshot of account PAX (OEP-4) amount * annual interest rate / 365',
-    'reward_l_12': "Snapshot time:",
-    'reward_l_13': "Every day at 16:00 (UTC) using the user’s PAX (OEP-4) amount",
-    'reward_l_11': "Partners:",
-    'reward_r_0': 'Special offer',
-    'reward_r_1': 'Dates',
-    'reward_r_2': 'APR',
-    'reward_r_3': 'Early bird (first week of cooperation)',
-    'reward_r_4': '24.00%',
-    'reward_r_5': 'General',
-    'reward_r_6': '5.5%',
-    'reward_r_7': "For details,",
-    'reward_r_8': "Please click here",
-    'touch1': 'If you are interested, please get in touch with us.',
-    'touch2': 'Email: ',
-    'touch3': 'pax@ont.io',
-    'get': 'How to get PAXOS ?',
-    'click': 'Click here to get PAXOS',
-    'ecology': 'Ecosystem partners'
+  home: {
+    banner_title: 'LINK EACH SIDE OF YOU',
+    banner_desc: 'Manage your digital identity and data safely',
+    banner_more: 'ONT ID is open ,Know more about'
   },
-  common: {
-    'lang': 'English'
+  second_screen: {
+    title: 'What can ONT ID do for you',
+    item1_title: 'Unified sign-In',
+    item1_desc: 'Support the Sign-up and Sign-in of ONT ID in dAPPs , simple and fast',
+    item2_title: 'Own your own data',
+    item2_desc: 'Provides you with a self-sovereign solution in which you can create and manage your self-controlled identity',
+    item3_title: 'Blockchain attestation',
+    item3_desc: 'Supports blockchain attestation service',
+    item4_title: 'Connect multiple identities',
+    item4_desc: 'Supports real-name authentication in 200+ countries. Connect multi-source data, including academic degrees, reputation, credit scoring of users.'
   },
-  footer: {
-    '1-1': 'Developer',
-    '1-2': 'Developer Center',
-    '1-3': 'Bounty Program',
-    '1-4': 'Documentation',
-    '2-1': 'dApps',
-    '2-2': 'dApps List',
-    '2-3': 'Submit a dApp',
-    '3-1': 'Wallet',
-    '3-2': 'ONTO',
-    '3-3': 'OWallet',
-    '4-1': 'Trust Ecosystem',
-    '4-2': 'Trust Anchor',
-    '4-3': 'Node',
-    '4-4': 'Paxo',
-    '5-1': 'About',
-    '5-2': 'About Us',
-    '5-3': 'Contact us',
-    '5-4': 'White Paper',
-    '5-5': 'Explorer'
+  thrid_screen: {
+    title: 'Why choose ONT ID',
+    item1_title: 'Identity you can trust',
+    item1_desc: 'By the nature of blockchain your identity cannot be tampered with by third parties, while multi-factor identities and data authentication let you compile well-rounded and credible identities.',
+    item2_title: 'Data security',
+    item2_desc: 'Privacy protection is ensured by cryptographic algorithms and your key for encryption can be self-managed or escrow to a third party. All data access must obtain your authorization.',
+    item3_title: 'Easy to use',
+    item3_desc: 'Avoid the fuss. Keep your identity data together in one place and quickly authorize its use.',
+    item4_title: 'Global coverage',
+    item4_desc: 'ONT ID is fully compatible with W3C DID standards. You are free to use your identity and data with any organization using the ONT ID protocol across the world.',
+  },
+  down_page: {
+    title: 'What is ONTO',
+    identity: 'Take back control of your identity',
+    iden_desc: 'ONTO is a comprehensive decentralized client product and an entrance to the Ontology blockchain system. ONTO allows you to build your own digital identity, store digital assets, and more, all with privacy protection ensured by cryptographic algorithms.'
+  },
+  developer: {
+    title: 'Developers',
+    deve_desc: 'ONT ID open APIs make it easy to integrate into your application.You can use ONT ID to login and access your application, KYC your users or use attestation services and more.',
+    start: "Get started"
+  },
+  lite_home: {
+    desc: 'ONT ID Lite allows users to open and use their blockchain accounts anywhere. They can use it on any dApps, mobile wallets, or even web applications.'
+  },
+  lite_pro: {
+    title: 'Why ONT ID Lite',
+    item1_title: 'Eliminate barries for users',
+    item1_desc: 'No need to manage private keys. The only thing users will need to remember is an email address, a mobile phone number, or a social media account like Facebook, Google or WeChat.',
+    item2_title: 'Suitable for light dAPPs',
+    item2_desc: 'Widely used in scenarios like games, social media and token airdrop applications.'
+  },
+  item_switch: {
+    title: 'Switch to self-sovereign mode',
+    p1: 'For now ,you are using ONT ID Lite which helps you navigate the world of blockchain without any barriers. ONT ID Lite is not meant to keep users using the service. Instead, it is meant as the middle-ground between trying your hand at blockchain and learning how to keep your private key safe.',
+    p2: 'We also provide you with wallets in which you can create and manage your self-controlled identity and data using private keys. You need to make sure you are able to keep your private key safe.Now you can download ONTO, then act as the following steps .'
   }
 };

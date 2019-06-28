@@ -1,22 +1,27 @@
 <template>
-  <div class="fourth_screen" ref="fourth_screen">
-    <div class="title">What is ONTO</div>
+  <div class="fourth_screen" id="fourth_top" ref="fourth_screen">
+    <div class="title">{{$t('down_page.title')}}</div>
     <div class="carousel_box">
       <div class="carousel_layout shrink" ref="carousel_layout">
-        <div class="card" v-for="(item) in carouseData" :key="item">{{item}}</div>
+        <div class="card" v-for="(item) in carouseData" :key="item.id">
+          <img :src="item.src">
+        </div>
       </div>
       <div class="iphone_box"></div>
-      <div class="btn_click_prev" ref="btn_click_prev" @click="prev()"></div>
-      <div class="btn_click_next" ref="btn_click_next" @click="next()"></div>
+      <div class="btn_click_prev hidenone" ref="btn_click_prev" @click="prev()"></div>
+      <div class="btn_click_next hidenone" ref="btn_click_next" @click="next()"></div>
     </div>
-    <div class="iden_title" ref="iden_title">Take back control of your identity</div>
-    <div
-      class="iden_desc"
-      ref="iden_desc"
-    >ONTO is a comprehensive decentralized client product and an entrance to the Ontology blockchain system. ONTO allows you to build your own digital identity, store digital assets, and more, all with privacy protection ensured by cryptographic algorithms.</div>
+    <div class="iden_title" ref="iden_title">{{$t('down_page.identity')}}</div>
+    <div class="iden_desc" ref="iden_desc">{{$t('down_page.iden_desc')}}</div>
     <div class="appload_box" ref="appload_box">
-      <span class="apple hover1"></span>
-      <span class="google hover1"></span>
+      <span
+        class="apple hover1"
+        @click="openNewPage('https://itunes.apple.com/cn/app/onto-an-ontology-dapp/id1436009823?mt=8')"
+      ></span>
+      <span
+        class="google hover1"
+        @click="openNewPage('https://play.google.com/store/apps/details?id=com.github.ontio.onto')"
+      ></span>
     </div>
   </div>
 </template>
@@ -39,7 +44,51 @@ export default {
           prevEl: '.btn_click_prev'
         }
       },
-      carouseData: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+      carouseData: [
+        {
+          id: 1,
+          src: 'https://app.ont.io/ontid/1.png'
+        },
+        {
+          id: 2,
+          src: 'https://app.ont.io/ontid/2.png'
+        }
+        ,
+        {
+          id: 3,
+          src: 'https://app.ont.io/ontid/3.png'
+        }
+        ,
+        {
+          id: 4,
+          src: 'https://app.ont.io/ontid/4.png'
+        }
+        ,
+        {
+          id: 5,
+          src: 'https://app.ont.io/ontid/5.png'
+        }
+        ,
+        {
+          id: 6,
+          src: 'https://app.ont.io/ontid/6.png'
+        }
+        ,
+        {
+          id: 7,
+          src: 'https://app.ont.io/ontid/7.png'
+        }
+        ,
+        {
+          id: 8,
+          src: 'https://app.ont.io/ontid/8.png'
+        }
+        ,
+        {
+          id: 9,
+          src: 'https://app.ont.io/ontid/9.png'
+        }
+      ]
     }
   },
   components: {
@@ -56,14 +105,19 @@ export default {
         return
       } else {
         // console.log('targetTop', targetTop)
-        if (targetTop < scrollTop) {
+        if (targetTop <= scrollTop) {
           this.lock = true
           // console.log('bottom')
           this.$refs.iden_title.classList.add('animated', 'fadeInUp')
           this.$refs.iden_desc.classList.add('animated', 'fadeInUp')
           this.$refs.appload_box.classList.add('animated', 'fadeInUp')
-          this.$refs.btn_click_prev.classList.add('animated', 'fadeInUp')
-          this.$refs.btn_click_next.classList.add('animated', 'fadeInUp')
+          setInterval(() => {
+            this.$refs.btn_click_prev.classList.remove('hidenone')
+            this.$refs.btn_click_next.classList.remove('hidenone')
+            this.$refs.btn_click_prev.classList.add('animated', 'fadeInUp')
+            this.$refs.btn_click_next.classList.add('animated', 'fadeInUp')
+
+          }, 100)
           this.$refs.carousel_layout.classList.remove("shrink")
           this.$refs.carousel_layout.classList.add("expand")
         }
@@ -78,6 +132,9 @@ export default {
       let end = this.carouseData.pop()
       this.carouseData.unshift(end)
       // console.log('carouseData', this.carouseData)
+    },
+    openNewPage(url) {
+      window.open(url)
     }
   },
   mounted() {
@@ -117,6 +174,7 @@ export default {
       transform: translate(-50%, -50%);
       background: url(../../assets/images/iphone.png) no-repeat;
       background-size: contain;
+      z-index: 100;
     }
     .carousel_layout {
       width: 100%;
@@ -181,14 +239,24 @@ export default {
     .card {
       width: 305px;
       height: 661px;
-      background: rgba(242, 242, 242, 1);
+      // background: rgba(242, 242, 242, 1);
       border-radius: 32px;
       flex-grow: 0;
       flex-shrink: 0;
       margin: 0 20px;
+      overflow: hidden;
+      border: 2px solid #fafafa;
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
     }
-    .card:nth-of-type(2n) {
-      background: skyblue;
+    // .card:nth-of-type(2n) {
+    //   background: skyblue;
+    // }
+    .card:nth-of-type(5) {
+      z-index: 99;
     }
     .swiper-slide {
       width: 345px !important;
@@ -201,10 +269,10 @@ export default {
       width: 60px;
       height: 60px;
       position: absolute;
-      left: 40px;
+      left: 0;
       top: 50%;
       transform: translateY(-50%);
-      z-index: 9;
+      z-index: 101;
       cursor: pointer;
       animation-delay: 1s;
     }
@@ -213,8 +281,11 @@ export default {
     }
     .btn_click_next {
       left: auto;
-      right: 40px;
+      right: 0;
       background: url(../../assets/images/d_next.svg) no-repeat;
+    }
+    .hidenone {
+      display: none;
     }
   }
   .shrink {
@@ -274,9 +345,9 @@ export default {
     }
   }
 }
-@media only screen and (max-width: 1440px) {
+@media only screen and (min-width: 1440px) and (max-width: 1920px) {
   .fourth_screen {
-    max-width: 1440px;
+    // max-width: 1440px;
     .carousel_box {
       .carousel_layout.expand {
         .card:nth-of-type(1) {
@@ -307,9 +378,9 @@ export default {
     }
   }
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (min-width: 1280px) and (max-width: 1439px) {
   .fourth_screen {
-    max-width: 1280px;
+    // max-width: 1280px;
     .carousel_box {
       .carousel_layout.expand {
         .card:nth-of-type(1) {
@@ -340,12 +411,12 @@ export default {
     }
   }
 }
-@media only screen and (max-width: 960px) {
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
   .fourth_screen .iden_desc {
     max-width: 800px;
   }
   .fourth_screen {
-    width: 960px;
+    // width: 960px;
     .carousel_box {
       .carousel_layout.expand {
         .card:nth-of-type(1) {
@@ -371,6 +442,38 @@ export default {
         }
         .card:nth-of-type(9) {
           left: 194%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 959px) {
+  .fourth_screen {
+    .carousel_box {
+      .carousel_layout.expand {
+        .card:nth-of-type(1) {
+          left: -130%;
+        }
+        .card:nth-of-type(2) {
+          left: -85%;
+        }
+        .card:nth-of-type(3) {
+          left: -40%;
+        }
+        .card:nth-of-type(4) {
+          left: 5%;
+        }
+        .card:nth-of-type(6) {
+          left: 95%;
+        }
+        .card:nth-of-type(7) {
+          left: 140%;
+        }
+        .card:nth-of-type(8) {
+          left: 185%;
+        }
+        .card:nth-of-type(9) {
+          left: 230%;
         }
       }
     }

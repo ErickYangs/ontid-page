@@ -1,19 +1,19 @@
 <template>
   <div class="lite_third_screen">
     <div class="lite_third_box home_contanier">
-      <div class="title">Switch to Self-sovrin Mode</div>
+      <div class="title">{{$t('item_switch.title')}}</div>
       <div
         class="lite_third_text"
-      >For now ,you are using ONT ID Lite which helps you navigate the world of blockchain without any barriers. ONT ID Lite is not meant to keep users using the service. Instead, it is meant as the middle-ground between trying your hand at blockchain and learning how to keep your private key safe.</div>
+      >{{$t('item_switch.p1')}}</div>
       <div
         class="lite_third_text"
-      >We also provide you with wallets in which you can create and manage your self-controlled identity and data using private keys. You need to make sure you are able to keep your private key safe.Now you can download ONTO, then act as the following steps .</div>
+      >{{$t('item_switch.p2')}}</div>
       <div class="line"></div>
       <div class="down_layout">
-        <div class="tips">Take back control of your identity</div>
+        <div class="tips">{{$t('down_page.identity')}}</div>
         <div class="app_box">
-          <span class="apple"></span>
-          <span class="google"></span>
+          <span class="apple" @click="openNewPage('https://itunes.apple.com/cn/app/onto-an-ontology-dapp/id1436009823?mt=8')"></span>
+          <span class="google" @click="openNewPage('https://play.google.com/store/apps/details?id=com.github.ontio.onto')"></span>
         </div>
       </div>
     </div>
@@ -22,7 +22,12 @@
 
 <script>
 export default {
-  name: 'LiteThirdScreen'
+  name: 'LiteThirdScreen',
+  methods: {
+    openNewPage(url) {
+      window.open(url)
+    }
+  },
 }
 </script>
 

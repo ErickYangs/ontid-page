@@ -1,40 +1,40 @@
 <template>
   <div id="second_screen_top" class="second_screen home_contanier">
-    <div class="title">What can ONT ID do for you</div>
+    <div class="title">{{$t('second_screen.title')}}</div>
     <div class="desc_box">
       <div class="left">
         <div class="ele_box">
           <swiper class="swiper-no-swiping" :options="swiperOption">
             <swiper-slide>
               <div class="ele_list">
-                <div class="ele_list_title">Unified Sign-In1</div>
+                <div class="ele_list_title">{{$t('second_screen.item1_title')}}</div>
                 <div
                   class="ele_list_desc"
-                >Support the Sign-up and Sign-in of ONT ID in dAPPs , simple and fast</div>
+                >{{$t('second_screen.item1_desc')}}</div>
               </div>
             </swiper-slide>
             <swiper-slide>
               <div class="ele_list">
-                <div class="ele_list_title">Unified Sign-In2</div>
+                <div class="ele_list_title">{{$t('second_screen.item2_title')}}</div>
                 <div
                   class="ele_list_desc"
-                >Support the Sign-up and Sign-in of ONT ID in dAPPs , simple and fast</div>
+                >{{$t('second_screen.item2_desc')}}</div>
               </div>
             </swiper-slide>
             <swiper-slide>
               <div class="ele_list">
-                <div class="ele_list_title">Unified Sign-In3</div>
+                <div class="ele_list_title">{{$t('second_screen.item3_title')}}</div>
                 <div
                   class="ele_list_desc"
-                >Support the Sign-up and Sign-in of ONT ID in dAPPs , simple and fast</div>
+                >{{$t('second_screen.item3_desc')}}</div>
               </div>
             </swiper-slide>
             <swiper-slide>
               <div class="ele_list">
-                <div class="ele_list_title">Unified Sign-In4</div>
+                <div class="ele_list_title">{{$t('second_screen.item4_title')}}</div>
                 <div
                   class="ele_list_desc"
-                >Support the Sign-up and Sign-in of ONT ID in dAPPs , simple and fast</div>
+                >{{$t('second_screen.item4_desc')}}</div>
               </div>
             </swiper-slide>
           </swiper>

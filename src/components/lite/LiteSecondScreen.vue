@@ -1,19 +1,16 @@
 <template>
   <div id="lite_second" class="litesecondscreen home_contanier">
-    <div class="title">Why ONT ID Lite</div>
+    <div class="title">{{$t('lite_pro.title')}}</div>
     <div class="introduct_box">
       <div class="introd_layout">
         <div class="left">
-          <div class="introd_title">Eliminate all the barries for uses</div>
-          <div
-            class="introd_desc"
-          >No need to manage private keys . The only thing users will need to remember is an email address, a mobile phone number, or a social account like Facebook,Google or Wechat account.</div>
+          <div class="introd_title">{{$t('lite_pro.item1_title')}}</div>
+          <div class="introd_desc">{{$t('lite_pro.item1_desc')}}</div>
         </div>
         <div class="right fp_one">
           <div class="outer"></div>
 
           <div class="inner" v-parallax.absY="0.05"></div>
-
         </div>
       </div>
       <div class="introd_layout">
@@ -22,10 +19,8 @@
           <div class="inner" v-parallax.absY="0.04"></div>
         </div>
         <div class="right">
-          <div class="introd_title">Suitable for light dAPPs</div>
-          <div
-            class="introd_desc"
-          >Widely used in scenarios like games ,candies, social media and small amount token reward applications.</div>
+          <div class="introd_title">{{$t('lite_pro.item2_title')}}</div>
+          <div class="introd_desc">{{$t('lite_pro.item2_desc')}}</div>
         </div>
       </div>
     </div>
@@ -37,9 +32,6 @@ import Parallax from 'vue-parallaxy'
 
 export default {
   name: 'LiteSecondScreen',
-  created() {
-    console.log(document.domain)
-  },
   components: {
     Parallax
   }
@@ -129,10 +121,9 @@ export default {
   }
 }
 @media only screen and (max-width: 1440px) {
-
- .litesecondscreen .introduct_box .introd_layout .fp_one .inner {
-   left: 6%;
- }
+  .litesecondscreen .introduct_box .introd_layout .fp_one .inner {
+    left: 6%;
+  }
 }
 @media only screen and (max-width: 1280px) {
   .litesecondscreen .introduct_box {

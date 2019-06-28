@@ -3,7 +3,7 @@
     <div class="header_box">
       <HomeHeader/>
     </div>
-    <parallax sectionHeight='120' breakpoint="(min-width: 960px)">
+    <parallax :sectionHeight='sectionHeight' breakpoint="(min-width: 960px)">
       <div class="banner_bg"></div>
     </parallax>
     <div class="banner_model"></div>
@@ -12,7 +12,7 @@
       <div class="logo"></div>
       <div
         class="banner_desc"
-      >ONT ID Lite (ONT ID Cloud Service) allows users to open and use their blockchain accounts anywhere. They can use it on any dApps, mobile wallets, or even a H5 page in social media software</div>
+      >{{$t('lite_home.desc')}}</div>
       <div class="open_account">
         <span class="hover1" @click="toIntegrat()">Open an account</span>
       </div>
@@ -74,7 +74,12 @@ export default {
         });
       return false;
     }
-  }
+  },
+  data() {
+    return {
+      sectionHeight: 140
+    }
+  },
 }
 </script>
 

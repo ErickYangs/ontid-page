@@ -1,5 +1,5 @@
 <template>
-  <div class="selectWrap">
+  <div class="selectWrap" :class="[isLite ? 'isLite': '']">
     <div class="select-wrapper">
       <div class="select" @mouseover="triggerOption">
         <div class="select-content">{{selectContent.text}}</div>
@@ -9,6 +9,7 @@
         <div class="triangle-ball"></div>
       </div>
       <div class="option-wrapper" @mouseleave="leaveHide" style="display: none;">
+      <!-- <div class="option-wrapper" @mouseleave="leaveHide"> -->
         <div
           class="option-item"
           v-for="(item,index) in subject"
@@ -23,6 +24,8 @@
 </template>
 <script>
 import LangStorage from '../../helpers/lang'
+import $ from "jquery"
+
 export default {
   props: {
     selectWidth: {
@@ -75,12 +78,13 @@ export default {
       event.currentTarget.classList.remove("hover");
     },
     triggerOption() {
-      console.log(1)
-      if (this.optionWrapper.style.display == "none") {
-        this.optionWrapper.style.display = "block";
-      } else {
-        this.optionWrapper.style.display = "none";
-      }
+      console.log($('.option-wrapper'))
+      // if (this.optionWrapper.style.display == "none") {
+      //   this.optionWrapper.style.display = "block";
+      // } else {
+      //   this.optionWrapper.style.display = "none";
+      // }
+      $('.option-wrapper').slideDown();
       for (var item of this.subjectList) {
         if (item.innerHTML == this.selectContent.text) {
           item.classList.add("hover");
@@ -101,12 +105,16 @@ export default {
       this.optionWrapper.style.display = "none";
     }
   },
+  data() {
+    return {
+      isLite: this.$router.currentRoute.path == '/lite' ? true : false
+    }
+  },
 }
 </script>
 <style>
 .select-wrapper {
   position: relative;
-  /* z-index: 9999999999; */
 }
 .select {
   position: relative;
@@ -128,6 +136,7 @@ export default {
   font-weight: 800;
   color: rgba(0, 0, 0, 1);
   line-height: 21px;
+  cursor: pointer;
 }
 .triangle-wrapper {
   position: absolute;
@@ -160,6 +169,14 @@ export default {
   width: 9px;
   height: 6px;
   background: url(../../assets/images/lang.svg) no-repeat center;
+  opacity: 0.3;
+}
+
+.select:hover .select-content {
+  opacity: 0.5;
+}
+.select:hover #triangle-down {
+  opacity: 1;
 }
 .option-wrapper {
   position: absolute;
@@ -167,9 +184,12 @@ export default {
   min-width: 70px;
   width: 100%;
   top: 32px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   background: #fff;
-  box-shadow: 0 0 10px #ccc;
+  /* box-shadow: 0 0 10px #ccc; */
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  left: -8px;
 }
 .option-item {
   min-width: 70px;
@@ -181,11 +201,28 @@ export default {
   font-size: 14px;
   /* font-family: FuturaLT-Heavy; */
   font-weight: 800;
-  color: rgba(0, 0, 0, 1);
+  color: rgba(0, 0, 0, 0.7);
   line-height: 26px;
   padding-left: 10px;
 }
+.option-item:hover {
+  color: rgba(0, 0, 0, 1);
+  background: rgba(242, 242, 242, 1);
+}
 .hover {
   cursor: pointer;
+}
+.selectWrap.isLite .select-content {
+  color: #fff;
+}
+.selectWrap.isLite .option-wrapper .option-item {
+  /* color: rgba(255, 255, 255, 1); */
+}
+.selectWrap.isLite #triangle-down {
+  background: url(../../assets/images/lang_white.svg) no-repeat center;
+}
+.selectWrap.isLite .triangle-ball {
+  background: url(../../assets/images/ball_white.svg) no-repeat center;
+  background-size: contain;
 }
 </style>

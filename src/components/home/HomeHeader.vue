@@ -1,5 +1,5 @@
 <template>
-  <div class="top_header">
+  <div class="top_header clearfix">
     <div class="left_logo" :class="[isLite ? 'lite_logo': 'home_logo']" @click="toIndex()"></div>
     <div class="right">
       <SelectBox/>
@@ -29,6 +29,8 @@ export default {
 <style lang="scss" scoped>
 .top_header {
   padding-top: 40px;
+  // padding-bottom: 40px;
+  // background: #000;
   height: 61px;
   .left_logo {
     width: 90px;
