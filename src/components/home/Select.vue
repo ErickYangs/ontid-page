@@ -182,28 +182,30 @@ export default {
   position: absolute;
   overflow: hidden;
   min-width: 70px;
-  width: 100%;
+  /* width: 100%; */
   top: 32px;
   /* border-radius: 5px; */
   background: #fff;
   /* box-shadow: 0 0 10px #ccc; */
   box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.3);
   border-radius: 3px;
-  left: -8px;
+  left: -18px;
 }
 .option-item {
   min-width: 70px;
-  /* height: 20px; */
-  /* line-height: 20px; */
-  padding-right: 10px;
   text-align: left;
   cursor: default;
-  font-size: 14px;
-  /* font-family: FuturaLT-Heavy; */
+  font-size: 13px;
   font-weight: 800;
   color: rgba(0, 0, 0, 0.7);
   line-height: 26px;
-  padding-left: 10px;
+  padding: 8px 25px;
+}
+.option-item:nth-of-type(1) {
+  border-bottom: 1px solid #fff;
+}
+.option-item:nth-of-type(1):hover {
+  border-bottom-color: #f2f2f2; 
 }
 .option-item:hover {
   color: rgba(0, 0, 0, 1);
