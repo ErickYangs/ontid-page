@@ -33,24 +33,24 @@ export default {
           if ($('#top_header_fixed').hasClass('whiteb')) {
             $('#top_header_fixed').removeClass('whiteb')
           }
-          $('#top_header_fixed').addClass('fiexd blackb')
+          $('#top_header_fixed').addClass('blackb')
         } else {
           if ($('#top_header_fixed').hasClass('blackb')) {
             $('#top_header_fixed').removeClass('blackb')
           }
-          $('#top_header_fixed').addClass('fiexd whiteb')
+          $('#top_header_fixed').addClass('whiteb')
         }
       } else {
         if (this.isLite) {
           if ($('#top_header_fixed').hasClass('whiteb')) {
             $('#top_header_fixed').removeClass('whiteb')
           }
-          $('#top_header_fixed').removeClass('fiexd blackb')
+          $('#top_header_fixed').removeClass('blackb')
         } else {
           if ($('#top_header_fixed').hasClass('blackb')) {
             $('#top_header_fixed').removeClass('blackb')
           }
-          $('#top_header_fixed').removeClass('fiexd whiteb')
+          $('#top_header_fixed').removeClass('whiteb')
         }
       }
     })
@@ -64,6 +64,8 @@ export default {
   padding-top: 40px;
   padding-bottom: 40px;
   width: 100%;
+  position: fixed;
+  top: 0;
   .left_logo {
     width: 90px;
     height: 20px;

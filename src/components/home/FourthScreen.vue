@@ -4,16 +4,16 @@
     <div class="carousel_box">
       <div class="carousel_layout shrink" ref="carousel_layout">
         <div class="card" v-for="(item) in carouseData" :key="item.id">
-          <img :src="item.src">
+          <img :src="item.src" />
         </div>
       </div>
       <div class="iphone_box"></div>
-      <div class="btn_click_prev hidenone" ref="btn_click_prev" @click="prev()"></div>
-      <div class="btn_click_next hidenone" ref="btn_click_next" @click="next()"></div>
+      <div class="btn_click_prev hidenone" ref="btn_click_prev" @click="next()"></div>
+      <div class="btn_click_next hidenone" ref="btn_click_next" @click="prev()"></div>
     </div>
-    <div class="iden_title" ref="iden_title">{{$t('down_page.identity')}}</div>
-    <div class="iden_desc" ref="iden_desc">{{$t('down_page.iden_desc')}}</div>
-    <div class="appload_box" ref="appload_box">
+    <div class="iden_title hidenone" ref="iden_title">{{$t('down_page.identity')}}</div>
+    <div class="iden_desc hidenone" ref="iden_desc">{{$t('down_page.iden_desc')}}</div>
+    <div class="appload_box hidenone" ref="appload_box">
       <span
         class="apple hover1"
         @click="openNewPage('https://itunes.apple.com/cn/app/onto-an-ontology-dapp/id1436009823?mt=8')"
@@ -28,23 +28,13 @@
 
 <script>
 import '../../../node_modules/animate.css/animate.css'
-import 'swiper/dist/css/swiper.css'
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 export default {
   data() {
     return {
       lock: false,
-      swiperOption: {
-        slidesPerView: 7,
-        centeredSlides: true,
-        loop: true,
-        navigation: {
-          nextEl: '.btn_click_next',
-          prevEl: '.btn_click_prev'
-        }
-      },
-      carouseData: [
+      carouseData: [],
+      chImgUrl: [
         {
           id: 1,
           src: 'https://app.ont.io/ontid/1.png'
@@ -52,38 +42,69 @@ export default {
         {
           id: 2,
           src: 'https://app.ont.io/ontid/2.png'
-        }
-        ,
+        },
         {
           id: 3,
           src: 'https://app.ont.io/ontid/3.png'
-        }
-        ,
+        },
         {
           id: 4,
           src: 'https://app.ont.io/ontid/4.png'
-        }
-        ,
+        },
         {
           id: 5,
           src: 'https://app.ont.io/ontid/5.png'
-        }
-        ,
+        },
         {
           id: 6,
           src: 'https://app.ont.io/ontid/6.png'
-        }
-        ,
+        },
         {
           id: 7,
           src: 'https://app.ont.io/ontid/7.png'
-        }
-        ,
+        },
         {
           id: 8,
           src: 'https://app.ont.io/ontid/8.png'
+        },
+        {
+          id: 9,
+          src: 'https://app.ont.io/ontid/9.png'
         }
-        ,
+      ],
+      enImgUrl: [
+        {
+          id: 1,
+          src: 'https://app.ont.io/ontid/1.png'
+        },
+        {
+          id: 2,
+          src: 'https://app.ont.io/ontid/2.png'
+        },
+        {
+          id: 3,
+          src: 'https://app.ont.io/ontid/3.png'
+        },
+        {
+          id: 4,
+          src: 'https://app.ont.io/ontid/4.png'
+        },
+        {
+          id: 5,
+          src: 'https://app.ont.io/ontid/5.png'
+        },
+        {
+          id: 6,
+          src: 'https://app.ont.io/ontid/6.png'
+        },
+        {
+          id: 7,
+          src: 'https://app.ont.io/ontid/7.png'
+        },
+        {
+          id: 8,
+          src: 'https://app.ont.io/ontid/8.png'
+        },
         {
           id: 9,
           src: 'https://app.ont.io/ontid/9.png'
@@ -91,53 +112,51 @@ export default {
       ]
     }
   },
-  components: {
-    swiper,
-    swiperSlide
-  },
   methods: {
     handleScroll() {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop ||
         document.body.scrollTop
-      // console.log(scrollTop)
       let targetTop = this.$refs.fourth_screen.offsetTop // 目标元素离页面顶端的距离
       if (this.lock) {
         return
       } else {
-        // console.log('targetTop', targetTop)
-        if (targetTop <= scrollTop) {
-          this.lock = true
-          // console.log('bottom')
+        if (targetTop < scrollTop + 200) {
+          this.$refs.btn_click_prev.classList.remove('hidenone')
+          this.$refs.btn_click_next.classList.remove('hidenone')
+          this.$refs.btn_click_prev.classList.add('animated', 'fadeInUp')
+          this.$refs.btn_click_next.classList.add('animated', 'fadeInUp')
+          this.$refs.carousel_layout.classList.remove('shrink')
+          this.$refs.carousel_layout.classList.add('expand')
+        }
+        if (targetTop < scrollTop - 100) {
+          this.$refs.iden_title.classList.remove('hidenone')
+          this.$refs.iden_desc.classList.remove('hidenone')
+          this.$refs.appload_box.classList.remove('hidenone')
           this.$refs.iden_title.classList.add('animated', 'fadeInUp')
           this.$refs.iden_desc.classList.add('animated', 'fadeInUp')
           this.$refs.appload_box.classList.add('animated', 'fadeInUp')
-          setInterval(() => {
-            this.$refs.btn_click_prev.classList.remove('hidenone')
-            this.$refs.btn_click_next.classList.remove('hidenone')
-            this.$refs.btn_click_prev.classList.add('animated', 'fadeInUp')
-            this.$refs.btn_click_next.classList.add('animated', 'fadeInUp')
-
-          }, 100)
-          this.$refs.carousel_layout.classList.remove("shrink")
-          this.$refs.carousel_layout.classList.add("expand")
+          this.lock = true
         }
       }
     },
     prev() {
       let first = this.carouseData.shift()
       this.carouseData.push(first)
-      // console.log(this.carouseData)
     },
     next() {
       let end = this.carouseData.pop()
       this.carouseData.unshift(end)
-      // console.log('carouseData', this.carouseData)
     },
     openNewPage(url) {
       window.open(url)
     }
   },
   mounted() {
+    if (this.$i18n.locale === 'zh') {
+      this.carouseData = this.chImgUrl
+    } else {
+      this.carouseData = this.enImgUrl
+    }
     window.addEventListener('scroll', this.handleScroll)
   },
   beforeDestroy() {
@@ -182,16 +201,17 @@ export default {
       .card {
         transition: all 0.5s linear;
       }
+      .card:nth-of-type(1) {
+        opacity: 0;
+      }
+      .card:nth-of-type(9) {
+        opacity: 0;
+      }
     }
     .carousel_layout.expand {
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
       overflow: hidden;
-      // transition: all 2s;
       .card {
         position: absolute;
-        // left: 0;
         top: 50%;
         transform: translate(-57%, -50%);
       }
@@ -284,19 +304,6 @@ export default {
       right: 0;
       background: url(../../assets/images/d_next.svg) no-repeat;
     }
-    .hidenone {
-      display: none;
-    }
-  }
-  .shrink {
-    .swiper-container {
-      // display: none;
-    }
-  }
-  .expand {
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
   }
   .iden_title {
     font-size: 30px;
@@ -344,6 +351,9 @@ export default {
       background-size: contain;
     }
   }
+}
+.hidenone {
+  visibility: hidden;
 }
 @media only screen and (min-width: 1440px) and (max-width: 1920px) {
   .fourth_screen {

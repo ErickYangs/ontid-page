@@ -267,7 +267,7 @@ export default {
           // transition: all 1.5s;
         }
         .outer_line.wi {
-          animation: widthVariety 5s linear forwards;
+          animation: widthVariety 3s ease-in forwards;
         }
       }
     }
