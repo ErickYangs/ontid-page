@@ -5,39 +5,31 @@
       <div class="ele_box">
         <div class="ele_list">
           <div class="top_img">
-            <img src="../../assets/images/1.svg" alt>
+            <img src="../../assets/images/1.svg" alt />
           </div>
           <div class="desc_title">{{$t('thrid_screen.item1_title')}}</div>
-          <div
-            class="desc_text"
-          >{{$t('thrid_screen.item1_desc')}}</div>
+          <div class="desc_text">{{$t('thrid_screen.item1_desc')}}</div>
         </div>
         <div class="ele_list">
           <div class="top_img">
-            <img src="../../assets/images/2.svg" alt>
+            <img src="../../assets/images/2.svg" alt />
           </div>
           <div class="desc_title">{{$t('thrid_screen.item2_title')}}</div>
-          <div
-            class="desc_text"
-          >{{$t('thrid_screen.item2_desc')}}</div>
+          <div class="desc_text">{{$t('thrid_screen.item2_desc')}}</div>
         </div>
         <div class="ele_list">
           <div class="top_img">
-            <img src="../../assets/images/3.svg" alt>
+            <img src="../../assets/images/3.svg" alt />
           </div>
           <div class="desc_title">{{$t('thrid_screen.item3_title')}}</div>
-          <div
-            class="desc_text"
-          >{{$t('thrid_screen.item3_desc')}}</div>
+          <div class="desc_text">{{$t('thrid_screen.item3_desc')}}</div>
         </div>
         <div class="ele_list">
           <div class="top_img">
-            <img src="../../assets/images/4.svg" alt>
+            <img src="../../assets/images/4.svg" alt />
           </div>
           <div class="desc_title">{{$t('thrid_screen.item4_title')}}</div>
-          <div
-            class="desc_text"
-          >{{$t('thrid_screen.item4_desc')}}</div>
+          <div class="desc_text">{{$t('thrid_screen.item4_desc')}}</div>
         </div>
       </div>
     </div>
@@ -103,9 +95,38 @@ export default {
     }
   }
 }
-@media only screen and (max-width: 960px) {
+// @media only screen and (min-width: 768px) and (max-width: 959px)
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .third_screen .screen_box .ele_box .ele_list {
+    width: 50%;
+  }
+  .third_screen .screen_box .ele_box .ele_list:nth-of-type(1) {
+    margin-bottom: 40px;
+  }
+  .third_screen .screen_box .ele_box .ele_list:nth-of-type(2) {
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (max-width: 767px) {
   .third_screen {
-    width: 960px;
+    .screen_box {
+      padding: 50px 0;
+      .choose_title {
+        font-size: 25px;
+        line-height: 30px;
+      }
+      .ele_box {
+        margin-top: 50px;
+        .ele_list {
+          width: 100%;
+          margin-bottom: 50px;
+        }
+        .ele_list:nth-of-type(4) {
+          margin-bottom: 0;
+        }
+      }
+      
+    }
   }
 }
 </style>

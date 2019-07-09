@@ -3,12 +3,12 @@
     <div class="fifth_box">
       <div class="outer_box">
         <div class="fifth_title">{{$t('developer.title')}}</div>
+        <div class="fifth_desc">{{$t('developer.deve_desc')}}</div>
         <div
-          class="fifth_desc"
-        >">{{$t('developer.deve_desc')}}</div>
-        <div class="start hover1" @click="openNewPage('https://ontid.readme.io/docs/getting-started')">{{$t('developer.start')}}</div>
+          class="start hover1"
+          @click="openNewPage('https://ontid.readme.io/docs/getting-started')"
+        >{{$t('developer.start')}}</div>
       </div>
-
       <div class="gear-box">
         <i class="l"></i>
         <i class="m"></i>
@@ -89,10 +89,7 @@ export default {
       transform: translateX(-50%);
       z-index: 0;
       i {
-        // background: url(../../assets/images/gear.svg) no-repeat;
         background-size: cover;
-        // -webkit-animation: myRotate 10s linear infinite;
-        // animation: myRotate 10s linear infinite;
       }
       i.l {
         display: block;
@@ -176,9 +173,48 @@ export default {
     -webkit-transform: rotate(-360deg);
   }
 }
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 767px) {
   .fifth_screen {
-    width: 960px;
+    padding: 50px 0;
+    .fifth_box {
+      .fifth_title {
+        font-size: 25px;
+        line-height: 30px;
+      }
+      .fifth_desc {
+        margin-top: 25px;
+        padding: 0 25px;
+        opacity: 0.6;
+      }
+      .start {
+        margin-top: 20px;
+        width: 138px;
+        height: 38px;
+        font-size: 15px;
+        line-height: 36px;
+      }
+      .gear-box {
+        width: 150px;
+        height: 142px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        i.l {
+          width: 100px;
+          height: 100px;
+          background-size: cover;
+        }
+        i.s {
+          width: 45px;
+          height: 45px;
+          background-size: cover;
+        }
+        i.m {
+          width: 60px;
+          height: 60px;
+          background-size: cover;
+        }
+      }
+    }
   }
 }
 </style>

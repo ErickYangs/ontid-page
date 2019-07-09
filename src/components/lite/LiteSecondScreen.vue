@@ -9,7 +9,6 @@
         </div>
         <div class="right fp_one">
           <div class="outer"></div>
-
           <div class="inner" v-parallax.absY="0.05"></div>
         </div>
       </div>
@@ -101,6 +100,7 @@ export default {
       }
       .fp_two {
         position: relative;
+        padding-left: 130px;
         .outer {
           width: 213px;
           height: 242px;
@@ -111,7 +111,7 @@ export default {
           height: 300px;
           background: url(../../assets/images/fp_2_2.svg) no-repeat center;
           position: absolute;
-          left: -22%;
+          left: 5%;
           top: -34%;
           // transform: translateX(-50%);
           z-index: -1;
@@ -136,6 +136,79 @@ export default {
   }
   .litesecondscreen .introduct_box .introd_layout .fp_two .inner {
     left: -13%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .litesecondscreen .introduct_box .introd_layout .fp_one .inner {
+    left: -9%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .litesecondscreen {
+    padding: 50px 0;
+    .title {
+      font-size: 20px;
+      line-height: 22px;
+    }
+    .introduct_box {
+      padding: 0 30px;
+      .introd_layout {
+        margin-top: 50px;
+        .left, .right {
+          width: 100%;
+        }
+        .fp_one {
+          .inner {
+            left: 20%;
+            top: 12%;
+            width: 190px;
+            height: 72px;
+            background-size: contain;
+          }
+          .outer {
+            width: 75px;
+            height: 95px;
+            background-size: contain;
+          }
+        }
+        .fp_two {
+          padding-left: 0;
+           .outer {
+             width: 84px;
+             height: 97px;
+             background-size: contain;
+             margin: 0 auto;
+
+           }
+           .inner {
+             width: 99px;
+             height: 93px;
+             background-size: contain;
+             left: 25%;
+             top: -24%;
+           }
+        }
+        .introd_title {
+          text-align: center;
+          font-size: 15px;
+          line-height: 17px;
+        }
+        .introd_desc {
+          padding: 0;
+          text-align: center;
+          font-size: 12px;
+          line-height: 13px;
+        }
+      }
+      .introd_layout:nth-of-type(1) {
+        flex-direction: column-reverse;
+      }
+      .introd_layout:nth-of-type(2) {
+        margin-top: 80px;
+      }
+    }
   }
 }
 </style>

@@ -3,9 +3,7 @@
     <div class="banner_layout">
       <div class="banner_text">
         <div class="banner_text_title">{{$t('home.banner_title')}}</div>
-        <div
-          class="banner_text_desc"
-        >{{$t('home.banner_desc')}}</div>
+        <div class="banner_text_desc">{{$t('home.banner_desc')}}</div>
         <div class="banner_text_download" ref="banner_text_download">
           <span class="hover1" @click="turnShow('#fourth_top')">Download ONTO</span>
         </div>
@@ -17,6 +15,10 @@
       <!-- <parallax> -->
       <div class="bottom_bg" v-parallax="0.2"></div>
       <!-- </parallax> -->
+    </div>
+    <div class="mobile_more">
+      <p>{{$t('home.banner_more')}}</p>
+      <span @click="toPro">Ontology DID protocols</span>
     </div>
     <div class="arrow_down" @click="turnShow('#second_screen_top')"></div>
   </div>
@@ -64,7 +66,7 @@ export default {
     position: relative;
     width: 100%;
     height: 100%;
-  overflow: hidden;
+    overflow: hidden;
   }
   .bottom_bg {
     position: absolute;
@@ -139,36 +141,67 @@ export default {
     bottom: 0;
     cursor: pointer;
   }
-}
-@media only screen and (max-width: 1440px) {
-  .banner {
-    .banner_text {
-      padding-left: 10%;
-      padding-top: 12%;
+  .mobile_more {
+    display: none;
+    width: 100%;
+    margin-top: 8%;
+    p {
+      text-align: center;
+      font-size: 13px;
+      font-family: Graphik-Regular;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.3);
+      line-height: 15px;
+      margin-bottom: 4%;
+    }
+    span {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 13px;
+      font-family: Graphik-Regular;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 1);
+      line-height: 15px;
+      text-decoration: underline;
+      cursor: pointer;
     }
   }
 }
-@media only screen and (max-width: 1280px) {
+
+//@media only screen and (min-width: 1210px) and (max-width: 1210px)
+@media only screen and (min-width: 1280px) and (max-width: 1440px) {
+  .banner {
+    .banner_text {
+      padding-left: 10%;
+      padding-top: 18%;
+    }
+  }
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
   .banner {
     .banner_text {
       padding-left: 0;
-      padding-top: 12%;
+      padding-top: 20%;
+      .banner_text_title {
+        font-size: 60px;
+      }
     }
     .bottom_bg {
       width: 900px;
-      right: 50%;
+      right: 25%;
       transform: translateX(50%);
     }
   }
 }
-@media only screen and (max-width: 1210px) {
+@media only screen and (max-width: 1209px) {
   .banner {
     .arrow_down {
       right: 0;
     }
   }
 }
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 959px) {
   .banner .banner_text .banner_text_title {
     text-align: center;
     width: 600px;
@@ -186,7 +219,59 @@ export default {
     text-align: center;
   }
   .banner .bottom_bg {
-    right: 3%;
+    // right: 3%;
+    width: 100%;
+  }
+  .banner {
+    padding: 0 20px;
+    .arrow_down {
+      right: 50%;
+      bottom: 20%;
+      transform: translateX(50%);
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .banner .banner_text .banner_text_title {
+    width: 100%;
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .banner .banner_text .banner_text_desc {
+    width: 100%;
+    font-size: 15px;
+    line-height: 30px;
+    font-family: Graphik-Regular;
+  }
+  .banner .banner_text .banner_text_download span {
+    padding: 13px 12px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .banner .banner_text {
+    padding-top: 36%;
+  }
+  .banner .bottom_bg {
+    background-position: center center;
+  }
+  .banner .banner_layout {
+    height: 70%;
+  }
+  // .banner .banner_layout
+  .banner .banner_text .banner_text_more {
+    display: none;
+  }
+  .banner .banner_text .banner_text_download {
+    margin-top: 10%;
+  }
+  .banner .arrow_down {
+    bottom: 6%;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+  }
+ .banner .mobile_more {
+    display: block;
   }
 }
 </style>

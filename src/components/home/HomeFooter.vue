@@ -7,9 +7,6 @@
         </div>
         <div class="ele_list">
           <div class="footer_main_title">Developer Center</div>
-          <!-- <div class="link_item">
-            <a href target="_blank" class="hover1">Tutorials</a>
-          </div>-->
           <div class="link_item">
             <a
               href="https://ontio.github.io/documentation/wp_download_en.html"
@@ -17,12 +14,6 @@
               class="hover1"
             >Documentation</a>
           </div>
-          <!-- <div class="link_item">
-            <a href target="_blank" class="hover1">Bounty</a>
-          </div>-->
-          <!-- <div class="link_item">
-            <a href target="_blank" class="hover1">SmartX</a>
-          </div>-->
           <div class="link_item">
             <a href="https://github.com/ontio-ontid" target="_blank" class="hover1">Github</a>
           </div>
@@ -36,9 +27,6 @@
               class="hover1"
             >Cooperate with Ontology</a>
           </div>
-          <!-- <div class="link_item">
-            <a href target="_blank" class="hover1">Nodes</a>
-          </div>-->
           <div class="link_item">
             <a
               href="https://info.ont.io/trust-anchor/en"
@@ -55,24 +43,6 @@
           <div class="link_item">
             <a href="https://github.com/ontio/owallet" target="_blank" class="hover1">OWallet</a>
           </div>
-          <!-- <div class="link_item">
-            <a href target="_blank" class="hover1">Press</a>
-          </div>
-          <div class="link_item">
-            <a href target="_blank" class="hover1">Tech News</a>
-          </div>
-          <div class="link_item">
-            <a href target="_blank" class="hover1">Team</a>
-          </div>
-          <div class="link_item">
-            <a href target="_blank" class="hover1">About Ontology</a>
-          </div>
-          <div class="link_item">
-            <a href target="_blank" class="hover1">White Paper</a>
-          </div>
-          <div class="link_item">
-            <a href target="_blank" class="hover1">Explore</a>
-          </div>-->
         </div>
         <div class="ele_list">
           <div class="footer_main_title">DApps</div>
@@ -84,28 +54,106 @@
           </div>
         </div>
       </div>
+      <MobileNav class="mobile_footer_nav" :navData="navData" :isShowLang="isShowLang" />
       <div class="share_link">
         <!-- <a href target="_blank"></a> -->
         <a href="https://discordapp.com/invite/4TQujHj" target="_blank" class="hover1"></a>
         <a href="https://twitter.com/OntologyNetwork" target="_blank" class="hover1"></a>
-        <a href="https://www.facebook.com/Ontology-Network-468098413590227/" target="_blank" class="hover1"></a>
+        <a
+          href="https://www.facebook.com/Ontology-Network-468098413590227/"
+          target="_blank"
+          class="hover1"
+        ></a>
         <a href="https://medium.com/ontologynetwork" target="_blank" class="hover1"></a>
         <a href="https://old.reddit.com/r/OntologyNetwork/" target="_blank" class="hover1"></a>
         <a href="https://github.com/ontio" target="_blank" class="hover1"></a>
         <a href="https://t.me/OntologyNetwork" target="_blank" class="hover1"></a>
-        <a href="https://www.youtube.com/channel/UCXzLZJgDglAWRU0b2GOa7pA" target="_blank" class="hover1"></a>
-        <a href="https://www.linkedin.com/company/ontology-network-official/" target="_blank" class="hover1"></a>
+        <a
+          href="https://www.youtube.com/channel/UCXzLZJgDglAWRU0b2GOa7pA"
+          target="_blank"
+          class="hover1"
+        ></a>
+        <a
+          href="https://www.linkedin.com/company/ontology-network-official/"
+          target="_blank"
+          class="hover1"
+        ></a>
       </div>
       <div class="copyright">&#169; 2019 ontid.com. All rights reserved</div>
     </div>
+    <img src="../../assets/images/logo.svg" alt class="mobile_footer_logo" />
   </div>
 </template>
 
 <script>
+import MobileNav from '../module/MobileNav.vue'
+
 export default {
   methods: {
     openNewPage(url) {
       window.open(url)
+    }
+  },
+  components: {
+    MobileNav
+  },
+  data() {
+    return {
+      navData: [
+        {
+          title: 'Developer Center',
+          navList: [
+            {
+              name: 'Documentation',
+              url: 'https://ontio.github.io/documentation/wp_download_en.html'
+            },
+            {
+              name: 'Github',
+              url: 'https://github.com/ontio-ontid'
+            }
+          ]
+        },
+        {
+          title: 'Cooperation',
+          navList: [
+            {
+              name: 'Cooperate with Ontology',
+              url: 'https://ont.io/contactUs'
+            },
+            {
+              name: 'Trust Anchor',
+              url: 'https://info.ont.io/trust-anchor/en'
+            }
+          ]
+        },
+        {
+          title: 'Wallets',
+          navList: [
+            {
+              name: 'ONTO',
+              url: 'https://onto.app/'
+            },
+            {
+              name: 'OWallet',
+              url: 'https://github.com/ontio/owallet'
+            }
+          ]
+        },
+        {
+          title: 'DApps',
+          navList: [
+            {
+              name: 'DApps List',
+              url: 'https://dapp.ont.io/'
+            },
+            {
+              name: 'Submit a DApp',
+              url: 'https://ont.io/dapp'
+            }
+          ]
+        }
+      ],
+      isShowLang: false
     }
   },
 }
@@ -115,6 +163,7 @@ export default {
 .home_footer {
   width: 100%;
   padding: 60px 0 40px;
+  background: #fff;
   .footer_box {
     .link_box {
       display: flex;
@@ -161,6 +210,7 @@ export default {
       padding: 50px 0 40px;
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       a {
         display: block;
         width: 20px;
@@ -172,39 +222,39 @@ export default {
       }
       a:nth-of-type(1) {
         background: url(../../assets/images/f-1.svg) no-repeat center;
-        background-size: contain;
+        background-size: cover;
       }
       a:nth-of-type(2) {
         background: url(../../assets/images/f-2.svg) no-repeat center;
-        background-size: contain;
+        background-size: cover;
       }
       a:nth-of-type(3) {
         background: url(../../assets/images/f-3.svg) no-repeat center;
-        background-size: contain;
+        background-size: cover;
       }
       a:nth-of-type(4) {
         background: url(../../assets/images/f-4.svg) no-repeat center;
-        background-size: contain;
+        background-size: cover;
       }
       a:nth-of-type(5) {
         background: url(../../assets/images/f-5.svg) no-repeat center;
-        background-size: contain;
+        background-size: cover;
       }
       a:nth-of-type(6) {
         background: url(../../assets/images/f-6.svg) no-repeat center;
-        background-size: contain;
+        background-size: cover;
       }
       a:nth-of-type(7) {
         background: url(../../assets/images/f-7.svg) no-repeat center;
-        background-size: contain;
+        background-size: cover;
       }
       a:nth-of-type(8) {
         background: url(../../assets/images/f-8.svg) no-repeat center;
-        background-size: contain;
+        background-size: cover;
       }
       a:nth-of-type(9) {
         background: url(../../assets/images/f-9.svg) no-repeat center;
-        background-size: contain;
+        background-size: cover;
       }
     }
     .copyright {
@@ -217,15 +267,82 @@ export default {
     }
   }
 }
+.mobile_footer_nav,
+.mobile_footer_logo {
+  display: none;
+}
+@media only screen and (max-width: 960px) {
+  .footer_box {
+    padding-left: 5px;
+    padding-right: 5px;
+    .link_box {
+      display: none !important;
+    }
+  }
+  .mobile_footer_nav {
+    display: block;
+  }
+}
 @media only screen and (max-width: 960px) {
   .home_footer {
-    width: 960px;
-    // padding-left: 20px;
-    // padding-right: 20px;
+    position: relative;
+    .mobile_footer_logo {
+      height: 15px;
+      display: block;
+      position: absolute;
+      left: 25px;
+      top: 30px;
+    }
   }
+}
+@media only screen and (max-width: 767px) {
   .footer_box {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    .link_box {
+      display: none !important;
+    }
+    .share_link {
+      padding: 25px 0 20px !important;
+      width: 70% !important;
+    }
+  }
+
+  .home_footer .footer_box .share_link a {
+    margin-bottom: 10px;
+    background-size: contain !important;
+  }
+  .home_footer .footer_box .share_link a:nth-of-type(1) {
+    width: 20%;
+  }
+  .home_footer .footer_box .share_link a:nth-of-type(2) {
+    width: 20%;
+  }
+  .home_footer .footer_box .share_link a:nth-of-type(3) {
+    width: 20%;
+  }
+  .home_footer .footer_box .share_link a:nth-of-type(4) {
+    width: 20%;
+  }
+  .home_footer .footer_box .share_link a:nth-of-type(5) {
+    width: 20%;
+  }
+  .home_footer .footer_box .share_link a:nth-of-type(6) {
+    width: 25%;
+    // padding-left: 10px;
+    background-position: 42px center;
+  }
+  .home_footer .footer_box .share_link a:nth-of-type(7) {
+    width: 25%;
+    background-position: 30px center;
+  }
+  .home_footer .footer_box .share_link a:nth-of-type(8) {
+    width: 25%;
+    background-position: 22px center;
+  }
+  .home_footer .footer_box .share_link a:nth-of-type(9) {
+    width: 25%;
+    background-position: 12px center;
   }
 }
 </style>

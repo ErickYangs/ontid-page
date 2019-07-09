@@ -7,7 +7,7 @@ export default {
   second_screen: {
     title: 'What can ONT ID do for you',
     item1_title: 'Unified sign-In',
-    item1_desc: 'Support the Sign-up and Sign-in of ONT ID in dAPPs , simple and fast',
+    item1_desc: 'Supports simple and fast sign-up and sign-in of ONT ID in dApps',
     item2_title: 'Own your own data',
     item2_desc: 'Provides you with a self-sovereign solution in which you can create and manage your self-controlled identity',
     item3_title: 'Blockchain attestation',
@@ -29,7 +29,11 @@ export default {
   down_page: {
     title: 'What is ONTO',
     identity: 'Take back control of your identity',
-    iden_desc: 'ONTO is a comprehensive decentralized client product and an entrance to the Ontology blockchain system. ONTO allows you to build your own digital identity, store digital assets, and more, all with privacy protection ensured by cryptographic algorithms.'
+    iden_desc: 'ONTO is a comprehensive decentralized client product and an entrance to the Ontology blockchain system. ONTO allows you to build your own digital identity, store digital assets, and more, all with privacy protection ensured by cryptographic algorithms.',
+    ident_title1: 'Self-sovereign ',
+    ident_title2: 'Asset/Identity/Data',
+    ident_title3: ' All in ONE',
+    ident_desc1: 'Your Only Wallet'
   },
   developer: {
     title: 'Developers',

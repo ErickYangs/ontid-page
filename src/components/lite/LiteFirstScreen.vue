@@ -1,18 +1,13 @@
 <template>
   <div class="lite_first_screen">
-    <div class="header_box">
-      <HomeHeader/>
-    </div>
-    <parallax :sectionHeight='sectionHeight' breakpoint="(min-width: 960px)">
+    <parallax :sectionHeight="sectionHeight" breakpoint="(min-width: 320px)">
       <div class="banner_bg"></div>
     </parallax>
-    <div class="banner_model"></div>
+    <div class="banner_model" id="banner_model"></div>
     <!-- to do -->
     <div class="link_banner home_contanier">
       <div class="logo"></div>
-      <div
-        class="banner_desc"
-      >{{$t('lite_home.desc')}}</div>
+      <div class="banner_desc">{{$t('lite_home.desc')}}</div>
       <div class="open_account">
         <span class="hover1" @click="toIntegrat()">Open an account</span>
       </div>
@@ -44,7 +39,7 @@
         <div class="item_link">Verifiable Claims</div>
       </div>
     </div>-->
-    <BannerRightTips/>
+    <BannerRightTips class="BannerRightTips" />
   </div>
 </template>
 
@@ -54,6 +49,7 @@ import LinkBanner from '@/components/home/LinkBanner.vue'
 import BannerRightTips from '@/components/home/BannerRightTips.vue'
 import Parallax from 'vue-parallaxy'
 import $ from "jquery"
+
 export default {
   name: 'LiteFirstScreen',
   components: {
@@ -73,6 +69,19 @@ export default {
           easing: "swing"
         });
       return false;
+    },
+    handlerScroll() {
+      var scrollTop = $(window).scrollTop(); // 滚动条距离顶部的距离
+      var containerH = $('#banner_model').get(0).scrollHeight; // 图片的高度
+      if (scrollTop > 0 && scrollTop <= containerH) {
+        var a = scrollTop / containerH;
+        if ((a + 0.3) >= 1) {
+          $('#banner_model').css('background', 'rgba(0,0,0,1)');
+          return false
+        } else {
+          $('#banner_model').css('background', 'rgba(0,0,0,' + (a + 0.3) + ')');
+        }
+      }
     }
   },
   data() {
@@ -80,6 +89,12 @@ export default {
       sectionHeight: 140
     }
   },
+  mounted() {
+    window.addEventListener('scroll', this.handlerScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handlerScroll)
+  }
 }
 </script>
 
@@ -89,15 +104,6 @@ export default {
   height: 100%;
   position: relative;
   overflow: hidden;
-  .header_box {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 9999;
-    // height: 100%;
-    // background: url(../../assets/images/footer_bg.jpg) no-repeat;
-  }
   .banner_bg {
     position: absolute;
     left: 0;
@@ -196,10 +202,66 @@ export default {
       }
     }
   }
+  .lite_first_screen .link_banner {
+    padding-top: 19%;
+  }
 }
-@media only screen and (max-width: 960px) {
+
+@media only screen and (max-width: 959px) {
+  .BannerRightTips {
+    display: none;
+  }
   .lite_first_screen {
-    width: 960px;
+    width: 100%;
+  }
+  .lite_first_screen .link_banner .down_arrow {
+    right: 50%;
+    bottom: 22%;
+    transform: translateX(50%);
+  }
+  .lite_first_screen .link_banner .banner_desc {
+    padding: 0 10%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .lite_first_screen .link_banner {
+    padding-top: 35%;
+  }
+  .lite_first_screen .link_banner .logo {
+    margin-left: 39%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .lite_first_screen {
+    .link_banner {
+      padding-top: 36%;
+      .logo {
+        width: 210px;
+        height: 55px;
+        background-size: contain;
+        margin-left: 32%;
+      }
+      .banner_desc {
+        font-size: 15px;
+        line-height: 20px;
+        margin-top: 12%;
+        opacity: 0.6;
+      }
+      .open_account {
+        margin-top: 10%;
+        span {
+          padding: 10px 12px;
+          font-size: 14px;
+          line-height: 15px;
+          border-width: 1px;
+        }
+      }
+      .down_arrow {
+        width: 40px;
+        height: 40px;
+        bottom: 14%;
+      }
+    }
   }
 }
 </style>

@@ -8,33 +8,25 @@
             <swiper-slide>
               <div class="ele_list">
                 <div class="ele_list_title">{{$t('second_screen.item1_title')}}</div>
-                <div
-                  class="ele_list_desc"
-                >{{$t('second_screen.item1_desc')}}</div>
+                <div class="ele_list_desc">{{$t('second_screen.item1_desc')}}</div>
               </div>
             </swiper-slide>
             <swiper-slide>
               <div class="ele_list">
                 <div class="ele_list_title">{{$t('second_screen.item2_title')}}</div>
-                <div
-                  class="ele_list_desc"
-                >{{$t('second_screen.item2_desc')}}</div>
+                <div class="ele_list_desc">{{$t('second_screen.item2_desc')}}</div>
               </div>
             </swiper-slide>
             <swiper-slide>
               <div class="ele_list">
                 <div class="ele_list_title">{{$t('second_screen.item3_title')}}</div>
-                <div
-                  class="ele_list_desc"
-                >{{$t('second_screen.item3_desc')}}</div>
+                <div class="ele_list_desc">{{$t('second_screen.item3_desc')}}</div>
               </div>
             </swiper-slide>
             <swiper-slide>
               <div class="ele_list">
                 <div class="ele_list_title">{{$t('second_screen.item4_title')}}</div>
-                <div
-                  class="ele_list_desc"
-                >{{$t('second_screen.item4_desc')}}</div>
+                <div class="ele_list_desc">{{$t('second_screen.item4_desc')}}</div>
               </div>
             </swiper-slide>
           </swiper>
@@ -140,8 +132,8 @@ export default {
         },
         loop: true,
         navigation: {
-          nextEl: '.left_arrow',
-          prevEl: '.right_arrow'
+          nextEl: '.right_arrow',
+          prevEl: '.left_arrow'
         },
         on: {
           slideChangeTransitionEnd: function () {
@@ -154,8 +146,8 @@ export default {
       },
       swiperOption2: {
         navigation: {
-          nextEl: '.left_arrow',
-          prevEl: '.right_arrow'
+          nextEl: '.right_arrow',
+          prevEl: '.left_arrow'
         }, loop: true,
         on: {
           slideChangeTransitionEnd: function () {
@@ -170,8 +162,7 @@ export default {
         autoplay: {
           delay: 5000,
           disableOnInteraction: false
-        },
-
+        }
       },
       swiperOption3: {
         spaceBetween: 30,
@@ -185,8 +176,8 @@ export default {
           disableOnInteraction: false
         },
         navigation: {
-          nextEl: '.left_arrow',
-          prevEl: '.right_arrow',
+          nextEl: '.right_arrow',
+          prevEl: '.left_arrow',
           disabledClass: 'my-button-disabled'
         }
       }
@@ -462,6 +453,7 @@ export default {
         position: absolute;
         right: 32%;
         bottom: -4%;
+        z-index: 99;
         .index_layout {
           width: 140px;
           height: 140px;
@@ -546,26 +538,149 @@ export default {
     left: 9%;
   }
 }
-
-@media only screen and (max-width: 960px) {
+@media only screen and (min-width: 768px) and (max-width: 959px) {
   .second_screen .desc_box {
     padding: 0 30px;
   }
   .second_screen .desc_box .right .right_ele_box .right_ele.first .ball {
     left: 43%;
-    top: 14%;
+    top: 8%;
   }
   .second_screen .desc_box .right .right_ele_box .right_ele.second .ball {
-    left: 42.5%;
+    left: 54.5%;
   }
   .second_screen .desc_box .right .right_ele_box .right_ele.third .ball {
-    left: 45%;
+    left: 58%;
   }
   .second_screen .desc_box .right .right_ele_box .fourth .ball {
-    left: 9.5%;
+    left: 12.5%;
+  }
+
+}
+@media only screen and (max-width: 767px) {
+  .second_screen {
+    padding: 50px 0 60px;
+    .title {
+      font-size: 25px;
+      margin-bottom: 40px;
+      line-height: 30px;
+    }
+    .desc_box {
+      flex-direction: row-reverse;
+      flex-wrap: wrap-reverse;
+      .left,
+      .right {
+        width: 100%;
+      }
+      .right {
+        .right_ele_box {
+          padding-top: 0;
+          .right_ele {
+            padding: 20px;
+             min-height: 348px;
+          }
+          .second {
+            .people {
+              width: 100%;
+              background-size: contain;
+              background-position: center;
+              height: 170px;
+            }
+          }
+          .third {
+            .people {
+              width: 100%;
+              height: 220px;
+              background-size: contain;
+            }
+            .ball {
+              top: 13%;
+            }
+          }
+          .fourth {
+            .people {
+              width: 100%;
+              left: 32px;
+              top: 22px;
+              height: 214px;
+              background-size: contain;
+            }
+            .ball {
+              width: 180px;
+              left: 10%;
+              i:nth-of-type(2) {
+                left: 26px;
+              }
+              i:nth-of-type(3) {
+                left: 78px;
+              }
+              i:nth-of-type(4) {
+                left: 131px;
+              }
+            }
+          }
+          .right_ele.first {
+            .ball {
+              left: 43%;
+              top: 13%;
+            }
+          }
+          .right_ele.second {
+            .ball {
+              left: 49%;
+              top: 35%;
+            }
+          }
+          .people {
+           
+          }
+        }
+        .index {
+          bottom: 7%;
+        }
+        .right_arrow_box {
+          position: absolute;
+          left: 0;
+          bottom: 10%;
+          z-index: 9999;
+        }
+      }
+      .left {
+        position: relative;
+        .ele_box {
+           .ele_list {
+             .ele_list_title {
+               font-size: 20px;
+               line-height: 24px;
+               padding-top: 20px;
+               text-align: center;
+             }
+             .ele_list_desc {
+               font-size: 15px;
+               padding-right: 0;
+               text-align: center;
+               padding: 0 20px;
+               line-height: 20px;
+             }
+           }
+        }
+        .line_box {
+          margin-top: 0;
+          position: absolute;
+          left: 30px;
+          top: -19%;
+          width: 40%;
+        }
+      }
+    }
+  }
+  .second_screen .desc_box .left .line_box .outer_line {
+    height: 3px;
+  }
+  .second_screen .desc_box .left .line_box .inner_line {
+    height: 3px;
   }
 }
-
 @keyframes breath {
   from {
     opacity: 0.1;

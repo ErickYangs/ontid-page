@@ -11,17 +11,22 @@
       <div class="btn_click_prev hidenone" ref="btn_click_prev" @click="next()"></div>
       <div class="btn_click_next hidenone" ref="btn_click_next" @click="prev()"></div>
     </div>
-    <div class="iden_title hidenone" ref="iden_title">{{$t('down_page.identity')}}</div>
-    <div class="iden_desc hidenone" ref="iden_desc">{{$t('down_page.iden_desc')}}</div>
+    <div class="iden_title hidenone" ref="iden_title">
+      {{$t('down_page.ident_title1')}}
+      <span class="iden_title_blod">{{$t('down_page.ident_title2')}}</span>
+      {{$t('down_page.ident_title3')}}
+    </div>
+    <div class="iden_desc hidenone" ref="iden_desc">{{$t('down_page.ident_desc1')}}</div>
     <div class="appload_box hidenone" ref="appload_box">
-      <span
+      <!-- <span
         class="apple hover1"
         @click="openNewPage('https://itunes.apple.com/cn/app/onto-an-ontology-dapp/id1436009823?mt=8')"
       ></span>
       <span
         class="google hover1"
         @click="openNewPage('https://play.google.com/store/apps/details?id=com.github.ontio.onto')"
-      ></span>
+      ></span>-->
+      <span :class="[$i18n.locale == 'zh' ? 'coming_zh' : 'coming_en']"></span>
     </div>
   </div>
 </template>
@@ -75,19 +80,19 @@ export default {
       enImgUrl: [
         {
           id: 1,
-          src: 'https://app.ont.io/ontid/1.png'
+          src: 'https://app.ont.io/ontid/1_en.png'
         },
         {
           id: 2,
-          src: 'https://app.ont.io/ontid/2.png'
+          src: 'https://app.ont.io/ontid/2_en.png'
         },
         {
           id: 3,
-          src: 'https://app.ont.io/ontid/3.png'
+          src: 'https://app.ont.io/ontid/3_en.png'
         },
         {
           id: 4,
-          src: 'https://app.ont.io/ontid/4.png'
+          src: 'https://app.ont.io/ontid/4_en.png'
         },
         {
           id: 5,
@@ -95,19 +100,19 @@ export default {
         },
         {
           id: 6,
-          src: 'https://app.ont.io/ontid/6.png'
+          src: 'https://app.ont.io/ontid/6_en.png'
         },
         {
           id: 7,
-          src: 'https://app.ont.io/ontid/7.png'
+          src: 'https://app.ont.io/ontid/7_en.png'
         },
         {
           id: 8,
-          src: 'https://app.ont.io/ontid/8.png'
+          src: 'https://app.ont.io/ontid/8_en.png'
         },
         {
           id: 9,
-          src: 'https://app.ont.io/ontid/9.png'
+          src: 'https://app.ont.io/ontid/9_en.png'
         }
       ]
     }
@@ -312,6 +317,9 @@ export default {
     color: rgba(0, 0, 0, 1);
     line-height: 53px;
     text-align: center;
+    span {
+      font-weight: 800;
+    }
   }
   .iden_desc {
     margin: 0 auto;
@@ -326,7 +334,8 @@ export default {
   }
   .appload_box {
     width: 100%;
-    max-width: 370px;
+    // max-width: 370px;
+    max-width: 170px;
     margin: 0 auto;
     margin-top: 40px;
     display: flex;
@@ -348,6 +357,14 @@ export default {
     }
     span.google {
       background: url(../../assets/images/google.svg) no-repeat;
+      background-size: contain;
+    }
+    span.coming_zh {
+      background: url(../../assets/images/coming_zh.svg) no-repeat center;
+      background-size: contain;
+    }
+    span.coming_en {
+      background: url(../../assets/images/coming_en.svg) no-repeat center;
       background-size: contain;
     }
   }
@@ -457,7 +474,7 @@ export default {
     }
   }
 }
-@media only screen and (max-width: 959px) {
+@media only screen and (min-width: 768px) and (max-width: 959px) {
   .fourth_screen {
     .carousel_box {
       .carousel_layout.expand {
@@ -487,6 +504,197 @@ export default {
         }
       }
     }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .fourth_screen {
+    padding: 41px 0 70px;
+    margin: 0 auto;
+    .title {
+      font-size: 21px;
+      font-weight: 800;
+      color: rgba(0, 0, 0, 1);
+      line-height: 35px;
+      text-align: center;
+      padding: 0 20px;
+      margin-bottom: 40px;
+    }
+    .carousel_box {
+      padding: 40px 0;
+      height: 430px;
+      position: relative;
+      overflow: hidden;
+      .iphone_box {
+        width: 195px;
+        height: 390px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: url(../../assets/images/iphone.png) no-repeat;
+        background-size: cover;
+        z-index: 100;
+      }
+      .carousel_layout {
+        width: 100%;
+        height: 100%;
+        .card {
+          transition: all 0.5s linear;
+        }
+      }
+      .carousel_layout.expand {
+        overflow: hidden;
+        .card {
+          position: absolute;
+          // left: 0;
+          top: 50%;
+          transform: translate(-57%, -50%);
+        }
+        .card:nth-of-type(1) {
+          left: -158%;
+        }
+        .card:nth-of-type(2) {
+          left: -106%;
+        }
+        .card:nth-of-type(3) {
+          left: -54%;
+        }
+        .card:nth-of-type(4) {
+          left: -2%;
+        }
+        .card:nth-of-type(5) {
+          left: 50%;
+        }
+        .card:nth-of-type(6) {
+          left: 104%;
+        }
+        .card:nth-of-type(7) {
+          left: 156%;
+        }
+        .card:nth-of-type(8) {
+          left: 208%;
+        }
+        .card:nth-of-type(9) {
+          left: 260%;
+        }
+      }
+      .carousel_layout.shrink {
+        // transition: all 2s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        .card {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-57%, -50%);
+        }
+      }
+      .card {
+        width: 180px;
+        height: 373px;
+        background: rgba(242, 242, 242, 1);
+        border-radius: 16px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin: 0 10px;
+      }
+      .swiper-slide {
+        width: 172px !important;
+        height: 330px;
+        display: flex;
+        justify-content: center;
+      }
+      .btn_click_prev,
+      .btn_click_next {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 0;
+        top: 44%;
+        transform: translateY(-50%);
+        z-index: 101;
+        cursor: pointer;
+      }
+      .hidenone {
+        display: none;
+      }
+      .btn_click_prev {
+        background: url(../../assets/images/d_prev.svg) no-repeat;
+        background-size: contain;
+      }
+      .btn_click_next {
+        left: auto;
+        right: 0;
+        background: url(../../assets/images/d_next.svg) no-repeat;
+        background-size: contain;
+      }
+    }
+    .shrink {
+      .swiper-container {
+        // display: none;
+      }
+    }
+    .expand {
+      // display: flex;
+      // justify-content: space-between;
+      // align-items: center;
+    }
+    .iden_title {
+      font-size: 20px;
+      font-weight: 800;
+      color: rgba(0, 0, 0, 1);
+      line-height: 53px;
+      text-align: center;
+      margin-top: 20px;
+      .iden_title_blod {
+        font-weight: 800;
+      }
+    }
+    .iden_desc {
+      margin: 0 auto;
+      margin-top: 10px;
+      width: 100%;
+      max-width: 1078px;
+      text-align: center;
+      font-size: 15px;
+      // font-family: FuturaLT;
+      color: rgba(0, 0, 0, 0.6);
+      line-height: 24px;
+      padding: 0 20px;
+    }
+    .appload_box {
+      width: 100%;
+      // max-width: 185px;
+      margin: 0 auto;
+      margin-top: 30px;
+      display: flex;
+      // justify-content: space-between;
+      justify-content: center;
+      flex-wrap: wrap;
+      span {
+        display: block;
+        width: 143px;
+        height: 45px;
+        cursor: pointer;
+        // margin-left: 10px;
+        &:hover {
+          opacity: 0.94;
+        }
+      }
+      span.apple {
+        background: url(../../assets/images/apple.svg) no-repeat;
+        background-size: contain;
+      }
+      span.google {
+        background: url(../../assets/images/google.svg) no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+  .fourth_screen .iden_title {
+    padding-left: 0;
   }
 }
 </style>

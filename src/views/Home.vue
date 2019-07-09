@@ -1,14 +1,12 @@
 <template>
   <div class="home">
-    <FirstScreen/>
-    <SecondScreen/>
-    <ThirdScreen/>
-    <FourthScreen/>
-    <FifthScreen/>
-    <SixthScreen/>
-    <!-- to do -->
-    <!-- <el-button plain @click="toRegister()">Register</el-button> -->
-    <HomeFooter/>
+    <FirstScreen />
+    <SecondScreen />
+    <ThirdScreen />
+    <FourthScreen />
+    <FifthScreen />
+    <SixthScreen />
+    <HomeFooter />
   </div>
 </template>
 
@@ -39,7 +37,7 @@ export default {
       // this.$router.push({ name: 'qrcode' })
       this.$router.push({ name: 'register' })
     }
-  },
+  }
 }
 </script>
 
@@ -50,17 +48,17 @@ export default {
 }
 @media only screen and (max-width: 1440px) {
   .home {
-    width: 1440px;
+    // width: 1440px;
   }
 }
 @media only screen and (max-width: 1280px) {
   .home {
-    width: 1280px;
+    // width: 1280px;
   }
 }
 @media only screen and (max-width: 960px) {
   .home {
-    width: 960px;
+    // width: 960px;
   }
 }
 </style>

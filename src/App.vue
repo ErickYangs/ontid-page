@@ -13,8 +13,7 @@
 export default {
   computed: {
     isLocal() {
-      // console.log(this.$store.state.lang)
-      return this.$store.state.lang
+      return this.$i18n.locale
     }
   }
 }

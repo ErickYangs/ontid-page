@@ -115,8 +115,36 @@ export default {
     padding: 0 40px;
   }
   .sixth_screen {
-    width: 960px;
+    // width: 960px;
   }
+}
+@media only screen and (max-width: 767px) {
+.sixth_screen {
+  .sixth_box {
+    flex-direction: column;
+    justify-content: center;
+    .left_lite {
+      margin-bottom: 50px;
+      .logo {
+        margin-left: 50px;
+      }
+    }
+    .right_learn_more {
+      width: auto;
+      height: 30px;
+      span {
+        font-size: 25px;
+        line-height: 30px;
+        margin-right: 25px;
+        display: none;
+      }
+      i {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
 }
 </style>
 
