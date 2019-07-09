@@ -66,7 +66,8 @@ export default {
         }
       ],
       isShowLang: true,
-      isScroll: false
+      isScroll: false,
+      isSlidown: false
     }
   },
   methods: {
@@ -77,11 +78,13 @@ export default {
           this.$refs.mobile_Top_nav.classList.remove('isheight')
           this.isShow = false
           $('#top_nav_box').slideUp()
+          this.isSlidown = false
         } else {
           this.$refs.show_nav.classList.add('isactive')
           this.$refs.mobile_Top_nav.classList.add('isheight')
           this.isShow = true
           $('#top_nav_box').slideDown()
+          this.isSlidown = true
         }
       } else {
         this.$refs.mobile_Top_nav.classList.add('isBlackBg')
@@ -91,11 +94,13 @@ export default {
           this.isShow = false
           this.$refs.mobile_Top_nav.classList.remove('isBlackBg')
           $('#top_nav_box').slideUp()
+          this.isSlidown = false
         } else {
           this.$refs.show_nav.classList.add('isactive')
           this.$refs.mobile_Top_nav.classList.add('isheight')
           this.isShow = true
           $('#top_nav_box').slideDown()
+          this.isSlidown = true
         }
       }
     },
@@ -109,7 +114,9 @@ export default {
         this.isScroll = true
       } else {
         this.isScroll = false
-        this.$refs.mobile_Top_nav.classList.remove('isBlackBg')
+        if (!this.isSlidown) {
+          this.$refs.mobile_Top_nav.classList.remove('isBlackBg')
+        }
       }
     }
   },

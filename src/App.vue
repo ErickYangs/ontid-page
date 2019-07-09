@@ -8,6 +8,10 @@
 #app {
   height: 100%;
 }
+#app.ohapp {
+  overflow: hidden;
+  height: 100vh;
+}
 </style>
 <script>
 export default {

@@ -70,11 +70,13 @@ export default {
   methods: {
     showNav() {
       if (this.isShow) {
+        $('#app').removeClass('ohapp')
         this.$refs.show_nav.classList.remove('isactive')
         this.$refs.mobile_Top_nav.classList.remove('isheight')
         this.isShow = false
         $('#top_nav_box').slideUp()
       } else {
+        $('#app').addClass('ohapp')
         this.$refs.show_nav.classList.add('isactive')
         this.$refs.mobile_Top_nav.classList.add('isheight')
         this.isShow = true
@@ -145,4 +147,5 @@ export default {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 }
+
 </style>
