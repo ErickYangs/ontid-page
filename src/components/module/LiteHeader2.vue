@@ -1,6 +1,6 @@
 <template>
-  <div class="top_header clearfix" id="top_header_fixed">
-    <div class="left_logo" :class="[isLite ? 'lite_logo': 'home_logo']" @click="toIndex()"></div>
+  <div class="top_header clearfix blackb" id="top_header_fixed">
+    <div class="left_logo lite_logo" @click="toIndex()"></div>
     <div class="right">
       <!-- <SelectBox /> -->
       <!-- <Lang /> -->
@@ -70,15 +70,7 @@ export default {
       isLite: this.$router.currentRoute.path == '/lite' ? true : false,
       timer: null
     }
-  },
-  mounted() {
-    this.timer = setTimeout(() => {
-      this.fixedNav()
-    }, 100);
-  },
-  beforeDestroy() {
-    clearTimeout(this.timer)
-  },
+  }
 }
 </script>
 

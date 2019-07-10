@@ -1,6 +1,6 @@
 <template>
   <div class="top_header clearfix" id="top_header_fixed">
-    <div class="left_logo" :class="[isLite ? 'lite_logo': 'home_logo']" @click="toIndex()"></div>
+    <div class="left_logo home_logo" @click="toIndex()"></div>
     <div class="right">
       <!-- <SelectBox /> -->
       <!-- <Lang /> -->
@@ -72,12 +72,12 @@ export default {
     }
   },
   mounted() {
-    this.timer = setTimeout(() => {
-      this.fixedNav()
-    }, 100);
+    // this.timer = setTimeout(() => {
+    //   this.fixedNav()
+    // }, 100);
   },
   beforeDestroy() {
-    clearTimeout(this.timer)
+    // clearTimeout(this.timer)
   },
 }
 </script>
@@ -88,7 +88,7 @@ export default {
   padding-bottom: 25px;
   width: 100%;
   position: fixed;
-  top: 0;
+  top: 4.5%;
   left: 0;
   background: #ffffff00;
   z-index: 9999999;
@@ -132,6 +132,22 @@ export default {
   background: rgba(255, 255, 255, 0) !important;
   padding-top: 24px;
   padding-bottom: 24px;
+}
+
+@media only screen and (min-width: 1921px) and (max-width: 2560px) {
+  .top_header {
+    top: 3%;
+  }
+}
+@media only screen and (min-width: 1681px) and (max-width: 1920px) {
+  .top_header {
+    top: 2%;
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 1680px) {
+  .top_header {
+    top: 2%;
+  }
 }
 @media only screen and (min-width: 960px) and (max-width: 1279px) {
   .top_header {

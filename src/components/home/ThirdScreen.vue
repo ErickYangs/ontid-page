@@ -1,30 +1,30 @@
 <template>
-  <div class="third_screen">
+  <div class="third_screen" ref="third_screen">
     <div class="screen_box home_contanier">
       <div class="choose_title">{{$t('thrid_screen.title')}}</div>
       <div class="ele_box">
-        <div class="ele_list">
+        <div class="ele_list hidenone" ref="ele_list1">
           <div class="top_img">
             <img src="../../assets/images/1.svg" alt />
           </div>
           <div class="desc_title">{{$t('thrid_screen.item1_title')}}</div>
           <div class="desc_text">{{$t('thrid_screen.item1_desc')}}</div>
         </div>
-        <div class="ele_list">
+        <div class="ele_list hidenone" ref="ele_list2">
           <div class="top_img">
             <img src="../../assets/images/2.svg" alt />
           </div>
           <div class="desc_title">{{$t('thrid_screen.item2_title')}}</div>
           <div class="desc_text">{{$t('thrid_screen.item2_desc')}}</div>
         </div>
-        <div class="ele_list">
+        <div class="ele_list hidenone" ref="ele_list3">
           <div class="top_img">
             <img src="../../assets/images/3.svg" alt />
           </div>
           <div class="desc_title">{{$t('thrid_screen.item3_title')}}</div>
           <div class="desc_text">{{$t('thrid_screen.item3_desc')}}</div>
         </div>
-        <div class="ele_list">
+        <div class="ele_list hidenone" ref="ele_list4">
           <div class="top_img">
             <img src="../../assets/images/4.svg" alt />
           </div>
@@ -37,8 +37,43 @@
 </template>
 
 <script>
-export default {
+import '../../../node_modules/animate.css/animate.css'
 
+export default {
+  methods: {
+    handleScrollFadeIn() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop ||
+        document.body.scrollTop
+      let targetTop = this.$refs.third_screen.offsetTop // 目标元素离页面顶端的距离
+      if (this.lock) {
+        return
+      } else {
+        if (targetTop < scrollTop + 400) {
+          this.$refs.ele_list1.classList.remove('hidenone')
+          this.$refs.ele_list1.classList.add('animated', 'fadeInUp')
+          setTimeout(() => {
+            this.$refs.ele_list2.classList.remove('hidenone')
+            this.$refs.ele_list2.classList.add('animated', 'fadeInUp')
+          }, 200)
+          setTimeout(() => {
+            this.$refs.ele_list3.classList.remove('hidenone')
+            this.$refs.ele_list3.classList.add('animated', 'fadeInUp')
+          }, 600)
+          setTimeout(() => {
+            this.$refs.ele_list4.classList.remove('hidenone')
+            this.$refs.ele_list4.classList.add('animated', 'fadeInUp')
+          }, 1000)
+          this.lock = true
+        }
+      }
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScrollFadeIn)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScrollFadeIn)
+  }
 }
 </script>
 
@@ -95,6 +130,9 @@ export default {
     }
   }
 }
+.hidenone {
+  visibility: hidden;
+}
 // @media only screen and (min-width: 768px) and (max-width: 959px)
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .third_screen .screen_box .ele_box .ele_list {
@@ -125,7 +163,6 @@ export default {
           margin-bottom: 0;
         }
       }
-      
     }
   }
 }

@@ -70,7 +70,7 @@ export default {
   }
   .bottom_bg {
     position: absolute;
-    right: 0;
+    right: 80px;
     top: 0;
     width: 800px;
     height: 100%;
@@ -79,7 +79,7 @@ export default {
     z-index: -1;
   }
   .banner_text {
-    padding-top: 20%;
+    padding-top: 22%;
     .banner_text_title {
       font-size: 80px;
       // font-family: Graphik-Medium;
@@ -168,12 +168,12 @@ export default {
     }
   }
 }
-@media only screen and (min-width: 1441px) and (max-width: 2560px) {
-  .banner {
-    margin: 0 auto;
-  }
+@media only screen and (min-width: 1921px) and (max-width: 2560px) {
+  // .banner {
+  //   margin: 0 auto;
+  // }
   .banner .banner_text {
-    padding-top: 30%;
+    padding-top: 28%;
   }
 }
 //@media only screen and (min-width: 1210px) and (max-width: 1210px)
@@ -184,6 +184,16 @@ export default {
       padding-top: 18%;
     }
   }
+}
+@media only screen and (max-width: 1440px) {
+  .banner .banner_text .banner_text_title {
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 1079px) and (max-width: 1440px) {
+.banner .bottom_bg {
+  right: 40px;
+}
 }
 @media only screen and (min-width: 960px) and (max-width: 1279px) {
   .banner {
@@ -228,6 +238,7 @@ export default {
   .banner .bottom_bg {
     // right: 3%;
     width: 100%;
+    right: 0;
   }
   .banner {
     padding: 0 20px;

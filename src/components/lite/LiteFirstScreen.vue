@@ -9,7 +9,7 @@
       <div class="logo"></div>
       <div class="banner_desc">{{$t('lite_home.desc')}}</div>
       <div class="open_account">
-        <span class="hover1" @click="toIntegrat()">Open an account</span>
+        <span :class="!isPC ? 'hover1':'hover1 pcaction' " @click="toIntegrat()">Open an account</span>
       </div>
       <div class="down_arrow" @click="turnShow('#lite_second')"></div>
     </div>
@@ -96,6 +96,15 @@ export default {
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handlerScroll)
+  },
+  computed: {
+    isPC() {
+      if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+        return false
+      } else {
+        return true
+      }
+    }
   }
 }
 </script>
@@ -129,7 +138,7 @@ export default {
     top: 0;
     transform: translateX(-50%);
     height: 100%;
-    padding-top: 14%;
+    padding-top: 16%;
     .logo {
       width: 254px;
       height: 90px;
@@ -161,10 +170,10 @@ export default {
         font-weight: 800;
         line-height: 30px;
         cursor: pointer;
-        &:hover {
-          background: #fff;
-          color: #3d3d3d;
-        }
+      }
+      .pcaction:hover {
+        background: #fff;
+        color: #3d3d3d;
       }
       margin: 4% auto;
     }

@@ -645,9 +645,10 @@ export default {
       font-size: 20px;
       font-weight: 800;
       color: rgba(0, 0, 0, 1);
-      line-height: 53px;
+      line-height: 40px;
       text-align: center;
       margin-top: 20px;
+
       .iden_title_blod {
         font-weight: 800;
       }
@@ -694,7 +695,7 @@ export default {
     }
   }
   .fourth_screen .iden_title {
-    padding-left: 0;
+    padding: 0 30px;
   }
 }
 </style>

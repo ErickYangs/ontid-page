@@ -1,7 +1,8 @@
 <template>
   <div class="home">
     <FirstScreen />
-    <SecondScreen />
+    <ImgText />
+    <!-- <SecondScreen /> -->
     <ThirdScreen />
     <FourthScreen />
     <FifthScreen />
@@ -14,6 +15,7 @@
 // @ is an alias to /src
 import FirstScreen from '@/components/home/FirstScreen.vue'
 import SecondScreen from '@/components/home/SecondScreen.vue'
+import ImgText from '@/components/home/ImgText.vue'
 import ThirdScreen from '@/components/home/ThirdScreen.vue'
 import FourthScreen from '@/components/home/FourthScreen.vue'
 import FifthScreen from '@/components/home/FifthScreen.vue'
@@ -29,7 +31,8 @@ export default {
     ThirdScreen,
     FourthScreen,
     FifthScreen,
-    SixthScreen
+    SixthScreen,
+    ImgText
   },
   methods: {
     toRegister() {

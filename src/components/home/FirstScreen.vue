@@ -1,7 +1,12 @@
 <template>
   <div class="first_screen">
     <div class="header_box">
-      <HomeHeader class="pc_nav" />
+      <transition name="fade">
+        <HomeHeader v-if="!isShow" class="pc_nav" />
+      </transition>
+      <transition name="fade">
+        <HomeHeader2 v-if="isShow" class="pc_nav" transiton="fade" />
+      </transition>
       <MobileTopNav class="mobile_nav" />
     </div>
     <!-- to do -->
@@ -13,19 +18,55 @@
 </template>
 
 <script>
-import HomeHeader from '@/components/home/HomeHeader.vue'
+import HomeHeader from '@/components/module/IndexHeader1.vue'
+import HomeHeader2 from '@/components/module/IndexHeader2.vue'
 import LinkBanner from '@/components/home/LinkBanner.vue'
 import BannerRightTips from '@/components/home/BannerRightTips.vue'
 import MobileTopNav from '@/components/module/MobileTopNav.vue'
 // import Parallax from 'vue-parallaxy'
+import $ from "jquery"
+
 export default {
   name: 'firstscreen',
   components: {
     HomeHeader,
     LinkBanner,
     BannerRightTips,
-    MobileTopNav
+    MobileTopNav,
+    HomeHeader2
     // Parallax
+  },
+  data() {
+    return {
+      isShow: false,
+      timer: null
+    }
+  },
+  methods: {
+    fixedNav() {
+      $(document).on('scroll', () => {
+        let $scroll = $(document).scrollTop()
+        if ($scroll >= 100) {
+          this.isShow = true
+        } else {
+          this.isShow = false
+        }
+      })
+    }
+  },
+  mounted() {
+    let $scroll = $(document).scrollTop()
+    if ($scroll >= 80) {
+      this.isShow = true
+    } else {
+      this.isShow = false
+    }
+    this.timer = setTimeout(() => {
+      this.fixedNav()
+    }, 100);
+  },
+  beforeDestroy() {
+    clearTimeout(this.timer)
   }
 }
 </script>
@@ -43,12 +84,19 @@ export default {
     z-index: 99990000000008888;
   }
   .link_banner {
-    padding: 3% 0;
+    padding: 2% 0;
     height: 100%;
   }
   .mobile_nav {
     display: none;
   }
+}
+.fade-enter-active {
+  transition: opacity 1s;
+}
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
 }
 @media only screen and (max-width: 959px) {
   .first_screen .link_banner {

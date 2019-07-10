@@ -56,7 +56,6 @@
       </div>
       <MobileNav class="mobile_footer_nav" :navData="navData" :isShowLang="isShowLang" />
       <div class="share_link">
-        <!-- <a href target="_blank"></a> -->
         <a href="https://discordapp.com/invite/4TQujHj" target="_blank" class="hover1"></a>
         <a href="https://twitter.com/OntologyNetwork" target="_blank" class="hover1"></a>
         <a
@@ -78,6 +77,33 @@
           target="_blank"
           class="hover1"
         ></a>
+      </div>
+      <div class="mobile_footer">
+        <div class="first_line">
+          <a href="https://discordapp.com/invite/4TQujHj" target="_blank" class="hover1"></a>
+          <a href="https://twitter.com/OntologyNetwork" target="_blank" class="hover1"></a>
+          <a
+            href="https://www.facebook.com/Ontology-Network-468098413590227/"
+            target="_blank"
+            class="hover1"
+          ></a>
+          <a href="https://medium.com/ontologynetwork" target="_blank" class="hover1"></a>
+          <a href="https://old.reddit.com/r/OntologyNetwork/" target="_blank" class="hover1"></a>
+        </div>
+        <div class="second_line">
+          <a href="https://github.com/ontio" target="_blank" class="hover1"></a>
+          <a href="https://t.me/OntologyNetwork" target="_blank" class="hover1"></a>
+          <a
+            href="https://www.youtube.com/channel/UCXzLZJgDglAWRU0b2GOa7pA"
+            target="_blank"
+            class="hover1"
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/ontology-network-official/"
+            target="_blank"
+            class="hover1"
+          ></a>
+        </div>
       </div>
       <div class="copyright">&#169; 2019 ontid.com. All rights reserved</div>
     </div>
@@ -257,6 +283,66 @@ export default {
         background-size: cover;
       }
     }
+    .mobile_footer {
+      width: 100%;
+      padding-left: 20px;
+      display: none;
+      margin-bottom: 30px;
+      margin-top: 20px;
+      .first_line,
+      .second_line {
+        display: flex;
+        justify-content: flex-start;
+      }
+      .first_line {
+        margin-bottom: 20px;
+        a:nth-of-type(1) {
+          background: url(../../assets/images/f-1.svg) no-repeat center;
+          background-size: cover;
+        }
+        a:nth-of-type(2) {
+          background: url(../../assets/images/f-2.svg) no-repeat center;
+          background-size: cover;
+        }
+        a:nth-of-type(3) {
+          background: url(../../assets/images/f-3.svg) no-repeat center;
+          background-size: cover;
+        }
+        a:nth-of-type(4) {
+          background: url(../../assets/images/f-4.svg) no-repeat center;
+          background-size: cover;
+        }
+        a:nth-of-type(5) {
+          background: url(../../assets/images/f-5.svg) no-repeat center;
+          background-size: cover;
+        }
+      }
+      .second_line {
+        a:nth-of-type(1) {
+          background: url(../../assets/images/f-6.svg) no-repeat center;
+          background-size: cover;
+        }
+        a:nth-of-type(2) {
+          background: url(../../assets/images/f-7.svg) no-repeat center;
+          background-size: cover;
+        }
+        a:nth-of-type(3) {
+          background: url(../../assets/images/f-8.svg) no-repeat center;
+          background-size: cover;
+        }
+        a:nth-of-type(4) {
+          background: url(../../assets/images/f-9.svg) no-repeat center;
+          background-size: cover;
+        }
+      }
+      a {
+        display: block;
+        width: 20px;
+        height: 16px;
+        background: #000;
+        margin-right: 20px;
+      }
+    }
     .copyright {
       width: 100%;
       text-align: center;
@@ -303,46 +389,21 @@ export default {
       display: none !important;
     }
     .share_link {
-      padding: 25px 0 20px !important;
+      padding: 25px 0 20px 5px !important;
       width: 70% !important;
+      margin: initial !important;
     }
   }
 
-  .home_footer .footer_box .share_link a {
-    margin-bottom: 10px;
-    background-size: contain !important;
+  .home_footer .footer_box .share_link {
+    display: none;
   }
-  .home_footer .footer_box .share_link a:nth-of-type(1) {
-    width: 20%;
+  .mobile_footer {
+    display: block !important;
   }
-  .home_footer .footer_box .share_link a:nth-of-type(2) {
-    width: 20%;
-  }
-  .home_footer .footer_box .share_link a:nth-of-type(3) {
-    width: 20%;
-  }
-  .home_footer .footer_box .share_link a:nth-of-type(4) {
-    width: 20%;
-  }
-  .home_footer .footer_box .share_link a:nth-of-type(5) {
-    width: 20%;
-  }
-  .home_footer .footer_box .share_link a:nth-of-type(6) {
-    width: 25%;
-    // padding-left: 10px;
-    background-position: 42px center;
-  }
-  .home_footer .footer_box .share_link a:nth-of-type(7) {
-    width: 25%;
-    background-position: 30px center;
-  }
-  .home_footer .footer_box .share_link a:nth-of-type(8) {
-    width: 25%;
-    background-position: 22px center;
-  }
-  .home_footer .footer_box .share_link a:nth-of-type(9) {
-    width: 25%;
-    background-position: 12px center;
+  .copyright {
+    text-align: left !important;
+    padding-left: 20px;
   }
 }
 </style>

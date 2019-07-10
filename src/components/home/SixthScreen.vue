@@ -66,12 +66,12 @@ export default {
       }
     }
     .right_learn_more {
-      width: 300px;
-      height: 60px;
+      width: 260px;
+      height: 50px;
       display: flex;
       justify-content: space-between;
       span {
-        font-size: 40px;
+        font-size: 30px;
         font-family: Graphik-Medium;
         font-weight: 800;
         color: rgba(255, 255, 255, 1);

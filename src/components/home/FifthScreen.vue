@@ -185,6 +185,7 @@ export default {
         margin-top: 25px;
         padding: 0 25px;
         opacity: 0.6;
+        font-size: 15px;
       }
       .start {
         margin-top: 20px;

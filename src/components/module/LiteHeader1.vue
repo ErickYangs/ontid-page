@@ -1,6 +1,6 @@
 <template>
   <div class="top_header clearfix" id="top_header_fixed">
-    <div class="left_logo" :class="[isLite ? 'lite_logo': 'home_logo']" @click="toIndex()"></div>
+    <div class="left_logo lite_logo" @click="toIndex()"></div>
     <div class="right">
       <!-- <SelectBox /> -->
       <!-- <Lang /> -->
@@ -22,63 +22,14 @@ export default {
     toIndex() {
       this.$router.push({ path: '/' })
     },
-    fixedNav() {
-      $(document).on('scroll', () => {
-        let $scroll = $(document).scrollTop()
-        if ($scroll >= 50) {
-          if (this.isLite) {
-            if ($('#top_header_fixed').hasClass('whiteb')) {
-              $('#top_header_fixed').removeClass('whiteb')
-            }
-            $('#top_header_fixed').addClass('blackb')
-          } else {
-            if ($('#top_header_fixed').hasClass('blackb')) {
-              $('#top_header_fixed').removeClass('blackb')
-            }
-            if ($('#top_header_fixed').hasClass('white0')) {
-              $('#top_header_fixed').removeClass('white0')
-            }
-            if (!$('#top_header_fixed').hasClass('whiteb')) {
-              $('#top_header_fixed').addClass('whiteb')
-            }
-          }
-        } else {
-          if (this.isLite) {
-            if ($('#top_header_fixed').hasClass('whiteb')) {
-              $('#top_header_fixed').removeClass('whiteb')
-            }
-            if ($('#top_header_fixed').hasClass('blackb')) {
-              $('#top_header_fixed').removeClass('blackb')
-            }
-          } else {
-            if ($('#top_header_fixed').hasClass('blackb')) {
-              $('#top_header_fixed').removeClass('blackb')
-            }
-            if ($('#top_header_fixed').hasClass('whiteb')) {
-              $('#top_header_fixed').removeClass('whiteb')
-            }
-            if (!$('#top_header_fixed').hasClass('white0')) {
-              $('#top_header_fixed').addClass('white0')
-            }
-          }
-        }
-      })
-    }
   },
   data() {
     return {
       isLite: this.$router.currentRoute.path == '/lite' ? true : false,
       timer: null
     }
-  },
-  mounted() {
-    this.timer = setTimeout(() => {
-      this.fixedNav()
-    }, 100);
-  },
-  beforeDestroy() {
-    clearTimeout(this.timer)
-  },
+  }
+ 
 }
 </script>
 

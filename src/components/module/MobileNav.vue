@@ -55,7 +55,7 @@ export default {
     a {
       display: block;
       line-height: 16px;
-      padding-bottom: 20px;
+      padding: 12px 0;
       color: rgba(0, 0, 0, 0.6);
       font-size: 13px;
       transition: all 0.5s ease;
@@ -71,10 +71,14 @@ export default {
     font-size: 14px;
     color: #000 !important;
     font-family: Graphik-Medium;
+    font-weight: 800;
+    height: 56px;
+    line-height: 56px;
+    border-bottom: 1px solid #0000000f;
     .el-icon-arrow-right:before {
-      content: "\e6d9";
+      content: url(../../assets/images/open.svg);
       color: #000;
-      font-weight: bold;
+      font-weight: bolder;
     }
     .el-collapse-item__arrow.is-active {
       -webkit-transform: rotate(45deg);

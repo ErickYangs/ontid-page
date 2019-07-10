@@ -182,6 +182,7 @@ export default {
   .top_nav_box {
     background: #fff;
     display: none;
+    padding-bottom: 20px;
   }
   .balckImgLogo {
     display: none !important;

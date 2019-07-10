@@ -1,23 +1,23 @@
 <template>
-  <div id="lite_second" class="litesecondscreen home_contanier">
+  <div id="lite_second" ref="lite_second" class="litesecondscreen home_contanier">
     <div class="title">{{$t('lite_pro.title')}}</div>
     <div class="introduct_box">
       <div class="introd_layout">
-        <div class="left">
+        <div class="left hidenone" ref="ele_left1">
           <div class="introd_title">{{$t('lite_pro.item1_title')}}</div>
           <div class="introd_desc">{{$t('lite_pro.item1_desc')}}</div>
         </div>
-        <div class="right fp_one">
+        <div class="right fp_one hidenone" ref="ele_right1">
           <div class="outer"></div>
-          <div class="inner" v-parallax.absY="0.05"></div>
+          <!-- <div class="inner" v-parallax.absY="0.2"></div> -->
         </div>
       </div>
       <div class="introd_layout">
-        <div class="left fp_two">
+        <div class="left fp_two hidenone" ref="ele_left2">
           <div class="outer"></div>
-          <div class="inner" v-parallax.absY="0.04"></div>
+          <!-- <div class="inner" v-parallax.absY="0.2"></div> -->
         </div>
-        <div class="right">
+        <div class="right hidenone" ref="ele_right2">
           <div class="introd_title">{{$t('lite_pro.item2_title')}}</div>
           <div class="introd_desc">{{$t('lite_pro.item2_desc')}}</div>
         </div>
@@ -28,11 +28,46 @@
 
 <script>
 import Parallax from 'vue-parallaxy'
+import '../../../node_modules/animate.css/animate.css'
 
 export default {
   name: 'LiteSecondScreen',
   components: {
     Parallax
+  },
+  methods: {
+    handleScrollFade() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop ||
+        document.body.scrollTop
+      let targetTop = this.$refs.lite_second.offsetTop // 目标元素离页面顶端的距离
+      if (this.lock) {
+        return
+      } else {
+        if (targetTop < scrollTop + 600) {
+          this.$refs.ele_left1.classList.remove('hidenone')
+          this.$refs.ele_left1.classList.add('animated', 'fadeInUp')
+          setTimeout(() => {
+            this.$refs.ele_right1.classList.remove('hidenone')
+            this.$refs.ele_right1.classList.add('animated', 'fadeInUp')
+          }, 200)
+          setTimeout(() => {
+            this.$refs.ele_left2.classList.remove('hidenone')
+            this.$refs.ele_left2.classList.add('animated', 'fadeInUp')
+          }, 600)
+          setTimeout(() => {
+            this.$refs.ele_right2.classList.remove('hidenone')
+            this.$refs.ele_right2.classList.add('animated', 'fadeInUp')
+          }, 1000)
+          this.lock = true
+        }
+      }
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScrollFade)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScrollFade)
   }
 }
 </script>
@@ -52,7 +87,7 @@ export default {
     // overflow: hidden;
     padding: 0 205px;
     .introd_layout {
-      margin-top: 120px;
+      margin-top: 80px;
       display: flex;
       justify-content: flex-start;
       flex-wrap: wrap;
@@ -67,7 +102,7 @@ export default {
         font-weight: 800;
         color: rgba(0, 0, 0, 1);
         line-height: 35px;
-        padding-top: 20px;
+        padding-top: 85px;
       }
 
       .introd_desc {
@@ -82,9 +117,11 @@ export default {
       .fp_one {
         position: relative;
         .outer {
-          width: 148px;
-          height: 190px;
-          background: url(../../assets/images/fp_1_1.svg) no-repeat;
+          width: 100%;
+          max-width: 400px;
+          height: 300px;
+          background: url(../../assets/images/fp_1_1.svg) no-repeat center;
+          background-size: contain;
           margin: 0 auto;
         }
         .inner {
@@ -100,14 +137,17 @@ export default {
       }
       .fp_two {
         position: relative;
-        padding-left: 130px;
+        // padding-left: 130px;
         .outer {
-          width: 213px;
-          height: 242px;
-          background: url(../../assets/images/fp_2_1.svg) no-repeat;
+          width: 100%;
+          max-width: 400px;
+          height: 300px;
+          background: url(../../assets/images/fp_2_1.svg) no-repeat center;
+          background-size: contain;
+          margin: 0 auto;
         }
         .inner {
-          width: 246px;
+          width: 400px;
           height: 300px;
           background: url(../../assets/images/fp_2_2.svg) no-repeat center;
           position: absolute;
@@ -119,6 +159,9 @@ export default {
       }
     }
   }
+}
+.hidenone {
+  visibility: hidden;
 }
 @media only screen and (max-width: 1440px) {
   .litesecondscreen .introduct_box .introd_layout .fp_one .inner {
@@ -132,7 +175,7 @@ export default {
 }
 @media only screen and (max-width: 960px) {
   .litesecondscreen .introduct_box .introd_layout .fp_two {
-    padding-left: 50px;
+    // padding-left: 50px;
   }
   .litesecondscreen .introduct_box .introd_layout .fp_two .inner {
     left: -13%;
@@ -142,6 +185,9 @@ export default {
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .litesecondscreen .introduct_box .introd_layout .fp_one .inner {
     left: -9%;
+  }
+  .litesecondscreen .introduct_box .introd_layout .fp_one .outer {
+    width: 100%;
   }
 }
 
@@ -168,8 +214,8 @@ export default {
             background-size: contain;
           }
           .outer {
-            width: 75px;
-            height: 95px;
+            width: 240px;
+            height: 190px;
             background-size: contain;
           }
         }
@@ -194,6 +240,7 @@ export default {
           text-align: center;
           font-size: 15px;
           line-height: 17px;
+          padding-top: 20px;
         }
         .introd_desc {
           padding: 0;
@@ -206,7 +253,7 @@ export default {
         flex-direction: column-reverse;
       }
       .introd_layout:nth-of-type(2) {
-        margin-top: 80px;
+        margin-top: 50px;
       }
     }
   }

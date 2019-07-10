@@ -1,6 +1,6 @@
 <template>
-  <div class="top_header clearfix" id="top_header_fixed">
-    <div class="left_logo" :class="[isLite ? 'lite_logo': 'home_logo']" @click="toIndex()"></div>
+  <div class="top_header clearfix whiteb" id="top_header_fixed">
+    <div class="left_logo home_logo" @click="toIndex()"></div>
     <div class="right">
       <!-- <SelectBox /> -->
       <!-- <Lang /> -->
@@ -72,12 +72,12 @@ export default {
     }
   },
   mounted() {
-    this.timer = setTimeout(() => {
-      this.fixedNav()
-    }, 100);
+    // this.timer = setTimeout(() => {
+    //   this.fixedNav()
+    // }, 100);
   },
   beforeDestroy() {
-    clearTimeout(this.timer)
+    // clearTimeout(this.timer)
   },
 }
 </script>

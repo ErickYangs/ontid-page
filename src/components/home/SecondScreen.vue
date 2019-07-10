@@ -126,10 +126,10 @@ export default {
         fadeEffect: {
           crossFade: true,
         },
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false
-        },
+        // autoplay: {
+        //   delay: 5000,
+        //   disableOnInteraction: false
+        // },
         loop: true,
         navigation: {
           nextEl: '.right_arrow',
@@ -159,10 +159,10 @@ export default {
             $('.four_share').removeClass('share')
           }
         },
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false
-        }
+        // autoplay: {
+        //   delay: 5000,
+        //   disableOnInteraction: false
+        // }
       },
       swiperOption3: {
         spaceBetween: 30,
@@ -171,10 +171,10 @@ export default {
           crossFade: true,
         },
         loop: true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false
-        },
+        // autoplay: {
+        //   delay: 5000,
+        //   disableOnInteraction: false
+        // },
         navigation: {
           nextEl: '.right_arrow',
           prevEl: '.left_arrow',
@@ -284,7 +284,7 @@ export default {
             background: url(../../assets/images/ball.svg) no-repeat;
             background-size: cover;
             position: absolute;
-            left: 30%;
+            left: 34%;
             top: 18%;
             animation: breath 3s linear infinite;
           }
@@ -303,7 +303,7 @@ export default {
             border-radius: 50%;
             background: #fff;
             position: absolute;
-            left: 26.8%;
+            left: 30%;
             top: 60%;
             animation: glow 800ms ease-out infinite alternate;
           }
@@ -321,7 +321,7 @@ export default {
             background: url(../../assets/images/ball_3.svg) no-repeat;
             background-size: cover;
             position: absolute;
-            left: 29%;
+            left: 32%;
             top: 16%;
             animation: breath3 3s linear infinite;
           }

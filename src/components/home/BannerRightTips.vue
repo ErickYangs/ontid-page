@@ -52,7 +52,7 @@ export default {
   width: 200px;
   position: absolute;
   right: 0;
-  top: 14%;
+  top: 5%;
 }
 .banner_right_tips .item {
   width: 200px;
@@ -119,6 +119,11 @@ export default {
   color: rgba(255, 255, 255, 0.5);
   &:hover {
     color: rgba(255, 255, 255, 1);
+  }
+}
+@media only screen and (max-width: 1680px) {
+  .banner_right_tips {
+    top: 4%;
   }
 }
 </style>

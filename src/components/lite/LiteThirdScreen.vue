@@ -77,7 +77,7 @@ export default {
       text-align: center;
       .tips {
         padding-top: 70px;
-        font-size: 30px;
+        font-size: 20px;
         font-family: Graphik-Medium;
         font-weight: 800;
         color: rgba(255, 255, 255, 1);
@@ -100,7 +100,7 @@ export default {
           display: block;
           width: 170px;
           height: 54px;
-          cursor: pointer;
+          // cursor: pointer;
           background-size: contain !important;
           // font-family: FuturaLT;
         }
@@ -113,10 +113,12 @@ export default {
         span.coming_zh {
           background: url(../../assets/images/coming_zh.svg) no-repeat center;
           background-size: contain;
+          opacity: 0.5;
         }
         span.coming_en {
           background: url(../../assets/images/coming_en.svg) no-repeat center;
           background-size: contain;
+          opacity: 0.5;
         }
       }
     }
@@ -150,7 +152,7 @@ export default {
         .tips {
           padding-top: 30px;
           font-size: 15px;
-          line-height: 17px;
+          line-height: 30px;
         }
         .app_box {
           margin-top: 30px;

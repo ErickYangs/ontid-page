@@ -64,7 +64,7 @@ export default {
           ]
         }
       ],
-      isShowLang: true
+      isShowLang: false
     }
   },
   methods: {
@@ -141,6 +141,7 @@ export default {
   .top_nav_box {
     background: #fff;
     display: none;
+    padding-bottom: 20px;
   }
 }
 .mobile_Top_nav.isheight {
