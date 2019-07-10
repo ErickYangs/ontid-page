@@ -19,6 +19,14 @@ export default {
     isLocal() {
       return this.$i18n.locale
     }
-  }
+  },
+  methods: {
+    BacksrcollTop() {
+      window.scrollTo(0,0);
+    }
+  },
+  mounted() {
+    window.addEventListener("beforeunload", this.BacksrcollTop);
+  },
 }
 </script>

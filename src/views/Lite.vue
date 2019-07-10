@@ -1,10 +1,10 @@
 <template>
   <div class="lite">
     <transition name="fade">
-      <HomeHeader class="pcNav" v-if="!isShow" />
+      <HomeHeader class="pcNav" v-if="!isShowNav" />
     </transition>
     <transition name="fade">
-      <HomeHeader2 class="pcNav" v-if="isShow" transiton="fade" />
+      <HomeHeader2 class="pcNav" v-if="isShowNav" transiton="fade" />
     </transition>
     <MobileTopNavLite class="mobileNav" />
     <LiteFirstScreen />
@@ -38,7 +38,7 @@ export default {
   },
   data() {
     return {
-      isShow: false,
+      isShowNav: false,
       timer: null
     }
   },
@@ -47,20 +47,20 @@ export default {
       $(document).on('scroll', () => {
         let $scroll = $(document).scrollTop()
         if ($scroll >= 100) {
-          this.isShow = true
+          this.isShowNav = true
         } else {
-          this.isShow = false
+          this.isShowNav = false
         }
       })
     }
   },
   mounted() {
-    let $scroll = $(document).scrollTop()
-    if ($scroll >= 100) {
-      this.isShow = true
-    } else {
-      this.isShow = false
-    }
+    // let $scroll = $(document).scrollTop()
+    // if ($scroll >= 100) {
+    //   this.isShowNav = true
+    // } else {
+    //   this.isShowNav = false
+    // }
     this.timer = setTimeout(() => {
       this.fixedNav()
     }, 100);

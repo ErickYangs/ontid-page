@@ -48,7 +48,7 @@ export default {
       if (this.lock) {
         return
       } else {
-        if (targetTop < scrollTop + 400) {
+        if (targetTop < scrollTop + 600) {
           this.$refs.ele_list1.classList.remove('hidenone')
           this.$refs.ele_list1.classList.add('animated', 'fadeInUp')
           setTimeout(() => {
