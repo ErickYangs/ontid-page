@@ -168,7 +168,14 @@ export default {
     }
   }
 }
-
+@media only screen and (min-width: 1441px) and (max-width: 2560px) {
+  .banner {
+    margin: 0 auto;
+  }
+  .banner .banner_text {
+    padding-top: 30%;
+  }
+}
 //@media only screen and (min-width: 1210px) and (max-width: 1210px)
 @media only screen and (min-width: 1280px) and (max-width: 1440px) {
   .banner {

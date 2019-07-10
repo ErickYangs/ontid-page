@@ -71,10 +71,12 @@ export default {
       return false;
     },
     handlerScroll() {
-      var scrollTop = $(window).scrollTop(); // 滚动条距离顶部的距离
-      var containerH = $('#banner_model').get(0).scrollHeight; // 图片的高度
+      let scrollTop = $(window).scrollTop(); // 滚动条距离顶部的距离
+      let containerH = $('#banner_model').get(0).scrollHeight; // 图片的高度
+      let persent30 = containerH * 0.3
+      scrollTop = scrollTop - persent30
       if (scrollTop > 0 && scrollTop <= containerH) {
-        var a = scrollTop / containerH;
+        let a = scrollTop / containerH;
         if ((a + 0.3) >= 1) {
           $('#banner_model').css('background', 'rgba(0,0,0,1)');
           return false
