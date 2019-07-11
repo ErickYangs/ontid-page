@@ -65,7 +65,7 @@ export default {
           ]
         }
       ],
-      isShowLang: true,
+      isShowLang: false,
       isScroll: false,
       isSlidown: false
     }
