@@ -25,42 +25,10 @@ export default {
     fixedNav() {
       $(document).on('scroll', () => {
         let $scroll = $(document).scrollTop()
-        if ($scroll >= 50) {
-          if (this.isLite) {
-            if ($('#top_header_fixed').hasClass('whiteb')) {
-              $('#top_header_fixed').removeClass('whiteb')
-            }
-            $('#top_header_fixed').addClass('blackb')
-          } else {
-            if ($('#top_header_fixed').hasClass('blackb')) {
-              $('#top_header_fixed').removeClass('blackb')
-            }
-            if ($('#top_header_fixed').hasClass('white0')) {
-              $('#top_header_fixed').removeClass('white0')
-            }
-            if (!$('#top_header_fixed').hasClass('whiteb')) {
-              $('#top_header_fixed').addClass('whiteb')
-            }
-          }
+        if ($scroll >= 80) {
+          $('#top_header_fixed').addClass('fiexd')
         } else {
-          if (this.isLite) {
-            if ($('#top_header_fixed').hasClass('whiteb')) {
-              $('#top_header_fixed').removeClass('whiteb')
-            }
-            if ($('#top_header_fixed').hasClass('blackb')) {
-              $('#top_header_fixed').removeClass('blackb')
-            }
-          } else {
-            if ($('#top_header_fixed').hasClass('blackb')) {
-              $('#top_header_fixed').removeClass('blackb')
-            }
-            if ($('#top_header_fixed').hasClass('whiteb')) {
-              $('#top_header_fixed').removeClass('whiteb')
-            }
-            if (!$('#top_header_fixed').hasClass('white0')) {
-              $('#top_header_fixed').addClass('white0')
-            }
-          }
+          $('#top_header_fixed').removeClass('fiexd')
         }
       })
     }
@@ -72,12 +40,12 @@ export default {
     }
   },
   mounted() {
-    // this.timer = setTimeout(() => {
-    //   this.fixedNav()
-    // }, 100);
+    this.timer = setTimeout(() => {
+      this.fixedNav()
+    }, 100);
   },
   beforeDestroy() {
-    // clearTimeout(this.timer)
+    clearTimeout(this.timer)
   },
 }
 </script>
@@ -91,8 +59,8 @@ export default {
   top: 4.5%;
   left: 0;
   background: #ffffff00;
-  z-index: 9999999;
-  transition: background-color 0.1s;
+  z-index: 99999999;
+  transition: all 0.5s;
   .left_logo {
     width: 90px;
     height: 20px;
@@ -114,9 +82,7 @@ export default {
   }
 }
 .top_header.fiexd {
-  position: fixed;
   top: 0;
-  left: 0;
 }
 .top_header.blackb {
   background: rgba(0, 0, 0, 0.8) !important;

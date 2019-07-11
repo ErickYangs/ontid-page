@@ -89,9 +89,9 @@
           ></a>
           <a href="https://medium.com/ontologynetwork" target="_blank" class="hover1"></a>
           <a href="https://old.reddit.com/r/OntologyNetwork/" target="_blank" class="hover1"></a>
+          <a href="https://github.com/ontio" target="_blank" class="hover1"></a>
         </div>
         <div class="second_line">
-          <a href="https://github.com/ontio" target="_blank" class="hover1"></a>
           <a href="https://t.me/OntologyNetwork" target="_blank" class="hover1"></a>
           <a
             href="https://www.youtube.com/channel/UCXzLZJgDglAWRU0b2GOa7pA"
@@ -186,7 +186,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#app.lang_en .home_footer .footer_box .link_box .ele_list .footer_main_title{
+#app.lang_en .home_footer .footer_box .link_box .ele_list .footer_main_title {
   font-family: Graphik-Medium;
 }
 .home_footer {
@@ -318,21 +318,21 @@ export default {
           background: url(../../assets/images/f-5.svg) no-repeat center;
           background-size: cover;
         }
-      }
-      .second_line {
-        a:nth-of-type(1) {
+        a:nth-of-type(6) {
           background: url(../../assets/images/f-6.svg) no-repeat center;
           background-size: cover;
         }
-        a:nth-of-type(2) {
+      }
+      .second_line {
+        a:nth-of-type(1) {
           background: url(../../assets/images/f-7.svg) no-repeat center;
           background-size: cover;
         }
-        a:nth-of-type(3) {
+        a:nth-of-type(2) {
           background: url(../../assets/images/f-8.svg) no-repeat center;
           background-size: cover;
         }
-        a:nth-of-type(4) {
+        a:nth-of-type(3) {
           background: url(../../assets/images/f-9.svg) no-repeat center;
           background-size: cover;
         }

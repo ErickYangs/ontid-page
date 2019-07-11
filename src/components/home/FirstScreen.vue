@@ -1,9 +1,9 @@
 <template>
   <div class="first_screen">
     <div class="header_box">
-      <transition name="fade">
-        <HomeHeader v-if="!isShow" class="pc_nav" />
-      </transition>
+      <!-- <transition name="fade"> -->
+        <HomeHeader class="pc_nav" />
+      <!-- </transition> -->
       <transition name="fade">
         <HomeHeader2 v-if="isShow" class="pc_nav" transiton="fade" />
       </transition>

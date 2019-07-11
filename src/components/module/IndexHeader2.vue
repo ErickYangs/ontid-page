@@ -1,6 +1,6 @@
 <template>
   <div class="top_header clearfix whiteb" id="top_header_fixed">
-    <div class="left_logo home_logo" @click="toIndex()"></div>
+    <!-- <div class="left_logo home_logo" @click="toIndex()"></div> -->
     <div class="right">
       <!-- <SelectBox /> -->
       <!-- <Lang /> -->

@@ -1,8 +1,8 @@
 <template>
   <div class="lite">
-    <transition name="fade">
-      <HomeHeader class="pcNav" v-if="!isShowNav" />
-    </transition>
+    <!-- <transition name="fade"> -->
+      <HomeHeader class="pcNav"/>
+    <!-- </transition> -->
     <transition name="fade">
       <HomeHeader2 class="pcNav" v-if="isShowNav" transiton="fade" />
     </transition>

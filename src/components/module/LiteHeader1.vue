@@ -42,7 +42,7 @@ export default {
   top: 0;
   left: 0;
   background: #ffffff00;
-  z-index: 9999999;
+  z-index: 99999999;
   transition: background-color 0.1s;
   .left_logo {
     width: 90px;
