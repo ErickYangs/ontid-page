@@ -95,6 +95,8 @@ video {
   color: #000;
   box-sizing: border-box;
   background-size: contain;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 /* HTML5 display-role reset for older browsers */
 article,

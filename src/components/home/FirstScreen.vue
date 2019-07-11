@@ -56,6 +56,7 @@ export default {
   },
   mounted() {
     let $scroll = $(document).scrollTop()
+    // console.log('$scroll', $scroll)
     if ($scroll >= 80) {
       this.isShow = true
     } else {
