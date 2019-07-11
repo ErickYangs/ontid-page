@@ -78,13 +78,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#app.lang_en .third_screen .screen_box .choose_title {
+  font-family: Graphik-Medium;
+}
+#app.lang_en .third_screen .screen_box .ele_box .ele_list .desc_title {
+  font-family: Graphik-Medium;
+}
 .third_screen {
   background: #000;
   .screen_box {
     padding: 150px 0;
     .choose_title {
       font-size: 40px;
-      font-family: Graphik-Medium;
       font-weight: 800;
       color: rgba(255, 255, 255, 1);
       line-height: 66px;
@@ -111,7 +116,6 @@ export default {
         .desc_title {
           margin-top: 24px;
           font-size: 20px;
-          font-family: Graphik-Medium;
           font-weight: 800;
           color: rgba(255, 255, 255, 1);
           line-height: 35px;
@@ -133,7 +137,6 @@ export default {
 .hidenone {
   visibility: hidden;
 }
-// @media only screen and (min-width: 768px) and (max-width: 959px)
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .third_screen .screen_box .ele_box .ele_list {
     width: 50%;

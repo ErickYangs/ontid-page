@@ -99,11 +99,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#app.lang_en .second_screen .title {
+  font-family: Graphik-Medium;
+}
+#app.lang_en .ele_layout .ele_item .sub_title{
+  font-family: Graphik-Medium;
+}
 .second_screen {
   padding: 150px 0 210px;
   .title {
     font-size: 40px;
-    font-family: Graphik-Medium;
     font-weight: 800;
     color: rgba(0, 0, 0, 1);
     line-height: 66px;
@@ -121,7 +126,6 @@ export default {
       }
       .sub_title {
         font-size: 24px;
-        font-family: Graphik-Medium;
         font-weight: 800;
         color: rgba(0, 0, 0, 1);
         line-height: 35px;
@@ -129,7 +133,6 @@ export default {
       }
       .sub_desc {
         font-size: 14px;
-        // font-family: FuturaLT;
         color: rgba(0, 0, 0, 0.6);
         line-height: 24px;
         margin-top: 20px;

@@ -191,6 +191,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#app.lang_en .second_screen .title {
+  font-family: Graphik-Medium;
+}
+#app.lang_en .second_screen .desc_box .left .ele_box .ele_list .ele_list_title {
+  font-family: Graphik-Medium;
+}
+#app.lang_en .right .index .num {
+  font-family: Graphik-Medium;
+}
 .my-button-disabled {
   opacity: 0.3;
 }
@@ -198,7 +207,6 @@ export default {
   padding: 150px 0 210px;
   .title {
     font-size: 40px;
-    font-family: Graphik-Medium;
     font-weight: 800;
     color: rgba(0, 0, 0, 1);
     line-height: 66px;
@@ -215,7 +223,6 @@ export default {
         .ele_list {
           .ele_list_title {
             font-size: 40px;
-            font-family: Graphik-Medium;
             font-weight: 800;
             color: rgba(0, 0, 0, 1);
             line-height: 53px;
@@ -473,7 +480,6 @@ export default {
           color: #fff;
           position: absolute;
           font-size: 34px;
-          font-family: Graphik-Medium;
           font-weight: 800;
         }
         .num.t {
@@ -555,7 +561,6 @@ export default {
   .second_screen .desc_box .right .right_ele_box .fourth .ball {
     left: 12.5%;
   }
-
 }
 @media only screen and (max-width: 767px) {
   .second_screen {
@@ -577,7 +582,7 @@ export default {
           padding-top: 0;
           .right_ele {
             padding: 20px;
-             min-height: 348px;
+            min-height: 348px;
           }
           .second {
             .people {
@@ -632,7 +637,6 @@ export default {
             }
           }
           .people {
-           
           }
         }
         .index {
@@ -648,21 +652,21 @@ export default {
       .left {
         position: relative;
         .ele_box {
-           .ele_list {
-             .ele_list_title {
-               font-size: 20px;
-               line-height: 24px;
-               padding-top: 20px;
-               text-align: center;
-             }
-             .ele_list_desc {
-               font-size: 15px;
-               padding-right: 0;
-               text-align: center;
-               padding: 0 20px;
-               line-height: 20px;
-             }
-           }
+          .ele_list {
+            .ele_list_title {
+              font-size: 20px;
+              line-height: 24px;
+              padding-top: 20px;
+              text-align: center;
+            }
+            .ele_list_desc {
+              font-size: 15px;
+              padding-right: 0;
+              text-align: center;
+              padding: 0 20px;
+              line-height: 20px;
+            }
+          }
         }
         .line_box {
           margin-top: 0;

@@ -73,18 +73,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#app.lang_en .litesecondscreen .title {
+  font-family: Graphik-Medium;
+}
+#app.lang_en .litesecondscreen .introduct_box .introd_layout .introd_title {
+  font-family: Graphik-Medium;
+}
 .litesecondscreen {
   padding: 150px 0;
   .title {
     font-size: 40px;
-    font-family: Graphik-Medium;
     font-weight: 800;
     color: rgba(0, 0, 0, 1);
     line-height: 66px;
     text-align: center;
   }
   .introduct_box {
-    // overflow: hidden;
     padding: 0 205px;
     .introd_layout {
       margin-top: 80px;
@@ -98,7 +102,6 @@ export default {
 
       .introd_title {
         font-size: 24px;
-        font-family: Graphik-Medium;
         font-weight: 800;
         color: rgba(0, 0, 0, 1);
         line-height: 35px;
@@ -202,7 +205,8 @@ export default {
       padding: 0 30px;
       .introd_layout {
         margin-top: 50px;
-        .left, .right {
+        .left,
+        .right {
           width: 100%;
         }
         .fp_one {
@@ -221,20 +225,19 @@ export default {
         }
         .fp_two {
           padding-left: 0;
-           .outer {
-             width: 84px;
-             height: 97px;
-             background-size: contain;
-             margin: 0 auto;
-
-           }
-           .inner {
-             width: 99px;
-             height: 93px;
-             background-size: contain;
-             left: 25%;
-             top: -24%;
-           }
+          .outer {
+            width: 84px;
+            height: 97px;
+            background-size: contain;
+            margin: 0 auto;
+          }
+          .inner {
+            width: 99px;
+            height: 93px;
+            background-size: contain;
+            left: 25%;
+            top: -24%;
+          }
         }
         .introd_title {
           text-align: center;

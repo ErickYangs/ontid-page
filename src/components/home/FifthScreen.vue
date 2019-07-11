@@ -44,7 +44,7 @@ export default {
     }
     .fifth_title {
       font-size: 40px;
-      font-family: Graphik-Medium;
+      // font-family: Graphik-Medium;
       font-weight: 800;
       color: rgba(255, 255, 255, 1);
       line-height: 66px;
@@ -68,7 +68,6 @@ export default {
       border-radius: 4px;
       border: 2px solid rgba(255, 255, 255, 1);
       font-size: 16px;
-      font-family: Graphik-Medium;
       font-weight: 800;
       color: rgba(255, 255, 255, 1);
       line-height: 50px;
@@ -127,7 +126,12 @@ export default {
     }
   }
 }
-
+#app.lang_en .fifth_screen .fifth_box .fifth_title {
+  font-family: Graphik-Medium;
+}
+#app.lang_en .fifth_screen .fifth_box .start {
+  font-family: Graphik-Medium;
+}
 @-webkit-keyframes myRotate {
   0% {
     -webkit-transform: rotate(0deg);

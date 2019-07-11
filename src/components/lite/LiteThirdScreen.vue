@@ -41,13 +41,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
+#app.lang_en .lite_third_screen .lite_third_box .title {
+  font-family: Graphik-Medium;
+}
+#app.lang_en .lite_third_screen .lite_third_box .down_layout .tips {
+  font-family: Graphik-Medium;
+}
 .lite_third_screen {
   padding: 150px 0 100px;
   background: linear-gradient(135deg, #a5ff89 0%, #329120 100%);
   .lite_third_box {
     .title {
       font-size: 40px;
-      font-family: Graphik-Medium;
       font-weight: 800;
       color: rgba(255, 255, 255, 1);
       line-height: 66px;
@@ -78,7 +83,6 @@ export default {
       .tips {
         padding-top: 70px;
         font-size: 20px;
-        font-family: Graphik-Medium;
         font-weight: 800;
         color: rgba(255, 255, 255, 1);
         line-height: 40px;

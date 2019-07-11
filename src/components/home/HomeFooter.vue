@@ -186,6 +186,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+#app.lang_en .home_footer .footer_box .link_box .ele_list .footer_main_title{
+  font-family: Graphik-Medium;
+}
 .home_footer {
   width: 100%;
   padding: 60px 0 40px;
@@ -209,7 +212,6 @@ export default {
 
         .footer_main_title {
           font-size: 14px;
-          font-family: Graphik-Medium;
           font-weight: 800;
           color: rgba(0, 0, 0, 1);
           line-height: 21px;
@@ -287,8 +289,8 @@ export default {
       width: 100%;
       padding-left: 20px;
       display: none;
-      margin-bottom: 30px;
-      margin-top: 20px;
+      margin-bottom: 34px;
+      margin-top: 24px;
       .first_line,
       .second_line {
         display: flex;
@@ -404,6 +406,9 @@ export default {
   .copyright {
     text-align: left !important;
     padding-left: 20px;
+  }
+  .home_footer .footer_box .copyright {
+    padding-bottom: 20px;
   }
 }
 </style>

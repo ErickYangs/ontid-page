@@ -86,6 +86,7 @@ export default {
 .fade-leave-active {
   opacity: 0;
 }
+
 @media only screen and (max-width: 959px) {
   .pcNav {
     display: none;

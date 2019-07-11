@@ -64,10 +64,12 @@ export default {
   padding-right: 50px;
   text-align: right;
 }
-
+#app.lang_en .banner_right_tips .item .item_title {
+  font-family: Graphik-Medium;
+}
 .banner_right_tips .item .item_title {
   font-size: 14px;
-  font-family: Graphik-Medium;
+  // font-family: Graphik-Medium;
   font-weight: 800;
   // color: rgba(0, 0, 0, 1);
   line-height: 21px;

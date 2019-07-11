@@ -33,6 +33,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#app.lang_en .sixth_screen .sixth_box .right_learn_more span {
+  font-family: Graphik-Medium;
+}
 .sixth_screen {
   width: 100%;
   height: 264px;
@@ -72,7 +75,6 @@ export default {
       justify-content: space-between;
       span {
         font-size: 30px;
-        font-family: Graphik-Medium;
         font-weight: 800;
         color: rgba(255, 255, 255, 1);
         line-height: 50px;
@@ -119,32 +121,32 @@ export default {
   }
 }
 @media only screen and (max-width: 767px) {
-.sixth_screen {
-  .sixth_box {
-    flex-direction: column;
-    justify-content: center;
-    .left_lite {
-      margin-bottom: 50px;
-      .logo {
-        margin-left: 50px;
+  .sixth_screen {
+    .sixth_box {
+      flex-direction: column;
+      justify-content: center;
+      .left_lite {
+        margin-bottom: 50px;
+        .logo {
+          margin-left: 50px;
+        }
       }
-    }
-    .right_learn_more {
-      width: auto;
-      height: 30px;
-      span {
-        font-size: 25px;
-        line-height: 30px;
-        margin-right: 25px;
-        display: none;
-      }
-      i {
-        width: 30px;
+      .right_learn_more {
+        width: auto;
         height: 30px;
+        span {
+          font-size: 25px;
+          line-height: 30px;
+          margin-right: 25px;
+          display: none;
+        }
+        i {
+          width: 30px;
+          height: 30px;
+        }
       }
     }
   }
-}
 }
 </style>
 

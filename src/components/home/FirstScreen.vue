@@ -23,7 +23,6 @@ import HomeHeader2 from '@/components/module/IndexHeader2.vue'
 import LinkBanner from '@/components/home/LinkBanner.vue'
 import BannerRightTips from '@/components/home/BannerRightTips.vue'
 import MobileTopNav from '@/components/module/MobileTopNav.vue'
-// import Parallax from 'vue-parallaxy'
 import $ from "jquery"
 
 export default {
@@ -34,7 +33,6 @@ export default {
     BannerRightTips,
     MobileTopNav,
     HomeHeader2
-    // Parallax
   },
   data() {
     return {
@@ -56,7 +54,6 @@ export default {
   },
   mounted() {
     let $scroll = $(document).scrollTop()
-    // console.log('$scroll', $scroll)
     if ($scroll >= 80) {
       this.isShow = true
     } else {
@@ -93,12 +90,13 @@ export default {
   }
 }
 .fade-enter-active {
-  transition: opacity 1s;
+  transition: all .5s;
 }
 .fade-enter,
 .fade-leave-active {
   opacity: 0;
 }
+
 @media only screen and (max-width: 959px) {
   .first_screen .link_banner {
     padding-top: 10% !important;

@@ -25,7 +25,6 @@ export default {
     min-height: 100%;
     .title {
       text-align: center;
-      // height: 60px;
       font-size: 36px;
       font-family: Graphik-Medium;
       font-weight: 800;

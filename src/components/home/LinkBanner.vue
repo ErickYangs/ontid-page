@@ -29,12 +29,6 @@ import $ from "jquery"
 import Parallax from 'vue-parallaxy'
 
 export default {
-  mounted() {
-    // console.log(this.$refs.banner_text_download.scrollTop)
-    // this.$refs.iden_title.classList.add('animated', 'fadeInUp')
-    // this.$refs.iden_desc.classList.add('animated', 'fadeInUp')
-    // this.$refs.appload_box.classList.add('animated', 'fadeInUp')
-  },
   methods: {
     turnShow(ele) {
       $("html, body").animate({
@@ -56,11 +50,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#app.lang_en .banner .banner_text {
+  .banner_text_title {
+    font-family: Graphik-Medium;
+  }
+  .banner_text_download {
+    span {
+      font-family: Graphik-Medium;
+    }
+  }
+}
 .banner {
   width: 100%;
   height: 100%;
   max-width: 1120px;
-  //   background: red;
   position: relative;
   .banner_layout {
     position: relative;
@@ -82,8 +85,6 @@ export default {
     padding-top: 22%;
     .banner_text_title {
       font-size: 80px;
-      // font-family: Graphik-Medium;
-      font-family: Graphik-Medium;
       font-weight: 800;
       color: rgba(0, 0, 0, 1);
       line-height: 106px;
@@ -108,7 +109,7 @@ export default {
         );
         border-radius: 4px;
         font-size: 16px;
-        font-family: Graphik-Medium;
+
         font-weight: 800;
         color: rgba(255, 255, 255, 1);
         line-height: 30px;
@@ -148,7 +149,6 @@ export default {
     p {
       text-align: center;
       font-size: 13px;
-      font-family: Graphik-Regular;
       font-weight: 400;
       color: rgba(0, 0, 0, 0.3);
       line-height: 15px;
@@ -159,7 +159,6 @@ export default {
       margin: 0 auto;
       text-align: center;
       font-size: 13px;
-      font-family: Graphik-Regular;
       font-weight: 400;
       color: rgba(0, 0, 0, 1);
       line-height: 15px;
@@ -191,9 +190,9 @@ export default {
   }
 }
 @media only screen and (min-width: 1079px) and (max-width: 1440px) {
-.banner .bottom_bg {
-  right: 40px;
-}
+  .banner .bottom_bg {
+    right: 40px;
+  }
 }
 @media only screen and (min-width: 960px) and (max-width: 1279px) {
   .banner {
@@ -259,7 +258,6 @@ export default {
     width: 100%;
     font-size: 15px;
     line-height: 30px;
-    font-family: Graphik-Regular;
   }
   .banner .banner_text .banner_text_download span {
     padding: 13px 12px;
@@ -288,7 +286,7 @@ export default {
     height: 40px;
     background-size: contain;
   }
- .banner .mobile_more {
+  .banner .mobile_more {
     display: block;
   }
 }

@@ -71,7 +71,6 @@ export default {
     font-size: 14px;
     color: #000 !important;
     font-family: Graphik-Medium;
-    font-weight: 800;
     height: 56px;
     line-height: 56px;
     border-bottom-color: #0000000f ;

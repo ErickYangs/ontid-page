@@ -13,32 +13,6 @@
       </div>
       <div class="down_arrow" @click="turnShow('#lite_second')"></div>
     </div>
-    <!-- <div class="banner_right_tips">
-      <div class="item">
-        <div class="item_title">
-          Protocols
-          <i></i>
-        </div>
-        <div class="item_link">Ontology DID</div>
-        <div class="item_link">Verifiable Claims</div>
-      </div>
-      <div class="item">
-        <div class="item_title">
-          Protocols
-          <i></i>
-        </div>
-        <div class="item_link">Ontology DID</div>
-        <div class="item_link">Verifiable Claims</div>
-      </div>
-      <div class="item">
-        <div class="item_title">
-          Protocols
-          <i></i>
-        </div>
-        <div class="item_link">Ontology DID</div>
-        <div class="item_link">Verifiable Claims</div>
-      </div>
-    </div>-->
     <BannerRightTips class="BannerRightTips" />
   </div>
 </template>
@@ -110,6 +84,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#app.lang_en .lite_first_screen .link_banner .open_account span {
+  font-family: Graphik-Medium;
+}
 .lite_first_screen {
   width: 100%;
   height: 100%;
@@ -166,7 +143,6 @@ export default {
         padding: 12px 20px;
         border-radius: 4px;
         font-size: 16px;
-        font-family: Graphik-Medium;
         font-weight: 800;
         line-height: 30px;
         cursor: pointer;
