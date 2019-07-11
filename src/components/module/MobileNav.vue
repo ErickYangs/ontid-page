@@ -55,7 +55,7 @@ export default {
     a {
       display: block;
       line-height: 16px;
-      padding: 12px 0;
+      padding-bottom: 24px;
       color: rgba(0, 0, 0, 0.6);
       font-size: 13px;
       transition: all 0.5s ease;
@@ -74,7 +74,7 @@ export default {
     font-weight: 800;
     height: 56px;
     line-height: 56px;
-    border-bottom: 1px solid #0000000f;
+    border-bottom-color: #0000000f ;
     .el-icon-arrow-right:before {
       content: url(../../assets/images/open.svg);
       color: #000;
@@ -84,6 +84,9 @@ export default {
       -webkit-transform: rotate(45deg);
       transform: rotate(45deg);
     }
+  }
+  /deep/ .el-collapse-item__header.is-active {
+    border-bottom-color: transparent !important;
   }
   /deep/ .el-collapse-item {
     .el-collapse-item__content {
